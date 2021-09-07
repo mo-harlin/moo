@@ -13833,55 +13833,34 @@ end,nil)
 end,nil)
 end 
 
-if ChatType == 'sp' or ChatType == 'gp'  then
-if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
-if DevAbs:get(DevProx.."Abs:Kick:Me"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙عذرا هذه الخاصيه معطله ', 1, 'md')
+if text == 'اطردني' or text == 'طلعني' then
+if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
+if Can_or_NotCan(msg.sender_user_id_, msg.chat_id_) == true then
+send(msg.chat_id_, msg.id_, '\n ◉ عذرا لا استطيع طرد ( ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ )')
 return false
 end
-DevAbs:set(DevProx..'yes'..msg.sender_user_id_, 'delyes')
-DevAbs:set(DevProx..'no'..msg.sender_user_id_, 'delno')
-local Text = '⌁︙هل انت متأكد من المغادره'
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="نعم",callback_data="/delyes"},{text="لا",callback_data="/delno"}}} 
-Msg_id = msg.id_/2097152/0.5
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+tdcli_function({ID="ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=msg.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,data) 
+if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
+send(msg.chat_id_, msg.id_,' ◉ ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !') 
+return false  
 end
---     Source DevProx     --
-if text == 'تعطيل اطردني' and Manager(msg) and ChCheck(msg) then
-DevAbs:set(DevProx.."Abs:Kick:Me"..msg.chat_id_, true)
-local DevProxTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تعطيل امر اطردني'
-absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DevProxTEAM, 14, string.len(msg.sender_user_id_))
+if (data and data.code_ and data.code_ == 3) then 
+send(msg.chat_id_, msg.id_,' ◉ البوت ليس ادمن يرجى ترقيتي !') 
+return false  
 end
-if text == 'تفعيل اطردني' and Manager(msg) and ChCheck(msg) then
-DevAbs:del(DevProx.."Abs:Kick:Me"..msg.chat_id_)
-local DevProxTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تفعيل امر اطردني'
-absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DevProxTEAM, 14, string.len(msg.sender_user_id_))
+if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
+send(msg.chat_id_, msg.id_,' ◉ عذرا لا استطيع طرد ادمنية الجروب') 
+return false  
 end
---     Source DevProx     --
-if text == "نزلني" and ChCheck(msg) then
-if DevAbs:get(DevProx.."Abs:Del:Me"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙عذرا هذه الخاصيه معطله ', 1, 'md')
+if data and data.ID and data.ID == 'Ok' then
+send(msg.chat_id_, msg.id_,' ◉ تم طردك من الجروب') 
+tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = msg.sender_user_id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
 return false
 end
-DevAbs:set(DevProx..'yesdel'..msg.sender_user_id_, 'delyes')
-DevAbs:set(DevProx..'nodel'..msg.sender_user_id_, 'delno')
-local Text = '⌁︙هل انت متأكد من تنزيلك'
-keyboard = {} 
-keyboard.inline_keyboard = {{{text="نعم",callback_data="/yesdel"},{text="لا",callback_data="/nodel"}}} 
-Msg_id = msg.id_/2097152/0.5
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end,nil)   
+else
+send(msg.chat_id_, msg.id_,' ◉ تم تعطيل امر اطردني') 
 end
---     Source DevProx     --
-if text == 'تعطيل نزلني' and BasicConstructor(msg) and ChCheck(msg) then
-DevAbs:set(DevProx.."Abs:Del:Me"..msg.chat_id_, true)
-local DevProxTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تعطيل امر نزلني'
-absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DevProxTEAM, 14, string.len(msg.sender_user_id_))
-end
-if text == 'تفعيل نزلني' and BasicConstructor(msg) and ChCheck(msg) then
-DevAbs:del(DevProx.."Abs:Del:Me"..msg.chat_id_)
-local DevProxTEAM = '⌁︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n⌁︙تم تفعيل امر نزلني'
-absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, DevProxTEAM, 14, string.len(msg.sender_user_id_))
 end
 
 if text and text:match("^صيح (.*)$") then

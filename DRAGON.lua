@@ -13218,6 +13218,7 @@ database:del(bot_id.."my_anamen:status"..msg.chat_id_)
 send(msg.chat_id_, msg.id_," ᥀︙ تم تعطيل انا مين") 
 return false end
 end
+
 if text == "رتبتي" then
 local msg_id = msg.id_/2097152/0.5  
 local textt = '  ᥀︙ رتبتك ← '..Rutba(msg.sender_user_id_,msg.chat_id_)
@@ -13227,7 +13228,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13249,7 +13250,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13272,7 +13273,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13295,7 +13296,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13318,7 +13319,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13341,7 +13342,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13364,7 +13365,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13387,7 +13388,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13410,7 +13411,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13433,7 +13434,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13456,7 +13457,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
+{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13469,6 +13470,7 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 return false
 end
+
 
 if text == "تفعيل ردود السورس"  then
 if Constructor(msg) then  

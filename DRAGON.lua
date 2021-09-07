@@ -3125,9 +3125,9 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
 🔰 𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊
-•–––☆–––☆–––☆–––☆–––☆–––•
+•––––––––––––––––––•
 🔰 𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐄 𝐈𝐍 𝐓𝐄𝐋𝐘
-•–––☆–––☆–––☆–––☆–––☆–––•
+•––––––––––––––––––•
 🔰 𝐒𝐏𝐄𝐄𝐃 𝐀𝐂𝐂𝐔𝐑𝐀𝐂𝐘 𝐒𝐀𝐅𝐄𝐓𝐘
 ]]
 keyboard = {} 
@@ -11985,7 +11985,7 @@ local DRAGON_Msg = {
 'اسمي '..Namebot..' يامزه 🥺❤️',
 'اسمي '..Namebot..' يعم 😂❤️',
 'مقولت اسمي '..Namebot..' في اي 🙄❤️',
-'اسمي الكيوت '..Namebot..' 🌝💗',
+'اسمي الكيوت '..Namebot..' 🌝??',
 'اسمي '..Namebot..' ياحياتي🧸♥️',
 'اسمي '..Namebot..' يوتكه??❤',
 } 
@@ -13832,61 +13832,34 @@ send(msg.chat_id_, msg.id_, sofi)
 end,nil)
 end,nil)
 end 
-
-if text == 'اطردني' or text == 'طردني' and GetChannelMember(msg) then   
+if text == 'اطردني' or text == 'طلعني' then
 if not database:get(bot_id..'Cick:Me'..msg.chat_id_) then
 if Can_or_NotCan(msg.sender_user_id_, msg.chat_id_) == true then
-send(msg.chat_id_, msg.id_, '\n *⌯︙عذرا لا استطيع طرد ( '..Rutba(msg.sender_user_id_,msg.chat_id_)..' )*')
+send(msg.chat_id_, msg.id_, '\n ᥀︙ عذرا لا استطيع طرد ( ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜ )')
 return false
 end
-_key = {
-{{text="تأكيد الامر",callback_data="OkKikedMe"..msg.sender_user_id_},{text="الغاء الامر",callback_data="noKikedMe"..msg.sender_user_id_}},
-}
-send_inlin_key(msg.chat_id_," *⌯︙قم بتأكيد العمليه الان*",_key,msg.id_)
-return false
-else
-send(msg.chat_id_, msg.id_,' *⌯︙تم تعطيل امر اطردني*') 
-end
-end
-if Text == 'OkKikedMe'..data.sender_user_id_ then  
-tdcli_function({ID="ChangeChatMemberStatus",chat_id_=Chat_id,user_id_=data.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,data) 
+tdcli_function({ID="ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=msg.sender_user_id_,status_={ID="ChatMemberStatusKicked"},},function(arg,data) 
 if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url='http://t.me/SO_ROGEN'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌯︙ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+send(msg.chat_id_, msg.id_,' ᥀︙ ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !') 
+return false  
 end
 if (data and data.code_ and data.code_ == 3) then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url='http://t.me/SO_ROGEN'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌯︙البوت ليس ادمن يرجى ترقيتي !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+send(msg.chat_id_, msg.id_,' ᥀︙ البوت ليس ادمن يرجى ترقيتي !') 
+return false  
 end
 if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url='http://t.me/SO_ROGEN'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌯︙عذرا لا استطيع طرد ادمنية الكروب*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+send(msg.chat_id_, msg.id_,' ᥀︙ عذرا لا استطيع طرد ادمنية الجروب') 
+return false  
 end
 if data and data.ID and data.ID == 'Ok' then
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url='http://t.me/SO_ROGEN'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(" *⌯︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+send(msg.chat_id_, msg.id_,' ᥀︙ تم طردك من الجروب') 
+tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_id_ = msg.sender_user_id_, status_ = { ID = "ChatMemberStatusLeft" },},function(arg,ban) end,nil)   
+return false
 end
 end,nil)   
+else
+send(msg.chat_id_, msg.id_,' ᥀︙ تم تعطيل امر اطردني') 
 end
-if Text == 'noKikedMe'..data.sender_user_id_ then  
-local Text ="*⌯ تم الغاء الطرد بنجاح .*"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄʀ ᴛᴇʟᴀɴᴅ',url='http://t.me/SO_ROGEN'}},
-}
-return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 
 if text and text:match("^صيح (.*)$") then
@@ -17753,7 +17726,7 @@ return false
 end
 end
 if text and text ~="صراحه" and database:get(bot_id..":"..msg.sender_user_id_..":rkko_Bots"..msg.chat_id_) == "sendrkkoe" then
-numj = {"اما قله ادب صحيح كلو كدب فى كدب💔😔"," ده مظبوط🙂😹"," اقلك الكلام ده كدب واللى قالولك كداب وانت كداب واللى بيتفرج كمان كداب🤝😂"," ده برجوله وموثق كمان❤️😁","فعلا بتتكلم صح🤗","يجدع قول كلام غير دا😹","احس هل شي كذب᥀︙💕","طب عيني ف عينك كدا ??","انت صح",};
+numj = {"اما قله ادب صحيح كلو كدب فى كدب💔😔"," ده مظبوط🙂😹"," اقلك الكلام ده كدب واللى قالولك كداب وانت كداب واللى بيتفرج كمان كداب🤝😂"," ده برجوله وموثق كمان❤️😁","فعلا بتتكلم صح🤗","يجدع قول كلام غير دا??","احس هل شي كذب᥀︙💕","طب عيني ف عينك كدا ??","انت صح",};
 sendnuj = numj[math.random(#numj)]
 xl = ' ⟨  '..text..'  ⟩ \n '..sendnuj..'.'
 send(msg.chat_id_, msg.id_,xl) 

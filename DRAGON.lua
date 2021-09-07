@@ -3145,7 +3145,7 @@ keyboard = {}
 keyboard.inline_keyboard = {
 {{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
 {{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}}, 
-{{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/VOLT3R_bot"}}, 
+{{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -4062,11 +4062,11 @@ end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[TWL](t.me/VOLT3R_bot)
+[TWL](t.me/xx_shicoo_xx_bot)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/VOLT3R_bot"}}, 
+{{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11985,9 +11985,9 @@ local DRAGON_Msg = {
 'اسمي '..Namebot..' يامزه 🥺❤️',
 'اسمي '..Namebot..' يعم 😂❤️',
 'مقولت اسمي '..Namebot..' في اي 🙄❤️',
-'اسمي الكيوت '..Namebot..' 🌝??',
+'اسمي الكيوت '..Namebot..' 🌝💕',
 'اسمي '..Namebot..' ياحياتي🧸♥️',
-'اسمي '..Namebot..' يوتكه??❤',
+'اسمي '..Namebot..' يوتكه🙊❤',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  

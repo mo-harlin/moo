@@ -1245,7 +1245,7 @@ keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'قسم المبرمجين' and DevSoFi(msg) then 
@@ -1387,7 +1387,7 @@ keyboard.inline_keyboard = {
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'sᴏᴜʀᴇ ᴊᴀᴄᴋ' and DevSoFi(msg) then
@@ -1399,7 +1399,7 @@ keyboard.inline_keyboard = {
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'معلومات الكيبورد' and DevSoFi(msg) then
@@ -1445,18 +1445,18 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-┍━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┑
-    𝐖𝐄𝐋𝐂𝐎𝐌 sᴏᴜʀᴇ ᴊᴀᴄᴋ
-𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐒 𝐎𝐍 𝐓𝐄𝐈𝐄𝐆𝐑𝐀𝐌
-    ᴊᴀᴄᴋ 𝐈𝐍 𝐁𝐎𝐔𝐓𝐓𝐎𝐍𝐒 𝐁𝐄𝐋𝐎𝐋
-┕━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┙
+ 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––☆–––☆––––☆––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––☆–––☆––––☆––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
@@ -3124,13 +3124,11 @@ end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-┍━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┑
  🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
  ––––☆–––☆––––☆––––
  🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
  ––––☆–––☆––––☆––––
  🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
-┕━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┙
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3138,7 +3136,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
@@ -3148,7 +3146,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
 {{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}}, 
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/VOLT3R_bot"}}, 
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ, url="t.me/Source_JACK"}},
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Source_JACK&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -4033,33 +4031,33 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == '•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•' then
 local Text = [[ 
-┍━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┑
-    𝐖𝐄𝐋𝐂𝐎𝐌 sᴏᴜʀᴇ ᴊᴀᴄᴋ
-𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐒 𝐎𝐍 𝐓𝐄𝐈𝐄𝐆𝐑𝐀𝐌
-    ᴊᴀᴄᴋ 𝐈𝐍 𝐁𝐎𝐔𝐓𝐓𝐎??𝐒 ??𝐄𝐋𝐎𝐋
-┕━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┙
+ 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––☆–––☆––––☆––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––☆–––☆––––☆––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'قناه السورس' then
 local Text = [[ 
-┍━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┑
-    𝐖𝐄𝐋𝐂𝐎𝐌 sᴏᴜʀᴇ ᴊᴀᴄᴋ
-𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐒 𝐎𝐍 𝐓𝐄𝐈𝐄𝐆𝐑𝐀𝐌
-    ᴊᴀᴄᴋ 𝐈𝐍 𝐁𝐎𝐔𝐓𝐓𝐎𝐍𝐒 𝐁𝐄𝐋𝐎𝐋
-┕━━━━━☛ ᴊᴀᴄᴋ ☚━━━━━┙
+ 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––☆–––☆––––☆––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––☆–––☆––––☆––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
@@ -4071,7 +4069,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/VOLT3R_bot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'العاب جاك' or text == 'العاب مطوره' or text == 'الالعاب' then  
 local Text = [[  

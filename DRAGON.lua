@@ -4029,12 +4029,12 @@ end
 end 
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil) 
 end
-if text == '◍- - - - - - - -×- - - - - - - -◍' then
+if text == '•═════•〈〈 𝙅𝘼𝘾𝙆 〉〉•═════•' then
 local Text = [[ 
 ┍━━━━━☛ 𝐉𝐀𝐂𝐊 ☚━━━━━┑
     𝐖𝐄𝐋𝐂𝐎𝐌 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊
 𝐓𝐇𝐄 𝐁𝐄𝐒𝐓 𝐒𝐎𝐔𝐑𝐂𝐒 𝐎𝐍 𝐓𝐄𝐈𝐄𝐆𝐑𝐀𝐌
-    𝐉𝐀𝐂𝐊 𝐈𝐍 𝐁𝐎𝐔𝐓𝐓𝐎??𝐒 𝐁𝐄𝐋𝐎𝐋
+    𝐉𝐀𝐂𝐊 𝐈𝐍 𝐁𝐎𝐔𝐓𝐓𝐎??𝐒 ??𝐄𝐋𝐎𝐋
 ┕━━━━━☛ 𝐉𝐀𝐂𝐊 ☚━━━━━┙
 ]]
 keyboard = {}  
@@ -4071,7 +4071,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/ROOGEN1/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'العاب جاك' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب جاك' or text == 'العاب مطوره' or text == 'الالعاب' then  
 local Text = [[  
 ◍- - - - - - - -×- - - - - - - -◍
  اهلا في قائمه الالعاب المتطوره سورس جاك
@@ -13227,7 +13227,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13249,7 +13249,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13272,7 +13272,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13295,7 +13295,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13318,7 +13318,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13341,7 +13341,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13364,7 +13364,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13387,7 +13387,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13410,7 +13410,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13433,7 +13433,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13456,7 +13456,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"}},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐂𝐊', url="t.me/Source_JACK"},
 },
 }
 local function getpro(extra, result, success) 
@@ -14211,7 +14211,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜   ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ ↝'..Msguser..'↜   ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜   ↝💘\n¦• 𝙸𝙳↬  ↝'..msg.sender_user_id_..'↜   ↝💘\n¦• 𝒄𝒉↬ ↝@Source_JACK↜   ↝💘\n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝐔𝐒𝐄𝐑↬ '..username..' \n¦• 𝐌𝐒𝐆𝐒↬ '..Msguser..' \n¦• 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n¦• 𝐈𝐃↬ '..msg.sender_user_id_..' \n¦• 𝐂𝐇↬ @Source_JACK \n')
 end
 end
 
@@ -14306,10 +14306,10 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜     ↝💘\n¦• 𝙼𝚂𝙶𝚂↬  ↝'..Msguser..'↜     ↝💘\n¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜     ↝💘\n¦• 𝙸𝙳↬   ↝'..msg.sender_user_id_..'↜    ↝💘\n¦• 𝒄𝒉↬  ↝@Source_JACK↜     ↝💘\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n¦• 𝐔𝐒𝐄𝐑↬ '..username..' \n¦• 𝐌𝐒𝐆𝐒↬ '..Msguser..' \n¦• 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n¦• 𝐈𝐃↬ '..msg.sender_user_id_..' \n¦• 𝐂𝐇↬ @Source_JACK \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦• 𝚄𝚂𝙴𝚁 ↬  ↝'..username..'↜    ↝💘\n¦• 𝙼𝚂𝙶𝚂↬ ↝'..Msguser..'↜.   ↝💘\n ¦• 𝚁𝙰𝙽𝙺↬ ↝'..Rutba(msg.sender_user_id_,msg.chat_id_)..'↜    ↝💘\n¦• 𝙸𝙳↬  ↝'..msg.sender_user_id_..'↜    ↝💘\n¦• 𝒄𝒉↬   ↝@Source_JACK↜    ↝💘\n')
+send(msg.chat_id_, msg.id_,'[\n ¦• 𝐔𝐒𝐄𝐑 ↬ '..username..' \n¦• 𝐌𝐒𝐆𝐒↬ ..Msguser..' \n ¦• 𝐑𝐀𝐍𝐊 '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n¦• 𝐈𝐃↬ '..msg.sender_user_id_..' \n¦• 𝐂𝐇↬ @Source_JACK \n')
 else
 send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ⇜ ليس لديك صور في حسابك'..'[\n¦• 𝚄𝚂𝙴𝚁 ↬ ↝'..username..'↜\n¦• 𝙼𝚂𝙶𝚂↬ ↝'..Msguser..'↜\n¦• 𝙸𝙳↬  ↝'..msg.sender_user_id_..'↜\n¦• 𝒄𝒉↬  ↝@Source_JACK↜\n')
 end 
@@ -16192,7 +16192,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 return false
 end
 ----------------------------------------------------------------------------
-if text == 'العاب السورس' or text == 'الالعاب' or text == 'مميزات' then
+if text == 'العاب السورس' or text == 'العاب' or text == 'مميزات' then
 local Text = [[
 ◍- - - - - - - -×- - - - - - - -◍
 🎮 اهلا بك في قسم الالعاب بسورس جاك ⇊

@@ -1378,18 +1378,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'المبرمجين' and DevSoFi(msg) then
-local Text = [[ 
-قناه مبرمجين السورس 🍂
-محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/xx_Source_JACK"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
+
 if text == 'قناة السورس' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
@@ -1401,9 +1390,14 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == '•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•' and DevSoFi(msg) then
+
+if text == 'قناة السورس' and DevSoFi(msg) then
 local Text = [[ 
-[قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
+🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––––––––––––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––––––––––––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -1464,6 +1458,19 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'المبرمجين' and DevSoFi(msg) then
+local Text = [[ 
+قناه مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'مطورين السورس⚙', url="t.me/xx_Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -3148,20 +3155,20 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
-يوزرات مبرمجين السورس 🍂
+ يوزرات مبرمجين السورس 🍂
 محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
-{{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}}, 
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
+{{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Source_JACK&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'شيكو' or text == 'شيكو الهكر' or text == 'شيكو الهقر' or text == 'مبرمج السورس' then

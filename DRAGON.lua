@@ -994,15 +994,18 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
-if text == 'مبرمجين جاك' and DevSoFi(msg) then 
+if text == 'مبرمجين جاك' then
 local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
 local Key = {
 {'المبرمجين'},
-{'قناه السورس','التواصل'},
+{'التواصل','قناه السورس'},
 {'العوده'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
+
+end
+end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
@@ -1448,6 +1451,22 @@ end
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
 send(msg.chat_id_, msg.id_,' ') 
+end
+
+if text == 'قناة السورس' and DevSoFi(msg) then
+local Text = [[ 
+🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––––––––––––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––––––––––––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  

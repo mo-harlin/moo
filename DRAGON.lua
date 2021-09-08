@@ -175,7 +175,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
- ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @xx_shico
+ ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @S_H_Y_C_O
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -939,6 +939,8 @@ if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
 local bl = '᥀︙ مرحبا بيك عزيزي العضو اليك الاوامر قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
+{'قسم المبرمجين'},
+{'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
 {'التواصل','عايز بوت'},
 {'بايو','ايدي'},
 {'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
@@ -992,7 +994,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
-if text == 'مبرمجين جاك' then
+if text == 'قسم المبرمجين' then
 local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
 local Key = {
 {'المبرمجين'},
@@ -1377,7 +1379,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'قناه السورس' and DevSoFi(msg) then
+if text == 'قناة السورس' and DevSoFi(msg) then
 local Text = [[ 
 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
  ––––––––––––––––
@@ -1433,7 +1435,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. 
 send(msg.chat_id_, msg.id_,' ') 
 end
 
-if text == 'قناة السورس' and DevSoFi(msg) then
+if text == 'قناه السورس' and DevSoFi(msg) then
 local Text = [[ 
 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
  ––––––––––––––––
@@ -1471,6 +1473,21 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 
+if text == 'قناه السورس' and DevSoFi(msg) then
+local Text = [[ 
+🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––––––––––––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––––––––––––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if text == 'الاحصائيات' and SudoBot(msg) then 
 local Groups = database:scard(bot_id..'Chek:Groups')  
@@ -3122,7 +3139,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3136,7 +3153,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
@@ -3151,11 +3168,11 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"}},
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/S_H_Y_C_O&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'محمد' or text == 'محمد الهقر' or text == 'الهقر' or text == 'هارلين' then
@@ -15339,7 +15356,7 @@ Msᴀɢ ~ #msgs
 ⚕𝙎𝙏𝘼𝙏𝙎 : #stast
 ⚕𝙄𝘿 : #id
 ⚕??𝙀𝙒𝙀𝙇𝙎 : #game
-⚕𝘿𝙀𝙑 : #ridha
+⚕??𝙀𝙑 : #ridha
 ⚕𝗖𝗛 - @Source_JACK ᥀︙
 ]],
 [[

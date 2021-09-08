@@ -991,19 +991,6 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 end
-
-if text == 'قسم المبرمجين' then
-local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
-local Key = {
-{'مبرمجين السورس'},
-{'التواصل','قناه السورس'},
-{'العوده'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-
-end
-end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'العوده' then  
@@ -4045,21 +4032,6 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'قناه السورس' then
-local Text = [[ 
- 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
- ––––––––––––––––
- 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
- ––––––––––––––––
- 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'التواصل'  then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
@@ -5766,7 +5738,7 @@ end
 
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ᥀︙ ملفات السورس جاك•┄─━━━━•??𝐎𝐎𝐆𝐄𝐍•━━━━─┄•\n ◍- - - - - - - -×- - - - - - - -◍\n'
+t = ' ᥀︙ ملفات السورس جاك•┄─━━━━•??𝐎𝐎??𝐄𝐍•━━━━─┄•\n ◍- - - - - - - -×- - - - - - - -◍\n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -14949,7 +14921,7 @@ Msᴀɢ ~ #msgs
 𝒔𝒕𝒂𓂅 #stast 𓍯
 𝐮𝐬𝐞𝐫𓂅 #username 𓍯
 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯
-𝐢𝐝 𓂅 #id 𓍯
+𝐢𝐝 𓂅 #id ??
 𓂅 𝗖𝗛 - @Source_JACK 💞.
 ]],
 [[
@@ -15380,7 +15352,7 @@ Msᴀɢ ~ #msgs
 • ⊠ | 𝑰𝑫 : #id ‌‌‏♕
 • ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
 • ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - @Source_JACK ᥀︙
+• ❏ | ??𝗛 - @Source_JACK ᥀︙
 ]],
 [[
 ┇iD ➺ #id 💘

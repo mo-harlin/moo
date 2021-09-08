@@ -939,8 +939,6 @@ if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
 local bl = '᥀︙ مرحبا بيك عزيزي العضو اليك الاوامر قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
-{'قسم المبرمجين'},
-{'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
 {'التواصل','عايز بوت'},
 {'بايو','ايدي'},
 {'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
@@ -991,19 +989,6 @@ send(msg.chat_id_, msg.id_,Namebot, 1, 'md')
 end 
 end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end
-end
-
-if text == 'قسم المبرمجين' then
-local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
-local Key = {
-{'المبرمجين'},
-{'التواصل','قناه السورس'},
-{'العوده'},
-}
-send_inline_key(msg.chat_id_,Text,Key)
-end 
-
 end
 end
 --------------------------------------------------------------------------------------------------------------
@@ -1379,22 +1364,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'قناة السورس' and DevSoFi(msg) then
-local Text = [[ 
-🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
- ––––––––––––––––
- 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
- ––––––––––––––––
- 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 if text == 'معلومات الكيبورد' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
@@ -1473,7 +1442,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 
-if text == 'قناه السورس' and DevSoFi(msg) then
+if text == 'قناة السورس' and DevSoFi(msg) then
 local Text = [[ 
 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
  ––––––––––––––––
@@ -4051,6 +4020,21 @@ keyboard.inline_keyboard = {
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+if text == 'قناه السورس' and DevSoFi(msg) then
+local Text = [[ 
+🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
+ ––––––––––––––––
+ 🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ
+ ––––––––––––––––
+ 🔰 ᴊᴀᴄᴋ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'التواصل'  then
@@ -14503,7 +14487,7 @@ local List = {
 𖤂 ~ 𝑢𝑠𝑒 #username  𖤐
 𖤂 ~ 𝑚??𝑔 #msgs 𖤐
 𖤂 ~ 𝑠𝑡𝑎 #stast  
-𖤂 ~ 𝑖𝑑 #id 𖤐
+𖤂 ~ 𝑖?? #id 𖤐
 𖤂 ~ 𝑒𝑑𝑖𝑡 #edit 𖤐
 𖤂 ~ 𝗖𝗛 - @Source_JACK ᥀︙.
 ]],

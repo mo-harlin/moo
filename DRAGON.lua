@@ -939,8 +939,6 @@ if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
 local bl = '᥀︙ مرحبا بيك عزيزي العضو اليك الاوامر قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
-{'قسم المبرمجين'},
-{'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
 {'التواصل','عايز بوت'},
 {'بايو','ايدي'},
 {'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
@@ -1379,7 +1377,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == '•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•' and DevSoFi(msg) then
+if text == 'قناة السورس' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
 ]] 
@@ -14472,9 +14470,9 @@ local List = {
 🇪🇬𝗖𝗛 - @Source_JACK 💞.
 ]],
 [[
- 𝐔𝐒𝐄𝐑 𓄹𓄼 #username
+ 𝐔??𝐄𝐑 𓄹𓄼 #username
  𝐈𝐃  ??𓄼 #id 
- 𝚂𝚃𝙰 𓄹𓄼 #stast 
+ 𝚂𝚃𝙰 𓄹?? #stast 
  𝐌𝐒𝐆𝐒𓄹𓄼 #msgs
  𝗖𝗛 - @Source_JACK ??.
 ]],
@@ -15333,7 +15331,7 @@ Msᴀɢ ~ #msgs
 
 • ?? | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - @Source_JACK ᥀︙
+• 🖤 | ??𝗛 - @Source_JACK ᥀︙
 ]],
 [[
 • USE 𖦹 #username 

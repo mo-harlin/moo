@@ -939,8 +939,6 @@ if not DevSoFi(msg) then
 if text == '/start' or text == 'العوده'  then  
 local bl = '᥀︙ مرحبا بيك عزيزي العضو اليك الاوامر قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
-{'مبرمجين جاك'},
-{'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
 {'التواصل','عايز بوت'},
 {'بايو','ايدي'},
 {'•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•'},
@@ -1379,19 +1377,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'قناة السورس' and DevSoFi(msg) then
-local Text = [[ 
-[قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'قناة السورس' and DevSoFi(msg) then
+if text == 'قناه السورس' and DevSoFi(msg) then
 local Text = [[ 
 🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴇ ᴊᴀᴄᴋ
  ––––––––––––––––
@@ -1458,19 +1444,6 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'المبرمجين' and DevSoFi(msg) then
-local Text = [[ 
-قناه مبرمجين السورس 🍂
-محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
-]] 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'مطورين السورس⚙', url="t.me/xx_Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -15402,7 +15375,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
-𓄼 ѕᴛᴀ : #stast ☥
+?? ѕᴛᴀ : #stast ☥
 𓄼 ɪᴅ : #id ‌‌‏⚚
 𓄼 ᴍѕɢ : #msgs 𓆊
 𓄼 𝗖𝗛 - @Source_JACK ᥀︙

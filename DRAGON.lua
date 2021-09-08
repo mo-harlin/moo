@@ -995,9 +995,9 @@ end
 end
 
 if text == 'قسم المبرمجين' then
-local Text = ' قسم مبرمجين سورس جاك لدخول الي حسابتهم'
+local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
 local Key = {
-{'مبرمجين سورس جاك'},
+{'مبرمجين السورس'},
 {'التواصل','قناه السورس'},
 {'العوده'},
 }
@@ -1249,9 +1249,9 @@ https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. ms
 end
 
 if text == 'قسم المبرمجين' and DevSoFi(msg) then 
-local Text = 'قسم مبرمجين سورس جاك لدخول الي حسابتهم'
+local Text = 'قناه مبرمجين سورس جاك لدخول الي حسابتهم'
 local Key = {
-{'مبرمجين سورس جاك'},
+{'مبرمجين السورس'},
 {'قناه السورس','التواصل'},
 {'العوده'},
 }
@@ -1366,19 +1366,20 @@ if text == 'الاصدار' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ᥀︙ اصدار سورس جاك{ 3x }')
 end
-if text == 'مبرمجين سورس جاك' then
+if text == 'مبرمجين السورس' and DevSoFi(msg) then
 local Text = [[ 
-قناه مطورين السورس 🍂
-محتاج تنصب بوت حمايه ببلاش تواصل معانا✅
-]]
+قناه مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
+]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'مطورين السورس⚙', url="t.me/xx_Source_JACK"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_Source_JACK&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'sᴏᴜʀᴇ ᴊᴀᴄᴋ' and DevSoFi(msg) then
+
+if text == '•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
 ]] 
@@ -1390,7 +1391,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'sᴏᴜʀᴇ ᴊᴀᴄᴋ' and DevSoFi(msg) then
+if text == '•═════•〈〈 ᴊᴀᴄᴋ 〉〉•═════•' and DevSoFi(msg) then
 local Text = [[ 
 [قناه سورس جاك ادخل وتابع الجديد](t.me/Source_JACK)
 ]] 

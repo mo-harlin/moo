@@ -9013,7 +9013,7 @@ send(msg.chat_id_, msg.id_, ' ᥀︙ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ᥀︙ قائمة رقاصات الجروب \◍- - - - - - - -×- - - - - - - -◍\n"
+t = "\n ᥀︙ قائمة رقاصات الجروب  \n◍- - - - - - - -×- - - - - - - -◍\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then

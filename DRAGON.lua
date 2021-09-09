@@ -175,7 +175,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
- ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @S_H_Y_C_O
+ ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @xx_shico
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -992,7 +992,7 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
-if text == 'مبرمجين جاك' then
+if text == 'هكر جاك' then
 local Text = ' قسم مبرمجين السورس لدخول الي حسابتهم'
 local Key = {
 {'مبرمجين السورس'},
@@ -3121,7 +3121,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3135,7 +3135,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
@@ -3150,11 +3150,11 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/S_H_Y_C_O&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'محمد' or text == 'محمد الهقر' or text == 'الهقر' or text == 'هارلين' then
@@ -4907,7 +4907,7 @@ end,nil)
 elseif text == 'قفل الفيديو بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'ktm')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' ??  من قبل  ⇇['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'Source_JACK')..') \n ᥀︙ تم قفل الفيديو بالكتم ')
+send(msg.chat_id_, msg.id_,' ᥀︙ من قبل  ⇇['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'Source_JACK')..') \n ᥀︙ تم قفل الفيديو بالكتم ')
 end,nil)   
 elseif text == 'قفل الفيديو بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Video"..msg.chat_id_,'kick')  
@@ -5756,7 +5756,7 @@ end
 
 
 if text == 'الملفات' and DevSoFi(msg) then
-t = ' ᥀︙ ملفات السورس جاك•┄─━━━━•??𝐎𝐎??𝐄𝐍•━━━━─┄•\n ◍- - - - - - - -×- - - - - - - -◍\n'
+t = ' ᥀︙ ملفات السورس جاك◍- - - - - - - -×- - - - - - - -◍\n ◍- - - - - - - -×- - - - - - - -◍\n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -7783,7 +7783,7 @@ send(msg.chat_id_, msg.id_, ' ᥀︙ تم مسح المميزين')
 end
 if text == ("المميزين") and Mod(msg) then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ᥀︙ قائمة مميزين الجروب \n•┄─━━━━•𝐑𝐎??𝐆𝐄𝐍•━━━━─┄•\n"
+t = "\n ᥀︙ قائمة مميزين الجروب \n◍- - - - - - - -×- - - - - - - -◍\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -9013,7 +9013,7 @@ send(msg.chat_id_, msg.id_, ' ᥀︙ تم تنزيل جميع زواحف')
 end
 if text == ("تاك للرقاصات") and Mod(msg) then
 local list = database:smembers(bot_id..'Zahf:User'..msg.chat_id_)
-t = "\n ᥀︙ قائمة رقاصات الجروب \n•┄─━━━━•𝐑𝐎𝐎𝐆𝐄??•━━━━─┄•\n"
+t = "\n ᥀︙ قائمة رقاصات الجروب \◍- - - - - - - -×- - - - - - - -◍\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -14922,7 +14922,7 @@ Msᴀɢ ~ #msgs
 金 - 𝗖𝗛 - @Source_JACK 💞.
 ]],
 [[
-➜𝗨𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
+➜??𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
 ➜𝗦𝗧𝗔𝗧𝗦 : #stast
 ➜𝗜𝗗 : #id
@@ -17118,7 +17118,7 @@ local Teext =[[
  ᥀︙ مسح قائمه العام
  ᥀︙ جلب النسخه
  ᥀︙ رفع النسخه
-•┄─━━━━•𝐑𝐎𝐎𝐆??𝐍•━━━━─┄•
+◍- - - - - - - -×- - - - - - - -◍
  ᥀︙ اذاعه خاص
  ᥀︙ اذاعه
  ᥀︙ اذاعه بالتوجيه
@@ -17438,7 +17438,7 @@ keyboard.inline_keyboard = {
 {{text = 'غنيلي', callback_data="/help17"}},
 {{text = 'نسبه جمالي', callback_data="/help18"},{text = 'اليتيوب', callback_data="/help24"}},
 {{text = 'القائمه الرائسيه', callback_data="/add"}},
-{{text = '𝐬𝐨𝐮𝐫𝐜𝐞 𝐫𝐨𝐨𝐠??𝐧', url="t.me/Source_JACK"}},
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end

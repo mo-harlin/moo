@@ -3143,7 +3143,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'ديكا' or text == 'محمد' or text == 'مالك السورس²' then
+if text == 'محمد' or text == 'محمد هارلين' or text == 'هارلين' or text == 'الهقر' then
 local Text = [[
 هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
 ]]
@@ -3153,9 +3153,21 @@ keyboard.inline_keyboard = {
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BEK_ROG/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
+if text == 'شيكو' or text == 'شيكو الهقر' or text == 'شيكو الهكر' or text == 'مبرمج السورس' then
+local Text = [[
+شيكو مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
@@ -3173,18 +3185,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'محمد' or text == 'محمد هارلين' or text == 'هارلين' or text == 'الهقر' then
-local Text = [[
-هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ', url="t.me/G_W_P"}},
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'تايجر' or text == 'تايجر الهكر' or text == 'تايجر الهقر' or text == 'مطور السورس' then
 local Text = [[
 تايجر مطور سورس جاك لوحابب تتواصل معاه ❤️.

@@ -3143,19 +3143,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'محمد' or text == 'الهقر' or text == 'ماهر' or text == 'محمد هارلين' then
-local Text = [[
-هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
 if text == 'شيكو' or text == 'شيكو الهقر' or text == 'مبرمج السورس' then
 local Text = [[
 شيكو مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
@@ -3197,6 +3184,19 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Oo_tiger&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == 'محمد' or text == 'هارلين' or text == 'محمد هارلين' then
+local Text = [[
+هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},
+{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," ᥀︙ ارسل الان اذاعتك؟ \n ᥀︙ للخروج ارسل الغاء ")
@@ -14470,7 +14470,7 @@ local List = {
 [[
  𝐔??𝐄?? 𓄹𓄼 #username
  𝐈𝐃  ??𓄼 #id 
- 𝚂𝚃𝙰 𓄹?? #stast 
+ 𝚂𝚃?? 𓄹?? #stast 
  𝐌𝐒𝐆𝐒𓄹𓄼 #msgs
  𝗖𝗛 - @Source_JACK ??.
 ]],

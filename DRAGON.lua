@@ -175,7 +175,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
- ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @xx_shico
+ ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @S_H_Y_C_O
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE JACK≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -3121,7 +3121,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
@@ -3135,7 +3135,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/S_H_Y_C_O"},{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'ᴛᴡ ᴊᴀᴄᴋ', url="t.me/xx_shicoo_xx_bot"}}, 
 {{text = 'ᴡᴇʟᴄᴍᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
@@ -3143,30 +3143,30 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'محمد' or text == 'محمد هارلين' or text == 'هارلين' or text == 'الهقر' then
+if text == 'محمد' or text == 'الهقر' or text == 'ماهر' or text == 'محمد هارلين' then
 local Text = [[
 هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ', url="t.me/G_W_P"}},
+{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'شيكو' or text == 'شيكو الهقر' or text == 'شيكو الهكر' or text == 'مبرمج السورس' then
+if text == 'شيكو' or text == 'شيكو الهقر' or text == 'مبرمج السورس' then
 local Text = [[
 شيكو مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
+{{text = 'ᴅᴠ sʜʏᴄᴏ',url="t.me/S_H_Y_C_O"}},
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/S_H_Y_C_O&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then

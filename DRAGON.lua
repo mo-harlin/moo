@@ -3142,6 +3142,18 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if text == 'محمد' or text == 'محمد الهقر' or text == 'الهقر' or text == 'الكابوس بتع طنطا' then
+local Text = [[
+الكابوس مبرمج سورس فولتر لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ ᴇʟᴋᴀʙᴏѕ',url="t.me/G_W_P"}},
+{{text = 'ѕᴏᴜʀᴄѕ ᴠᴏʟᴛᴀʀ', url="t.me/V_O_L_T_E_R"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then
 local Text = [[
@@ -3159,20 +3171,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'شيكو' or text == 'شيكو الهكر' or text == 'شيكو الهقر' or text == 'مبرمج السورس' then
-local Text = [[
-شيكو مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ sʜʏᴄᴏ', url="t.me/xx_shico"}},
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'تايجر' or text == 'تايجر الهقر' or text == 'تايجر الهكر' or text == 'مطور السورس' then
+if text == 'تايجر' or text == 'محمد' or text == 'شيكو' or text == 'مطور السورس' then
 local Text = [[
 تايجر مطور سورس جاك لوحابب تتواصل معاه ❤️.
 ]]
@@ -3183,19 +3182,6 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Oo_tiger&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == 'محمد' or text == 'محمد هارلين' or text == 'محمد الهقر' or text == 'الهقر' then
-local Text = [[
-هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ', url="t.me/G_W_P"}},
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
@@ -14933,7 +14919,7 @@ Msᴀɢ ~ #msgs
 [[
 ➜??𝗦??𝗥𝗡𝗔𝗠𝗘 : #username
 ➜𝗠𝗘𝗦𝗦𝗔𝗚𝗘𝗦 : #msgs
-➜𝗦𝗧𝗔𝗧𝗦 : #stast
+➜𝗦𝗧𝗔𝗧?? : #stast
 ➜𝗜𝗗 : #id
 ➜𝗖𝗛 - @Source_JACK ??.
 ]],

@@ -3143,21 +3143,6 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/3&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-
-if text == 'تايجر' or text == 'تايجر الهقر' or text == 'تايجر الهكر' or text == 'مطور السورس' then
-local Text = [[
-تايجر مطور سورس جاك لوحابب تتواصل معاه ❤️.
-
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
-{{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Oo_tiger&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 if text == 'شيكو' or text == 'شيكو الهكر' or text == 'شيكو الهقر' or text == 'مبرمج السورس' then
 local Text = [[
 شيكو مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
@@ -3172,17 +3157,18 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/xx_shico&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'محمد' or text == 'محمد الهقر' or text == 'الهقر' or text == 'هارلين' then
+if text == 'تايجر' or text == 'تايجر الهقر' or text == 'تايجر الهكر' or text == 'مطور السورس' then
 local Text = [[
-هارلين مبرمج سورس جاك لوحابب تتواصل معاه ❤️.
+تايجر مطور سورس جاك لوحابب تتواصل معاه ❤️.
+
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ', url="t.me/G_W_P"}},
+{{text = 'ᴅᴠ ᴛɪɢᴇʀ', url="t.me/Oo_tiger"}},
 {{text = 'sᴏᴜʀᴇ ᴊᴀᴄᴋ', url="t.me/Source_JACK"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Oo_tiger&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'يوتيوب' or text == 'بحث' or text == 'اليوتيوب' then

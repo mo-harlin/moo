@@ -1108,11 +1108,11 @@ HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
 echo '⇗ نظام التشغيل ⇖•\n*←← '"$linux_version"'*' 
-echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙❨ الذاكره العشوائيه ❩ ↫\n*←← '"$memUsedPrc"'*'
-echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙❨ وحـده الـتـخـزيـن ❩ ↫\n*←← '"$HardDisk"'*'
-echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙❨ الـمــعــالــج ❩ ↫\n*←← '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
-echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙❨ الــدخــول ❩ ↫\n*←← '`whoami`'*'
-echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙❨ مـده تـشغيـل الـسـيـرفـر ❩↫\n*←← '"$uptime"'*'
+echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ الذاكره العشوائيه  ↫\n*←← '"$memUsedPrc"'*'
+echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ وحـده الـتـخـزيـن  ↫\n*←← '"$HardDisk"'*'
+echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ الـمــعــالــج  ↫\n*←← '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
+echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ الــدخــول  ↫\n*←← '`whoami`'*'
+echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ مـده تـشغيـل الـسـيـرفـر ↫\n*←← '"$uptime"'*'
 ]]):read('*all'))  
 end
 
@@ -9626,7 +9626,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '  ❨ '..result.first_name_..'  ❩ ',url="t.me/"..result.username_}},
+{{text = '   '..result.first_name_..'   ',url="t.me/"..result.username_}},
 {{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -12767,7 +12767,7 @@ local List = {
 ]],
 [[
 🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪??
-?? ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
+?? ¦✙• 𝐦??𝐠 ➢ ⁞  #msgs  📝
 🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
 🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
 ?? ¦ 𝗖𝗛 - t.me/SO_NOVA 🔰 .

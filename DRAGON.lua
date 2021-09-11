@@ -955,16 +955,10 @@ keyboard = start
 else
 keyboard = {
 {'قناة السورس','بوت التواصل'},
-{'خلفيات رومانسيه','صور كرتون'},
-{'غنيلي فديو','فديو اجنبي'},
-{'افلام اجنبي','افلام عربي'},
-{'كرتون يوغي'},
 {'تويت','صراحه'},
 {'استوري','متحركه'},
 {'انصحنى','كتابات','نكته'},
 {'ضحكني','ثيم'},
-{'صورتي','لو خيروك'},
-{'روايات'},
 {'يوتيوب','صورتي'},
 {'التاريخ','الساعه'},
 {'غنيلي','انا مين'},
@@ -2995,6 +2989,7 @@ keyboard.inline_keyboard = {
 {{text = 'بوت تيك توك',url="t.me/K0XBOT"}},
 {{text = 'بوت انستقرام',url="t.me/J33Bot"}},
 {{text = 'بوت قران',url="t.me/quran_lbot"}},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/8&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3056,30 +3051,6 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
-if text == 'روايات' or text == 'الروايات' or text == 'ررويات' then
-local Text = [[
-❈The list of novels.
-]]
-keyboard = {} keyboard.inline_keyboard = {
-{{text = '📖رواية "أرض زيكولا"',url="https://t.me/SOURCE_SP/9"}},
-{{text = '📖موسوعة الظلام رعب وما شابه ذلك', url="https://t.me/SOURCE_SP/3"}},
-{{text = '📖رواية "الشفق الجزء الأول"', url="https://t.me/SOURCE_SP/5"}},
-{{text = '📖رواية "المخلوق', url="https://t.me/SOURCE_SP/6"}},
-{{text = '📖رواية "بعد النسيان"', url="https://t.me/SOURCE_SP/7"}},
-{{text = '📖كتاب في حضرة الجن', url="https://t.me/https://t.me/SOURCE_SP/8"}},
-{{text = '📖رواية "واختفى كل شئ"', url="https://t.me/SOURCE_SP/10"}},
-{{text = '📖رواية "نيلوفر أسود"', url="https://t.me/SOURCE_SP/11"}},
-{{text = '📖رواية"جثة في الفندق"', url="https://t.me/SOURCE_SP/12"}},
-{{text = '📖رواية "في القطار السريع"', url="https://t.me/SOURCE_SP/13"}},
-{{text = '📖لقاء مع كاتب رعب"', url="https://t.me/SOURCE_SP/14"}},
-{{text = '📖رواية"الإنسان الأخير""', url="https://t.me/SOURCE_SP/16"}},
-{{text = '📖رواية" مقبرة الحيوانات""', url="https://t.me/SOURCE_SP/15"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url="t.me/SO_NOVA"}}
-}
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
 end
 
 if text == "كتابات" or text == "حكمه" or text == "قصيده" then 
@@ -3261,9 +3232,10 @@ local Text = [[
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'ᴛᴡ ɴᴏᴠᴀ', url="t.me/G_W_P_2_BOT"}}, 
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/aslak8/2&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P_2_BOT&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text and text:match("^بحث (.*)$") then
@@ -11219,11 +11191,10 @@ end
 
 if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
+local Text ='يبتع الخزين ي بصل 😂❤' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11232,7 +11203,7 @@ end
 
 if text == "ثيم" then  
 ght = math.random(1,33);  
-local Text ='الستخدم ثيم اخر اكتب ثيم'  
+local Text ='يبتع الخزين ي بصل 😂❤'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
  {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
@@ -11241,53 +11212,9 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == "لو خيروك" then  
-ght = math.random(1,33);  
-local Text ='مرحبا اليك لو خيروك بالصوره'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ahmed_1asd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "تويت" then  
-ght = math.random(1,33);  
-local Text ='مرحبا اليك تويت بالصور'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/a7a_00_1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "صور كرتون" then  
-ght = math.random(1,33);  
-local Text ='اليك صور انمي'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swary0/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "خلفيات رومانسيه" then  
-ght = math.random(1,33);  
-local Text ='خلفيات رومانسى'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/jrumdi/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
 if text == "استوري" then  
 ght = math.random(1,33);  
-local Text ='تم اختيار استوري'  
+local Text ='يبتع الخزين ي بصل 😂❤'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
@@ -11298,68 +11225,13 @@ end
 
 if text == "متحركه" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,30); 
-local Text ='يتم اختيار متحركه' 
+local Text ='يبتع الخزين ي بصل 😂❤' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/DV_HAR/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "افلام اجنبي" then  
-ght = math.random(1,33);  
-local Text ='يتم اختيار الفيلم الفشيخ'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jdjie1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "افلام عربي" then  
-ght = math.random(1,33);  
-local Text ='يتم اختيار الفيلم القامد'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jndjkdkd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "كرتون يوغي" then  
-ght = math.random(1,33);  
-local Text ='اليك حلقه من كرتون يوغي'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/y_giu/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "فديو اجنبي" then  
-ght = math.random(1,33);  
-local Text ='اليك اغانيه عظمه شبهك'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/agany001/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-
-if text == "غنيلي فديو" then  
-ght = math.random(1,33);  
-local Text ='اليك اغانيه عظمه شبهك'  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-}  
-local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jfudb637/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text and text:match("^قول (.*)$") then

@@ -11247,7 +11247,6 @@ local Text ='مرحبا اليك لو خيروك بالصوره'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ahmed_1asd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11259,7 +11258,6 @@ local Text ='مرحبا اليك تويت بالصور'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/a7a_00_1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11271,7 +11269,6 @@ local Text ='اليك صور انمي'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/swary0/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11283,7 +11280,6 @@ local Text ='خلفيات رومانسى'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/jrumdi/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11295,7 +11291,6 @@ local Text ='تم اختيار استوري'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qapplu/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11318,7 +11313,6 @@ local Text ='يتم اختيار الفيلم الفشيخ'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jdjie1/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11330,7 +11324,6 @@ local Text ='يتم اختيار الفيلم القامد'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jndjkdkd/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11342,7 +11335,6 @@ local Text ='اليك حلقه من كرتون يوغي'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/y_giu/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11354,7 +11346,6 @@ local Text ='اليك اغانيه عظمه شبهك'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/agany001/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -11366,7 +11357,6 @@ local Text ='اليك اغانيه عظمه شبهك'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/DEV_AH8"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/jfudb637/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12749,7 +12739,7 @@ local List = {
 [[
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪?? - 𝚄𝚂𝙴𝚁 ⟿ #username 💘.
-🇪🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
+??🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
 🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉

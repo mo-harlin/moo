@@ -14553,6 +14553,23 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
+----------------------------------------------------------------------------
+if SourceCh(msg) and text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
+local Text = [[
+[🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[––––––––––––––––](t.me/SO_NOVA)
+[🔰 ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ](t.me/SO_NOVA)
+[––––––––––––––––](t.me/SO_NOVA)
+[🔰 ɴᴏᴠᴀ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ](t.me/SO_NOVA)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ ᴇʟᴏᴘᴇʀ', callback_data="/units"},{text = 'ᴍʏ ᴄʜᴀɴɴᴇʟ', callback_data="/theytry"}},   
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SO_NOVA&caption=' .. URL.escape(Text).."&photo="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if SourceCh(msg) and text == '/HHH' then
 local Teext =[[
 [🔰 ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
@@ -14600,7 +14617,6 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
-
 ----------------------------------------------------------------------------
 if text == 'الالعاب' then
 if not Constructor(msg) then

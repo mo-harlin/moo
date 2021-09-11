@@ -2969,7 +2969,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},
-{{text =  ᴅᴠ ᴍᴀʀᴇɪɴ ,url="t.me/I_C_X"}},
+{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/I_C_X"}},
 {{text = 'ʙᴀᴄᴋ', callback_data="/HHH"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  

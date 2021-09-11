@@ -14930,11 +14930,14 @@ local TWEET_Msg = {
 " نبات بحرف ⇇ف  ",
 " اسم بنت بحرف ⇇غ  ",
 " اسم ولد بحرف ⇇و  ",
-" نبا- - - - - - - - - - - - - - - - - "دولة واسم بحرف ⇇ب  ",
+" نبات بحرف ⇇ل  ",
+"مدينة بحرف ⇇ع  ",
+"دولة واسم بحرف ⇇ب  ",
 } 
-send(msg.chat_id_, msg.id_,'['..- - - - - - - - - - - - - - - - - ]..']')  
+send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')  
 return false 
 end
+
 if text and text:match('^الحساب (%d+)$') then
 local id = text:match('^الحساب (%- - - - - - - - - - - - - - - - -  الحساب'
 tdcli_function ({ID="SendMessage", chat_id_=msg.chat_id_, reply_to_message_id_=msg.id_, disable_notificatio- - - - - - - - - - - - - - - - - arkup_=nil, input_message_content_={ID="InputMessageTex- - - - - - - - - - - - - - - - - preview_=1, clear_draft_=0, entities_={[0] = {ID="MessageEntityMentionName", offset_=0, length_=19, user_id_=id}}}}, dl_cb, nil)

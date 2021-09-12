@@ -15131,7 +15131,6 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'رابط اونلاين', callback_data="/nov2"},{text = 'رابط بالصور', callback_data="/nov1"}},   
-{{text = 'رابط بنص', callback_data="/nov3"}},
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
@@ -15274,7 +15273,7 @@ if Text == '/nov1' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = 'ʟɪɴᴋ ɢʀᴏᴘ\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+local linkgp = '['..ta.title_..']('..linkgpp.result..')'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
 DeleteMessage(Chat_id,{[0] = Msg_id})  

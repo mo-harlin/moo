@@ -15126,10 +15126,11 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 end
 if text == 'الرابط' or text == 'رابط'  then
 local Text = [[
-اختار نوع الرابط 
+🔰︙اختر نوع الرابط لجلبه
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
+{{text = 'رابط النص', callback_data="/nov3"}},
 {{text = 'رابط اونلاين', callback_data="/nov2"},{text = 'رابط بالصور', callback_data="/nov1"}},   
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
@@ -15260,7 +15261,7 @@ send(msg.chat_id_,msg.id_,'.\nـــــــــــــــــــــــــ
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = 'ʟɪɴᴋ ɢʀᴏᴘ\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+linkgp = '['..linkgpp.result..']'
 else
 linkgp = ' لا يوجد رابط ارسل ضع رابط'
 end  
@@ -15273,7 +15274,7 @@ if Text == '/nov1' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '['..ta.title_..']('..linkgpp.result..')'
+local linkgp = '🔰︙لينك الجروب ↬ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n ['..linkgpp.result..']'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
 DeleteMessage(Chat_id,{[0] = Msg_id})  
@@ -15287,7 +15288,7 @@ if Text == '/nov2' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '['..ta.title_..']('..linkgpp.result..')'
+local linkgp ='🔰︙لينك الجروب ↬ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n ['..ta.title_..']('..linkgpp.result..')'
 local inline = {{{text = ta.title_, url=linkgpp.result}},} 
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 send_inline_key(msg.chat_id_,linkgp,nil,inline,msg.id_/2097152/0.5) 

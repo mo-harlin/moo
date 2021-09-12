@@ -12401,7 +12401,7 @@ else
 username = 'SO_NOVA'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = ' رتبتك⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
 local NoVa = 'https://t.me/MRT_NOVA/3'
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13627,7 +13627,7 @@ Msᴀɢ ~ #msgs
 𓁷 - 𝙢𝙨𝙜 † : #msgs 𓀀 .
 𓁷 - 𝙨𝙩𝙖 †: #stast 𓀀  .
 𓁷 - 𝙞𝙙 †: #id 𓀀 .
-𓁷 - 𝗖𝗛 - t.me/SO_NOVA 🔰 
+𓁷 - ??𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 𖡋 𝐔𝐒𝐄 #username 
@@ -19000,7 +19000,7 @@ sendin(Chat_id,msg_idd,data.sender_user_id_,users[2])
 end
 end
 
-f Text and Text:match("^yesS(.*)$") then  
+if Text and Text:match("^yesS(.*)$") then  
 local delallph = Text:match("^yesS(.*)$")
 if msg.sender_user_id_ == tonumber(SUDO) then 
 local Texxt = "🚧 ┇ حسننا الان يمكنك ارسال معرف المطور الاساسي الجديد ..."

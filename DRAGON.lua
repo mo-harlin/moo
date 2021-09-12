@@ -15288,7 +15288,7 @@ if Text == '/nov2' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp ='🔰︙لينك الجروب ↬ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n ['..ta.title_..']('..linkgpp.result..')'
+local linkgp = '🔰︙لينك الجروب ↬ ⤈\n──┈┈┈┄┄╌╌╌╌┄┄┈┈┈\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 local inline = {{{text = ta.title_, url=linkgpp.result}},} 
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 send_inline_key(msg.chat_id_,linkgp,nil,inline,msg.id_/2097152/0.5) 

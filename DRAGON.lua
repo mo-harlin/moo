@@ -1210,7 +1210,7 @@ memUsedPrc=`free -m | awk 'NR==2{printf "%sMB/%sMB {%.2f%}\n", $3,$2,$3*100/$2 }
 HardDisk=`df -lh | awk '{if ($6 == "/") { print $3"/"$2" ~ {"$5"}" }}'`
 CPUPer=`top -b -n1 | grep "Cpu(s)" | awk '{print $2 + $4}'`
 uptime=`uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes."}'`
-echo '⇗ نظام التشغيل ⇖•\n*←← '"$linux_version"'*' 
+echo '⇗ نظام التشغيل ⇖\n*←← '"$linux_version"'*' 
 echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ الذاكره العشوائيه  ↫\n*←← '"$memUsedPrc"'*'
 echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ وحـده الـتـخـزيـن  ↫\n*←← '"$HardDisk"'*'
 echo '◍- - - - - - - -×- - - - - - - -◍\n🔰︙ الـمــعــالــج  ↫\n*←← '"`grep -c processor /proc/cpuinfo`""Core ~ {$CPUPer%} "'*'
@@ -1484,7 +1484,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'• اهلا بك عزيزي 🔰︙ •\n• لايمكنك استخدام البوت 🔰︙ •\n• عليك الاشتراك في القناة 🔰︙ •\n• اشترك اولا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'اهلا بك عزيزي 🔰︙ \nلايمكنك استخدام البوت 🔰︙ \nعليك الاشتراك في القناة 🔰︙ \nاشترك اولا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -1520,7 +1520,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'• اهلا بك عزيزي 🔰︙ •\n• لايمكنك استخدام البوت 🔰︙ •\n• عليك الاشتراك في القناة 🔰︙ •\n• اشترك اولا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'اهلا بك عزيزي 🔰︙ \nلايمكنك استخدام البوت 🔰︙ \nعليك الاشتراك في القناة 🔰︙ \nاشترك اولا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -1855,7 +1855,7 @@ local GetWelcomeGroup = database:get(bot_id..'Get:Welcome:Group'..msg.chat_id_)
 if GetWelcomeGroup then 
 t = GetWelcomeGroup
 else  
-t = '\n• نورت حبي \n•  name \n• user' 
+t = '\nنورت حبي \n name \nuser' 
 end 
 t = t:gsub('name',result.first_name_) 
 t = t:gsub('user',('@'..result.username_ or 'لا يوجد')) 
@@ -1870,7 +1870,7 @@ captcha = math.random(4567,8907);
 cap = math.random(10,50);
 capt = math.random(60,90);
 capc = math.random(100,500);
-local Text ='• قم بختيار الرقم الصحيح الموجود في الصوره\n• ليتم الغاء تقييدك الان'
+local Text ='قم بختيار الرقم الصحيح الموجود في الصوره\nليتم الغاء تقييدك الان'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '9'..capt..'5', callback_data=capt..msg.sender_user_id_},{text =capc..'2', callback_data=capc..msg.sender_user_id_}},
@@ -2969,11 +2969,11 @@ bnnaGet(id, sofi_mrsofi_new)
 end
 end
 if text == "تفعيل تنبيه الاسماء" and Manager(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تفعيل تنبيه الاسماء')
+send(msg.chat_id_, msg.id_, 'تم تفعيل تنبيه الاسماء')
 database:set(bot_id.."Ttn:BBE:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه الاسماء" and Manager(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تعطيل تنبيه الاسماء')
+send(msg.chat_id_, msg.id_, 'تم تعطيل تنبيه الاسماء')
 database:set(bot_id.."Ttn:BBE:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:BBE:stats"..msg.chat_id_) == "open" then 
@@ -3003,11 +3003,11 @@ end
 end,nil)   
 end
 if text == "تفعيل تنبيه المعرف" and Constructor(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تفعيل تنبيه المعرف')
+send(msg.chat_id_, msg.id_, 'تم تفعيل تنبيه المعرف')
 database:set(bot_id.."Ttn:Userr:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه المعرف" and Constructor(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تعطيل تنبيه المعرف')
+send(msg.chat_id_, msg.id_, 'تم تعطيل تنبيه المعرف')
 database:set(bot_id.."Ttn:Userr:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:Userr:stats"..msg.chat_id_) == "open" then  
@@ -3041,11 +3041,11 @@ end
 end,nil)   
 end
 if text == "تفعيل تنبيه الصور" and Manager(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تفعيل تنبيه الصور')
+send(msg.chat_id_, msg.id_, 'تم تفعيل تنبيه الصور')
 database:set(bot_id.."Ttn:Ph:stats"..msg.chat_id_,"open")
 end
 if text == "تعطيل تنبيه الصور" and Manager(msg) and database:get(bot_id.."AL:Sre:stats") == "✔" then
-send(msg.chat_id_, msg.id_, '•تم تعطيل تنبيه الصور')
+send(msg.chat_id_, msg.id_, 'تم تعطيل تنبيه الصور')
 database:set(bot_id.."Ttn:Ph:stats"..msg.chat_id_,"close")
 end
 if text and database:get(bot_id.."Ttn:Ph:stats"..msg.chat_id_) == "open" then  
@@ -3158,7 +3158,7 @@ send(msg.chat_id_, msg.id_," 🔰︙ مريم  معطله")
 return false  
 end
 local Text = [[
-🥀اطفي النور واستمتع بلعبه •
+🥀اطفي النور واستمتع بلعبه 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3202,33 +3202,33 @@ end
 
 if text == 'الابراج' then
 local Text = [[
-• أختر برجك عزيزي •📮،⍆
+أختر برجك عزيزي 📮،⍆
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '• الاسد ،🦁', callback_data="/zking"},{text = '• الثور 🐂', callback_data="/zzor"},
+{text = 'الاسد ،🦁', callback_data="/zking"},{text = 'الثور 🐂', callback_data="/zzor"},
 },
 {
-{text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
+{text = 'العقرب 🦂', callback_data="/zakrb"},{text = 'القوس 🏹', callback_data="/zkos"},
 },
 {
-{text = '• الحمل 🐐', callback_data="/zNOVA"},
+{text = 'الحمل 🐐', callback_data="/zNOVA"},
 },
 {
-{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
+{text = 'السرطان 🦀', callback_data="/zsltan"},{text = 'العذراء 🦋', callback_data="/zazra"},
 },
 {
-{text = '• الميزان ⚖', callback_data="/zmezan"},{text = '• الجدي 🦌', callback_data="/zgagy"},
+{text = 'الميزان ⚖', callback_data="/zmezan"},{text = 'الجدي 🦌', callback_data="/zgagy"},
 },
 {
 {text = ' معرفة برجك 🧭', callback_data="/zporg"},
 },
 {
-{text = '• الحوت 🐋', callback_data="/zhot"},
+{text = 'الحوت 🐋', callback_data="/zhot"},
 },
 {
-{text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
+{text = 'الجوزاء 🌩', callback_data="/zguza"},{text = 'الدلو 🦯', callback_data="/zdlu"},
 },
 {
 {text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
@@ -5387,7 +5387,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n 🔰︙ وينكم تعالو يريدوكم بالجروب \n•═════•| sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |•═════•\n"
+t = "\n 🔰︙ وينكم تعالو يريدوكم بالجروب \n═════| sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |═════\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5608,7 +5608,7 @@ local Text = "🔰︙  منشئ الجروب  ⋙ ["..b.first_name_.."](tg://use
 local msg_id = msg.id_/2097152/0.5
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '• '..b.first_name_..' •', url="t.me/"..UserName}},   
+{{text = ''..b.first_name_..' ', url="t.me/"..UserName}},   
 {{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..UserName..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -8115,7 +8115,7 @@ function start_function(extra, result, success)
 database:srem(bot_id..'Zahf:User'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n 🔰︙ العضو ← ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n 🔰︙ تم تنزيل خاين من الجروب\n'
+status  = '\n ??︙ تم تنزيل خاين من الجروب\n'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
@@ -12884,13 +12884,13 @@ local List = {
 ゠𝚂𝚃𝙰 𖨈 #stast 𖥲 .
 ゠𝙸𝙳 𖨈 #id 𖥲 .
 ]],
-[[🔰︙ ᴜѕᴇʀɴᴀᴍᴇ ➥• #username .
-🔰︙ᴍѕɢѕ ➥• #msgs .
-🔰︙ ѕᴛᴀᴛѕ ➥• #stast .
-🔰︙ ʏᴏᴜʀ ɪᴅ ➥• #id  .
-🔰︙ᴇᴅɪᴛ ᴍsɢ ➥• #edit .
-🔰︙ᴅᴇᴛᴀɪʟs ➥• #auto . 
-🔰︙ ɢᴀᴍᴇ ➥• #game .]],
+[[🔰︙ ᴜѕᴇʀɴᴀᴍᴇ ➥#username .
+🔰︙ᴍѕɢѕ ➥#msgs .
+🔰︙ ѕᴛᴀᴛѕ ➥#stast .
+🔰︙ ʏᴏᴜʀ ɪᴅ ➥#id  .
+🔰︙ᴇᴅɪᴛ ᴍsɢ ➥#edit .
+🔰︙ᴅᴇᴛᴀɪʟs ➥#auto . 
+🔰︙ ɢᴀᴍᴇ ➥#game .]],
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓?? #username 𓍯. 💕
@@ -12899,10 +12899,10 @@ local List = {
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴??𝑮 : #msgs 𓆊
+🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+🖤 | 𝑰𝑫 : #id ‌‌‏♕
+🖤 | 𝑴??𝑮 : #msgs 𓆊
 ]],
 [[
 ┌ 𝐔𝐒𝐄𝐑 𖤱 #username 𖦴 .
@@ -12959,10 +12959,10 @@ local List = {
 ➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
 ]],
 [[
-☆•𝐮𝐬𝐞𝐫 : #username 𖣬  
-☆•𝐦𝐬𝐠  : #msgs 𖣬 
-☆•𝐬𝐭𝐚 : #stast 𖣬 
-☆•𝐢𝐝  : #id 𖣬
+☆𝐮𝐬𝐞𝐫 : #username 𖣬  
+☆𝐦𝐬𝐠  : #msgs 𖣬 
+☆𝐬𝐭𝐚 : #stast 𖣬 
+☆𝐢𝐝  : #id 𖣬
 ]],
 [[
 - 𓏬 𝐔𝐬𝐄𝐫 : #username 𓂅 .
@@ -12994,11 +12994,11 @@ local List = {
 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-🇪🇬≪💎≫ #username • メ
-🇪🇬≪💎≫ #stast  •メ
-🇪🇬≪💎≫ #id  • メ
-🇪🇬≪💎≫ #msgs  •メ
-🇪🇬≪💎≫ #game •メ
+🇪🇬≪💎≫ #username メ
+🇪🇬≪💎≫ #stast  メ
+🇪🇬≪💎≫ #id  メ
+🇪🇬≪💎≫ #msgs  メ
+🇪🇬≪💎≫ #game メ
 🇪🇬𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
@@ -13047,13 +13047,13 @@ local List = {
 𖤂 ~ 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-••• ••• ••• ••• ••• ••• ••• 
-࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
- ࿕ ¦• 𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
- ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
- ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
-••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+
+࿕ ¦𝙐𝙎𝙀𝙍  ⟿ #username ༆
+ ࿕ ¦𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
+ ࿕ ¦𝙂𝙈𝘼𝙎  ⟿ #stast ༆
+ ࿕ ¦𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
+
+ ࿕ ¦𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
@@ -13094,19 +13094,19 @@ local List = {
 - 𓏬 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
-ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
-ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
-ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
-ᯓ 𝟔𝟔𝟔𖡋 #game •✟
+ᯓ 𝟔𝟔𝟔 𖡋 #username ✟
+ᯓ 𝟔𝟔𝟔𖡋 #stast  ✟
+ᯓ 𝟔𝟔𝟔𖡋 #id  ✟
+ᯓ 𝟔𝟔𝟔𖡋 #msgs  ✟ 
+ᯓ 𝟔𝟔𝟔𖡋 #game ✟
 ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-🔰 •𝐮𝐬𝐞𝐫 : #username 𖣬  
-🔰 •𝐦𝐬𝐠  : #msgs 𖣬 
-🔰 •𝐬𝐭𝐚 : #stast 𖣬 
-🔰 •𝐢𝐝  : #id 𖣬
-🔰 •𝗖𝗛 - t.me/SO_NOVA 🔰 .
+🔰 𝐮𝐬𝐞𝐫 : #username 𖣬  
+🔰 𝐦𝐬𝐠  : #msgs 𖣬 
+🔰 𝐬𝐭𝐚 : #stast 𖣬 
+🔰 𝐢𝐝  : #id 𖣬
+🔰 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -13147,18 +13147,18 @@ local List = {
 🇪🇬 ꙰  - 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-🌯 ¦✙• 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪??
-?? ¦✙• 𝐦??𝐠 ➢ ⁞  #msgs  📝
-🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
-🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
+🌯 ¦✙𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪??
+?? ¦✙𝐦??𝐠 ➢ ⁞  #msgs  📝
+🌯 ¦✙𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
+🌯 ¦✙𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
 ?? ¦ 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
-¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ ??🇬.
-¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
-¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+¦𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
+¦𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ ??🇬.
+¦𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
+¦𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
@@ -13176,19 +13176,19 @@ local List = {
 ➼ : 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-▽ ¦❀• USER ➭ ⁞ #username .
-▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
-▽ ¦❀• STAT ➬ ⁞ #stast  .
-▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+▽ ¦❀USER ➭ ⁞ #username .
+▽ ¦❀𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
+▽ ¦❀STAT ➬ ⁞ #stast  .
+▽ ¦❀𝙸𝙳  ➬ ⁞ #id  .
+▽ ¦❀𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-• ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
-• ❉ 𝑺𝑻𝑨 : #stast .
-• ❉ 𝑰𝑫 : #id  ‌‌‏.
-• ❉  𝑴𝑺𝑮 : #msgs 𓆊.
-• ❉ 𝑾??𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+❉ 𝑼𝑬𝑺 : #username ‌‌‏.
+❉ 𝑺𝑻𝑨 : #stast .
+❉ 𝑰𝑫 : #id  ‌‌‏.
+❉  𝑴𝑺𝑮 : #msgs 𓆊.
+❉ 𝑾??𝒍𝒄𝒐𝒎𝒆  ⁞ .
+❉ 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 |USERNAME #username 𓃚
@@ -13198,11 +13198,11 @@ local List = {
  | 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-??𝟔𝟔 𖡋 #username • 𖣰💞
-𝟔𝟔𝟔 𖡋  #stast •𖣰💞
-𝟔𝟔𝟔 𖡋 #id • 𖣰💞
-𝟔𝟔𝟔 𖡋 #game • 𖣰💞
-𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
+??𝟔𝟔 𖡋 #username 𖣰💞
+𝟔𝟔𝟔 𖡋  #stast 𖣰💞
+𝟔𝟔𝟔 𖡋 #id 𖣰💞
+𝟔𝟔𝟔 𖡋 #game 𖣰💞
+𝟔𝟔𝟔 𖡋 #msgs 𖣰💞
 𝟔𝟔𝟔 𖡋 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
@@ -13235,11 +13235,11 @@ local List = {
 ◣: 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-↣• USE ➤ #username  ↝🍬.
-↣• MSG ➤  #msgs  ↝🍬.
-↣• STA ➤  #stast  ↝🍬.
-↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+↣USE ➤ #username  ↝🍬.
+↣MSG ➤  #msgs  ↝🍬.
+↣STA ➤  #stast  ↝🍬.
+↣iD ➤ #id  ↝🍬.
+↣𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 ➫✿: S #stast 𓍯➟🔰 .
@@ -13256,22 +13256,22 @@ local List = {
 ✶- 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 :  #username
+🖤 | 𝑼𝑬𝑺 :  #username
 
-• 🖤 | 𝑺𝑻𝑨 : #stast
+🖤 | 𝑺𝑻𝑨 : #stast
 
-• 🖤 | 𝑰𝑫 :  #id
+🖤 | 𝑰𝑫 :  #id
 
-• 🖤 | 𝑴𝑺𝑮 : #msgs
+🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-• USE 𖦹 #username 
-• MSG 𖥳 #msgs  
-• STA 𖦹 #stast 
-• iD 𖥳 #id
-• 𝗖𝗛 - t.me/SO_NOVA 💞.
+USE 𖦹 #username 
+MSG 𖥳 #msgs  
+STA 𖦹 #stast 
+iD 𖥳 #id
+𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -13293,20 +13293,20 @@ local List = {
 ⚕𝗖?? - t.me/SO_NOVA 💞.
 ]],
 [[
-• 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🦄 | 𝑺𝑻𝑨 : #stast ☥
-• 🦄 | ??𝑫 : #id ‌‌‏♕
-• 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - t.me/SO_NOVA 💞.
+🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+🦄 | 𝑺𝑻𝑨 : #stast ☥
+🦄 | ??𝑫 : #id ‌‌‏♕
+🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
+🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
+🦄 | 𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-• △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• ▽ | 𝑺𝑻𝑨 : #stast ☥
-• ⊠ | ??𝑫 : #id ‌‌‏♕
-• ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
-• ❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - t.me/SO_NOVA 💞.
+△ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+▽ | 𝑺𝑻𝑨 : #stast ☥
+⊠ | ??𝑫 : #id ‌‌‏♕
+❏ | 𝑴𝑺𝑮 : #msgs 𓆊
+❏ | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 :
+❏ | 𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -13318,11 +13318,11 @@ local List = {
 ]],
 [[
 ⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ★
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻?? : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+🖤 | 𝑺𝑻?? : #stast 🧙🏻‍♂ ☥
+🖤 | 𝑰𝑫 : #id ‌‌‏♕
+🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 ┄─━━━━─┄
@@ -13343,12 +13343,12 @@ local List = {
 𓄼 𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-• ﮼ايديك  #id 🌻 ٬
-• ﮼يوزرك ➺ #username 🌻 ٬
-• ﮼مسجاتك ➺ #msgs 🌻 ٬
-•  ﮼رتبتك➺ #stast 🌻 ٬
-• ﮼تعديلك ➺ #edit 🌻 ٬
-• ﮼ تعين ➺ t.me/SO_NOVA 💞.
+﮼ايديك  #id 🌻 ٬
+﮼يوزرك ➺ #username 🌻 ٬
+﮼مسجاتك ➺ #msgs 🌻 ٬
+ ﮼رتبتك➺ #stast 🌻 ٬
+﮼تعديلك ➺ #edit 🌻 ٬
+﮼ تعين ➺ t.me/SO_NOVA 💞.
 ]],
 [[
 ‎⿻┊Yor iD 𖠄 #id ٫
@@ -13375,18 +13375,18 @@ local List = {
 🔰  : 𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-•ᑌᔕᗴᖇ- #username 
-•ᔕTᗩ- #stast 
-•ᗰᔕ- #msgs 
-•Iᗪ- #id
-•𝗖𝗛 - t.me/SO_NOVA 💞.
+ᑌᔕᗴᖇ- #username 
+ᔕTᗩ- #stast 
+ᗰᔕ- #msgs 
+Iᗪ- #id
+𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-• USE ➤ #username  .
-• MSG ➤  #msgs  .
-• STA ➤  #stast  .
-• iD ➤ #id  .
-• 𝗖𝗛 - t.me/SO_NOVA 💞.
+USE ➤ #username  .
+MSG ➤  #msgs  .
+STA ➤  #stast  .
+iD ➤ #id  .
+𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
@@ -13403,18 +13403,18 @@ local List = {
 ⭐️𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-• 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
-• 🇪🇬 - 𝙸𝙳 « #id  🍭
-• 🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
-• 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
+🇪🇬 - 𝙸𝙳 « #id  🍭
+🇪🇬 - 𝙼𝚂𝙶𝚂 « #msgs  🍭
+🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
+🇪🇬 - 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-• USE ➤  #username .
-• MSG ➤  #msgs .
-• STA ➤  #stast .
-• iD ➤ #id .
-• 𝗖𝗛 - t.me/SO_NOVA 💞.
+USE ➤  #username .
+MSG ➤  #msgs .
+STA ➤  #stast .
+iD ➤ #id .
+𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -13509,11 +13509,11 @@ Msᴀɢ ~ #msgs
 .𖣂 𝗖𝗛 - t.me/SO_NOVA 💞.
 ]],
 [[
-➥• USE 𖦹 #username - 🇪🇬.
-➥• MSG 𖥳 #msgs  - 🇪🇬.
-➥• STA 𖦹 #stast - 🇪🇬.
-➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+➥USE 𖦹 #username - 🇪🇬.
+➥MSG 𖥳 #msgs  - 🇪🇬.
+➥STA 𖦹 #stast - 🇪🇬.
+➥iD 𖥳 #id - 🇪🇬.
+➥𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
@@ -13539,13 +13539,13 @@ Msᴀɢ ~ #msgs
 𓄼 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
-𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
-𝐓𝐓• 𝐌𝐬𝐠𝐒 𖠰 #msgs .
-𝐓𝐓• 𝐔𝐬𝐞??𝐍𝐚 𖠰 #username .
-𝐓𝐓• 𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
-𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
-𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• 𝗖𝗛 - t.me/SO_NOVA 🔰 .
+𝐓𝐓𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
+𝐓𝐓𝐌𝐬𝐠𝐒 𖠰 #msgs .
+𝐓𝐓𝐔𝐬𝐞??𝐍𝐚 𖠰 #username .
+𝐓𝐓𝐒𝐓𝐀𝐒𝐓 𖠰 #stast .
+𝐓𝐓𝐀𝐔𝐓𝐎 𖠰 #auto .
+𝐓𝐓𝗘𝗗𝗜𝗧 𖠰 #edit .
+𝐓𝐓𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 𝟓 𝟔 𖡻 #username  ࿇🦄
@@ -13557,22 +13557,22 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 ༻┉𖦹┉┉𖦹┉┉𖦹┉┉𖦹┉༺
-• |𝗜𝗗  ⁞ #id
-• |𝗨𝗦𝗘 ⁞ #username
-• |𝗦𝗧𝗔  ⁞ #stast
-• |𝗠𝗦𝗚  ⁞ #edit
-• |𝗔𝗨𝗧𝗢 ⁞ #auto
+|𝗜𝗗  ⁞ #id
+|𝗨𝗦𝗘 ⁞ #username
+|𝗦𝗧𝗔  ⁞ #stast
+|𝗠𝗦𝗚  ⁞ #edit
+|𝗔𝗨𝗧𝗢 ⁞ #auto
 —————————————
 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
 [[
 ┄─━━━━─┄
-𖣰𖡻 𖡋𝗜𝗗• #id •𓀎
-𖣰𖡻 𖡋𝗨𝗦𝗘• #username •𓀎
-??𖡻 𖡋𝗦𝗧𝗔• #stast •𓀎
-𖣰𖡻 𖡋𝗠𝗦𝗚• #msgs •𓀎
-𖣰𖡻 𖡋𝗔𝗨𝗧𝗢• #auto •𓀎
-𖣰𖡻 𖡋𝗘𝗗??𝗧• #edit • 𓀎
+𖣰𖡻 𖡋𝗜𝗗#id 𓀎
+𖣰𖡻 𖡋𝗨𝗦𝗘#username 𓀎
+??𖡻 𖡋𝗦𝗧𝗔#stast 𓀎
+𖣰𖡻 𖡋𝗠𝗦𝗚#msgs 𓀎
+𖣰𖡻 𖡋𝗔𝗨𝗧𝗢#auto 𓀎
+𖣰𖡻 𖡋𝗘𝗗??𝗧#edit 𓀎
 ┄─━━━━─┄
 𝗖𝗛 - t.me/SO_NOVA 🔰 .
 ]],
@@ -13593,11 +13593,11 @@ Msᴀɢ ~ #msgs
 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-🇪🇬≪💎≫ #username • メ
-🇪🇬≪💎≫ #stast  •メ
-🇪🇬≪💎≫ #id  • メ
-🇪🇬≪💎≫ #msgs  •メ
-🇪🇬≪💎≫ #game •メ
+🇪🇬≪💎≫ #username メ
+🇪🇬≪💎≫ #stast  メ
+🇪🇬≪💎≫ #id  メ
+🇪🇬≪💎≫ #msgs  メ
+🇪🇬≪💎≫ #game メ
 🇪🇬𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
@@ -13649,18 +13649,18 @@ Msᴀɢ ~ #msgs
 -›   𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴 . #username 🇪🇬 ꙰ 
 -›   𝚂𝚃𝙰𝚂𝚃 . #stast 🇪🇬 ꙰
 -›   𝙸𝙳 . #id 🇪🇬 ꙰ 
--›   𝙶𝙼𝙰𝚂 . #stast 🇪🇬 ꙰ 
+-›   𝙶𝙼??𝚂 . #stast 🇪🇬 ꙰ 
 -›   𝙼𝚂𝙶𝚂 . #msgs 🇪🇬 ꙰
 -›   𝗖𝗛 - t.me/SO_NOVA 🇪🇬 ꙰.
 ]],
 [[
-••• ••• ••• ••• ••• ••• ••• 
-࿕ ¦• 𝙐𝙎𝙀𝙍  ⟿ #username ༆
- ࿕ ¦• 𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
- ࿕ ¦• 𝙂𝙈𝘼𝙎  ⟿ #stast ༆
- ࿕ ¦• 𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
-••• ••• ••• ••• ••• ••• •••
- ࿕ ¦• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+
+࿕ ¦𝙐𝙎𝙀𝙍  ⟿ #username ༆
+ ࿕ ¦𝙈𝙎𝙂𝙎   ⟿ #msgs ༆
+ ࿕ ¦𝙂𝙈𝘼𝙎  ⟿ #stast ༆
+ ࿕ ¦𝙏𝘿 𝙎𝙏𝘼  ⟿ #id ༆
+
+ ࿕ ¦𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 ► 𝗨𝗦𝗘𝗥𝗡𝗔𝗠𝗘 #username 𓃚  ꙰
@@ -13693,19 +13693,19 @@ Msᴀɢ ~ #msgs
 - 𓏬 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-ᯓ 𝟔𝟔𝟔 𖡋 #username •✟
-ᯓ 𝟔𝟔𝟔𖡋 #stast  •✟
-ᯓ 𝟔𝟔𝟔𖡋 #id  • ✟
-ᯓ 𝟔𝟔𝟔𖡋 #msgs  •✟ 
-ᯓ ??𝟔𝟔𖡋 #game •✟
+ᯓ 𝟔𝟔𝟔 𖡋 #username ✟
+ᯓ 𝟔𝟔𝟔𖡋 #stast  ✟
+ᯓ 𝟔𝟔𝟔𖡋 #id  ✟
+ᯓ 𝟔𝟔𝟔𖡋 #msgs  ✟ 
+ᯓ ??𝟔𝟔𖡋 #game ✟
 ᯓ 𝟔𝟔𝟔𖡋 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-🔰 •𝐮𝐬𝐞𝐫 : #username 𖣬  
-🔰 •𝐦𝐬𝐠  : #msgs 𖣬 
-🔰 •𝐬𝐭𝐚 : #stast 𖣬 
-🔰 •𝐢𝐝  : #id 𖣬
-🔰 •𝗖𝗛 - t.me/SO_NOVA 🔰 
+🔰 𝐮𝐬𝐞𝐫 : #username 𖣬  
+🔰 𝐦𝐬𝐠  : #msgs 𖣬 
+🔰 𝐬𝐭𝐚 : #stast 𖣬 
+🔰 𝐢𝐝  : #id 𖣬
+🔰 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 - ᴜѕᴇʀɴᴀᴍᴇ ➣ #username .
@@ -13730,10 +13730,10 @@ Msᴀɢ ~ #msgs
 - 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-🌯 ¦✙• 𝐮??𝐞??𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
-🌯 ¦✙• 𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
-🌯 ¦✙• 𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
-🌯 ¦✙• 𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
+🌯 ¦✙𝐮??𝐞??𝒏𝒂𝒎𝒆 ➢ ⁞  #username 🇪🇬
+🌯 ¦✙𝐦𝐬𝐠 ➢ ⁞  #msgs  📝
+🌯 ¦✙𝒓𝒂𝒏𝒌 ➢ ⁞ #stast  
+🌯 ¦✙𝐢𝐝 𝒔𝒕𝒂 ➢ ⁞ #id  🆔
 🌯 ¦ 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
@@ -13753,11 +13753,11 @@ Msᴀɢ ~ #msgs
 ⌔➺: 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
-¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
-¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
-¦• 𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
-¦• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+¦𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇪🇬.
+¦𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇪🇬.
+¦𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇪🇬.
+¦𝙸𝙳 𝚂𝚃𝙰 ⇉ #id  ↝🇪🇬.
+¦𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 ➞: 𝒔𝒕𝒂𓂅 #stast 𓍯➸💞.
@@ -13775,19 +13775,19 @@ Msᴀɢ ~ #msgs
 ➼ : 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-▽ ¦❀• USER ➭ ⁞ #username .
-▽ ¦❀• 𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
-▽ ¦❀• STAT ➬ ⁞ #stast  .
-▽ ¦❀• 𝙸𝙳  ➬ ⁞ #id  .
-▽ ¦❀• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+▽ ¦❀USER ➭ ⁞ #username .
+▽ ¦❀𝙼𝚂𝙶𝚂 ➬ ⁞  #msgs  .
+▽ ¦❀STAT ➬ ⁞ #stast  .
+▽ ¦❀𝙸𝙳  ➬ ⁞ #id  .
+▽ ¦❀𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• ❉ 𝑼𝑬𝑺 : #username ‌‌‏.
-• ❉ 𝑺𝑻𝑨 : #stast .
-• ❉ 𝑰𝑫 : #id  ‌‌‏.
-• ❉  𝑴𝑺𝑮 : #msgs 𓆊.
-• ❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
-• ❉ 𝗖𝗛 - t.me/SO_NOVA 🔰 
+❉ 𝑼𝑬𝑺 : #username ‌‌‏.
+❉ 𝑺𝑻𝑨 : #stast .
+❉ 𝑰𝑫 : #id  ‌‌‏.
+❉  𝑴𝑺𝑮 : #msgs 𓆊.
+❉ 𝑾𝒆𝒍𝒄𝒐𝒎𝒆  ⁞ .
+❉ 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 |USERNAME #username 𓃚
@@ -13797,11 +13797,11 @@ Msᴀɢ ~ #msgs
  | 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-𝟔𝟔𝟔 𖡋 #username • 𖣰💞
-𝟔𝟔𝟔 𖡋  #stast •𖣰💞
-????𝟔 𖡋 #id • 𖣰💞
-𝟔𝟔𝟔 𖡋 #game • 𖣰💞
-𝟔𝟔𝟔 𖡋 #msgs • 𖣰💞
+𝟔𝟔𝟔 𖡋 #username 𖣰💞
+𝟔𝟔𝟔 𖡋  #stast 𖣰💞
+????𝟔 𖡋 #id 𖣰💞
+𝟔𝟔𝟔 𖡋 #game 𖣰💞
+𝟔𝟔𝟔 𖡋 #msgs 𖣰💞
 𝟔𝟔𝟔 𖡋 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
@@ -13834,11 +13834,11 @@ Msᴀɢ ~ #msgs
  - 𝄬 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-↣• USE ➤ #username  ↝🍬.
-↣• MSG ➤  #msgs  ↝🍬.
-↣• STA ➤  #stast  ↝🍬.
-↣• iD ➤ #id  ↝🍬.
-↣• 𝗖𝗛 - t.me/SO_NOVA 🍬
+↣USE ➤ #username  ↝🍬.
+↣MSG ➤  #msgs  ↝🍬.
+↣STA ➤  #stast  ↝🍬.
+↣iD ➤ #id  ↝🍬.
+↣𝗖𝗛 - t.me/SO_NOVA 🍬
 ]],
 [[
 ➫✿: S #stast 𓍯➟🔰 .
@@ -13855,22 +13855,22 @@ Msᴀɢ ~ #msgs
 ✶- 𝗖𝗛 - t.me/SO_NOVA ↝❃.
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 :  #username
+🖤 | 𝑼𝑬𝑺 :  #username
 
-• 🖤 | 𝑺𝑻𝑨 : #stast
+🖤 | 𝑺𝑻𝑨 : #stast
 
-• 🖤 | 𝑰𝑫 :  #id
+🖤 | 𝑰𝑫 :  #id
 
-• 🖤 | 𝑴𝑺𝑮 : #msgs
+🖤 | 𝑴𝑺𝑮 : #msgs
 
-• 🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
+🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• USE 𖦹 #username 
-• MSG 𖥳 #msgs  
-• STA 𖦹 #stast 
-• iD 𖥳 #id
-• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+USE 𖦹 #username 
+MSG 𖥳 #msgs  
+STA 𖦹 #stast 
+iD 𖥳 #id
+𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 🌨↓Use ⇨ #username 🌨
@@ -13899,20 +13899,20 @@ Msᴀɢ ~ #msgs
 ⚕𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• 🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🦄 | 𝑺𝑻𝑨 : #stast ☥
-• 🦄 | 𝑰𝑫 : #id ‌‌‏♕
-• 🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
-• 🦄 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
+🦄 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+🦄 | 𝑺𝑻𝑨 : #stast ☥
+🦄 | 𝑰𝑫 : #id ‌‌‏♕
+🦄 | 𝑴𝑺𝑮 : #msgs 𓆊
+🦄 | 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 : ⁞
+🦄 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• △ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• ▽ | 𝑺𝑻𝑨 : #stast ☥
-• ⊠ | 𝑰𝑫 : #id ‌‌‏♕
-• ❏ | 𝑴𝑺𝑮 : #msgs 𓆊
-• ❏ | 𝑾𝒆??𝒄𝒐𝒎𝒆 :
-• ❏ | 𝗖𝗛 - t.me/SO_NOVA 🔰 
+△ | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+▽ | 𝑺𝑻𝑨 : #stast ☥
+⊠ | 𝑰𝑫 : #id ‌‌‏♕
+❏ | 𝑴𝑺𝑮 : #msgs 𓆊
+❏ | 𝑾𝒆??𝒄𝒐𝒎𝒆 :
+❏ | 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 ┇iD ➺ #id 💘
@@ -13923,11 +13923,11 @@ Msᴀɢ ~ #msgs
 ┇𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• 🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
-• 🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
-• 🖤 | 𝑰𝑫 : #id ‌‌‏♕
-• 🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
-• 🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
+🖤 | 𝑼𝑬𝑺 : #username ‌‌‏⚚
+🖤 | 𝑺𝑻𝑨 : #stast 🧙🏻‍♂ ☥
+🖤 | 𝑰𝑫 : #id ‌‌‏♕
+🖤 | 𝑴𝑺𝑮 : #msgs 𓆊
+🖤 | 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 𓄼 ᴜѕᴇ : #username ♕
@@ -13945,12 +13945,12 @@ Msᴀɢ ~ #msgs
 ‌‎⿻┊‌‎𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• ﮼ايديك  #id 🌻 ٬
-• ﮼يوزرك ➺ #username 🌻 ٬
-• ﮼مسجاتك ➺ #msgs 🌻 ٬
-•  ﮼رتبتك➺ #stast 🌻 ٬
-• ﮼تعديلك ➺ #edit 🌻 ٬
-•  تعين ➺ t.me/SO_NOVA 🔰 
+﮼ايديك  #id 🌻 ٬
+﮼يوزرك ➺ #username 🌻 ٬
+﮼مسجاتك ➺ #msgs 🌻 ٬
+ ﮼رتبتك➺ #stast 🌻 ٬
+﮼تعديلك ➺ #edit 🌻 ٬
+ تعين ➺ t.me/SO_NOVA 🔰 
 ]],
 [[
 ┄─━━━━─┄
@@ -13980,18 +13980,18 @@ Msᴀɢ ~ #msgs
 🔰  : 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-•ᑌᔕᗴᖇ- #username 
-•ᔕTᗩ- #stast 
-•ᗰᔕ- #msgs 
-•Iᗪ- #id
-•𝗖𝗛 - t.me/SO_NOVA 🔰 
+ᑌᔕᗴᖇ- #username 
+ᔕTᗩ- #stast 
+ᗰᔕ- #msgs 
+Iᗪ- #id
+𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• USE ➤ #username  .
-• MSG ➤  #msgs  .
-• STA ➤  #stast  .
-• iD ➤ #id  .
-• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+USE ➤ #username  .
+MSG ➤  #msgs  .
+STA ➤  #stast  .
+iD ➤ #id  .
+𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 𝐘𝐨𝐮𝐫 𝐈𝐃 ☤🇪🇬- #id 
@@ -14008,18 +14008,18 @@ Msᴀɢ ~ #msgs
 ⭐️𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• 🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
-• 🇪🇬 - 𝙸𝙳 « #id  🍭
-• 🇪🇬 - 𝙼𝚂𝙶?? « #msgs  🍭
-• 🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
-• 🇪🇬 - 𝗖𝗛 - t.me/SO_NOVA 🔰 
+🇪🇬 - 𝚄𝚂𝙴𝚁 « #username  🍭
+🇪🇬 - 𝙸𝙳 « #id  🍭
+🇪🇬 - 𝙼𝚂𝙶?? « #msgs  🍭
+🇪🇬 - 𝚂𝚃𝙰𝚂𝚃 « #stast  🍭
+🇪🇬 - 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-• USE ➤  #username .
-• MSG ➤  #msgs .
-• STA ➤  #stast .
-• iD ➤ #id .
-• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+USE ➤  #username .
+MSG ➤  #msgs .
+STA ➤  #stast .
+iD ➤ #id .
+𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 🇪🇬 - 𝄬 𝐔ˢᴱᴿᴺᴬᴹᴱ . #username  𓃠
@@ -14074,11 +14074,11 @@ Msᴀɢ ~ #msgs
 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-➥• USE 𖦹 #username - 🇪??.
-➥• MSG 𖥳 #msgs  - 🇪🇬.
-➥• STA 𖦹 #stast - 🇪??.
-➥• iD 𖥳 #id - 🇪🇬.
-➥• 𝗖𝗛 - t.me/SO_NOVA 🔰 
+➥USE 𖦹 #username - 🇪??.
+➥MSG 𖥳 #msgs  - 🇪🇬.
+➥STA 𖦹 #stast - 🇪??.
+➥iD 𖥳 #id - 🇪🇬.
+➥𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  ??
@@ -14144,13 +14144,13 @@ Msᴀɢ ~ #msgs
 𓄼 𝗖𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
-𝐓𝐓• 𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
-𝐓𝐓• 𝐌𝐬𝐠𝐒 𖠰 #msgs .
-𝐓𝐓• 𝐔𝐬𝐞𝐫𝐍𝐚 𖠰 #username .
-𝐓𝐓• 𝐒𝐓??𝐒𝐓 𖠰 #stast .
-𝐓𝐓• 𝐀𝐔𝐓𝐎 𖠰 #auto .
-𝐓𝐓• 𝗘𝗗𝗜𝗧 𖠰 #edit .
-𝐓𝐓• ??𝗛 - t.me/SO_NOVA 🔰 
+𝐓𝐓𝐘𝐎𝐔𝐑 𝐈𝐃 𖠰 #id .
+𝐓𝐓𝐌𝐬𝐠𝐒 𖠰 #msgs .
+𝐓𝐓𝐔𝐬𝐞𝐫𝐍𝐚 𖠰 #username .
+𝐓𝐓𝐒𝐓??𝐒𝐓 𖠰 #stast .
+𝐓𝐓𝐀𝐔𝐓𝐎 𖠰 #auto .
+𝐓𝐓𝗘𝗗𝗜𝗧 𖠰 #edit .
+𝐓𝐓??𝗛 - t.me/SO_NOVA 🔰 
 ]],
 [[
 ↑↓𝙐𝙎𝙀𝙍𝙉𝘼𝙈𝙀 ➱ #username  🔰  
@@ -14182,11 +14182,11 @@ Msᴀɢ ~ #msgs
 - 𝗶𝗗 🇺🇸 ꙰  t.me/SO_NOVA ☆
 ]],
 [[
-¦• 𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵🇷.
-¦• 𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇵🇷.
-¦• 𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇵🇷.
-¦• 𝙸𝙳 𝚂??𝙰 ⇉ #id  ↝🇵🇷.
-¦• 𝗶𝗗 - t.me/SO_NOVA ☆
+¦𝚄𝚂𝙴𝚁  ⇉⁞ #username ↝🇵🇷.
+¦𝙼𝚂𝙶𝚂 ⇉ ⁞  #msgs  ↝ 🇵🇷.
+¦𝚁𝙰𝙽𝙺  ⇉⁞ #stast  ↝🇵🇷.
+¦𝙸𝙳 𝚂??𝙰 ⇉ #id  ↝🇵🇷.
+¦𝗶𝗗 - t.me/SO_NOVA ☆
 ]],
 [[
 - 🇧🇷 UsErNaMe . #username 𖠲
@@ -14273,12 +14273,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..'\n     ꙰🔰 • 𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 •𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 •𝗖𝗛 t.me/SO_NOVA\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..'\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 𝗖𝗛 t.me/SO_NOVA\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰🔰 •𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰🔰 •𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰🔰 •𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰🔰 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰🔰 𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
 else
-send(msg.chat_id_, msg.id_, '\n 🔰︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫  '..username..'\n     ꙰🔰 •𝐦??𝐠  '..Msguser..'\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 •𝗖𝗛 t.me/SO_NOVA\n')
+send(msg.chat_id_, msg.id_, '\n 🔰︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰🔰 𝐮𝐬𝐞𝐫  '..username..'\n     ꙰🔰 𝐦??𝐠  '..Msguser..'\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 𝗖𝗛 t.me/SO_NOVA\n')
 end 
 end
 end
@@ -14296,7 +14296,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰🔰 •𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰🔰 •𝐬𝐭??  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰🔰 •𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰🔰 𝐬𝐭??  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰🔰 𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
 end
 end
 
@@ -14379,12 +14379,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..'\n     ꙰🔰 • 𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 •𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 •𝗖𝗛 t.me/SO_NOVA\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..'\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 𝗖𝗛 t.me/SO_NOVA\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰🔰 •𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰🔰 •𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰🔰 •𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰🔰 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰🔰 𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
 else
-send(msg.chat_id_, msg.id_, '\n 🔰︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫  '..username..'\n     ꙰🔰 •𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 •𝗖𝗛 t.me/SO_NOVA\n')
+send(msg.chat_id_, msg.id_, '\n 🔰︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰🔰 𝐮𝐬𝐞𝐫  '..username..'\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰🔰 𝗖𝗛 t.me/SO_NOVA\n')
 end 
 end
 end
@@ -14402,7 +14402,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 •𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰🔰 •𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰🔰 •𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰🔰 •𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰🔰 •𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n    ꙰🔰 𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰🔰 𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰🔰 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰🔰 𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰🔰 𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
 end
 end
 
@@ -15126,13 +15126,15 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 end
 if text == 'الرابط' or text == 'رابط'  then
 local Text = [[
-•اختار نوع الرابط الي ترودي⇣
+اختار نوع الرابط 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'رابط اونلاين', callback_data="/nov2"},{text = 'رابط بالصور', callback_data="/nov1"}},   
 {{text = 'رابط بنص', callback_data="/nov3"}},
-{{text = 'sᴏ NᴏVᴀ', url="t.me/SO_NOVA"}},
+{
+{text = 'اخفاء الاوامر', callback_data="/hide"},
+},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -15259,7 +15261,7 @@ send(msg.chat_id_,msg.id_,'.\nـــــــــــــــــــــــــ
 else                
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
 if linkgpp.ok == true then 
-linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+linkgp = 'ʟɪɴᴋ ɢʀᴏᴘ\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 else
 linkgp = ' لا يوجد رابط ارسل ضع رابط'
 end  
@@ -15272,7 +15274,7 @@ if Text == '/nov1' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+local linkgp = 'ʟɪɴᴋ ɢʀᴏᴘ\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
 DeleteMessage(Chat_id,{[0] = Msg_id})  
@@ -15286,7 +15288,7 @@ if Text == '/nov2' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
 local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
 if linkgpp.ok == true then 
-local linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+local linkgp = 'ʟɪɴᴋ ɢʀᴏᴘ\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
 local inline = {{{text = ta.title_, url=linkgpp.result}},} 
 DeleteMessage(Chat_id,{[0] = Msg_id})  
 send_inline_key(msg.chat_id_,linkgp,nil,inline,msg.id_/2097152/0.5) 
@@ -15303,7 +15305,7 @@ return false
 end
 local Teext =[[
 ⇊ اوامر القفل والفتح 🔰︙
-🔰︙◍- - - - - - - -×- - - - - - - -◍ 🔰︙
+◍- - - - - - - -×- - - - - - - -◍
 
 ]]
 keyboard = {} 
@@ -15354,7 +15356,7 @@ keyboard.inline_keyboard = {
 {text = 'قفل الانلاين', callback_data="/lockinline"},{text = 'فتح الانلاين', callback_data="/opainline"},
 },
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
@@ -15371,7 +15373,7 @@ return false
 end
 local Teext =[[
 ⇊ 『اوامر التفعيل』 والتعطي 🔰︙
-🔰︙◍- - - - - - - -×- - - - - - - -◍ 🔰︙
+◍- - - - - - - -×- - - - - - - -◍
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15433,7 +15435,7 @@ keyboard.inline_keyboard = {
 {text = 'تفعيل ردود السورس', callback_data="/lockreb"},{text = 'تعطيل ردود السورس', callback_data="/opareb"},
 },
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
@@ -15634,7 +15636,7 @@ end
 local Teext =[[
 
 🔰 اوامر المطورين
-•═════•|sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |•═════•
+═════|sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |═════
 🔰 تفعيل ← تعطيل 
 🔰 المجموعات ← المشتركين ← الاحصائيات
 🔰 رفع ← تنزيل منشئ اساسي
@@ -15642,7 +15644,7 @@ local Teext =[[
 🔰 مسح المنشئين ← المنشئين
 🔰 اسم ~ ايدي + بوت غادر 
 🔰 اذاعه 
-•═════•| sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |•═════• ┉ ┉
+═════| sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |═════┉ ┉
 🔰 اوامر مطور الاساسي
 ◍- - - - - - - -×- - - - - - - -◍
 🔰 تفعيل
@@ -15952,8 +15954,8 @@ local Teext =[[
 ◍- - - - - - - -×- - - - - - - -◍
 🔰︙أنت الآن في العاب السورس
 ◍- - - - - - - -×- - - - - - - -◍
- 🔰︙تفعيل الالعاب • لتفعيل العبه ° 
- 🔰︙تعطيل الالعاب • لتعطيل العبه °
+ 🔰︙تفعيل الالعاب لتفعيل العبه ° 
+ 🔰︙تعطيل الالعاب لتعطيل العبه °
 ◍- - - - - - - -×- - - - - - - -◍
  🔰︙الالعاب الخاصه بسورس 
 ◍- - - - - - - -×- - - - - - - -◍
@@ -16201,7 +16203,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16218,7 +16220,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16249,7 +16251,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16279,7 +16281,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16311,7 +16313,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16340,7 +16342,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16372,7 +16374,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16403,7 +16405,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16431,7 +16433,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16460,7 +16462,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16487,7 +16489,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16518,31 +16520,31 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
 end
 if Text == '/zporg' then
 local Teext =[[
-❣- برج الجدي: من 12/22 - الى 1/19•
-❣- برج الدلو: من 1/20 - الى 2/18•
-❣- برج الحوت: من 2/19 - الى 3/20•
-❣- برج الحمل: من 3/21 - الى 4/19•
-❣- برج الثور: من 4/20 - الى 5/20•
-❣- برج الجوزاء: من 5/21 - الى 6/20•
-❣- برج السرطان: من 6/21 - الى 7/21•
-❣- برج الاسد: من 7/23 - الى 8/22•
-❣- برج العذراء: من 8/23 - الى 9/22•
-❣- برج الميزان: من 9/23 - الى 10/22•
-❣- برج العقرب: من 10/23 - الى 11/21•
-❣- برج القوس: من 11/22 - الى 12/21•
+❣- برج الجدي: من 12/22 - الى 1/19
+❣- برج الدلو: من 1/20 - الى 2/18
+❣- برج الحوت: من 2/19 - الى 3/20
+❣- برج الحمل: من 3/21 - الى 4/19
+❣- برج الثور: من 4/20 - الى 5/20
+❣- برج الجوزاء: من 5/21 - الى 6/20
+❣- برج السرطان: من 6/21 - الى 7/21
+❣- برج الاسد: من 7/23 - الى 8/22
+❣- برج العذراء: من 8/23 - الى 9/22
+❣- برج الميزان: من 9/23 - الى 10/22
+❣- برج العقرب: من 10/23 - الى 11/21
+❣- برج القوس: من 11/22 - الى 12/21
  ◍- - - - - - - -×- - - - - - - -◍ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/zDRGd"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -16550,33 +16552,33 @@ end
 
 if Text == '/zDRGd' then
 local Teext =[[
-• اختر برجك عزيزي •📮،⍆
+اختر برجك عزيزي 📮،⍆
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '• الاسد ،🦁', callback_data="/zking"},{text = '• الثور 🐂', callback_data="/zzor"},
+{text = 'الاسد ،🦁', callback_data="/zking"},{text = 'الثور 🐂', callback_data="/zzor"},
 },
 {
-{text = '• العقرب 🦂', callback_data="/zakrb"},{text = '• القوس 🏹', callback_data="/zkos"},
+{text = 'العقرب 🦂', callback_data="/zakrb"},{text = 'القوس 🏹', callback_data="/zkos"},
 },
 {
-{text = '• الحمل 🐐', callback_data="/zNoVa"},
+{text = 'الحمل 🐐', callback_data="/zNoVa"},
 },
 {
-{text = '• السرطان 🦀', callback_data="/zsltan"},{text = '• العذراء 🦋', callback_data="/zazra"},
+{text = 'السرطان 🦀', callback_data="/zsltan"},{text = 'العذراء 🦋', callback_data="/zazra"},
 },
 {
-{text = '• الميزان ⚖', callback_data="/zmezan"},{text = '• الجدي 🦌', callback_data="/zgagy"},
+{text = 'الميزان ⚖', callback_data="/zmezan"},{text = 'الجدي 🦌', callback_data="/zgagy"},
 },
 {
 {text = ' معرفة برجك 🧭', callback_data="/zporg"},
 },
 {
-{text = '• الحوت 🐋', callback_data="/zhot"},
+{text = 'الحوت 🐋', callback_data="/zhot"},
 },
 {
-{text = '• الجوزاء 🌩', callback_data="/zguza"},{text = '• الدلو 🦯', callback_data="/zdlu"},
+{text = 'الجوزاء 🌩', callback_data="/zguza"},{text = 'الدلو 🦯', callback_data="/zdlu"},
 },
 {
 {text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
@@ -16587,7 +16589,7 @@ end
 
 if Text == '/may' then
 local Teext =[[
-• يلا بنا نبحث عن المنزل •
+يلا بنا نبحث عن المنزل 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16599,7 +16601,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/afkl' then
 local Teext =[[
-• في صوت هل صدر من الامام ام الخلف •
+في صوت هل صدر من الامام ام الخلف 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16611,7 +16613,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/amen' then
 local Teext =[[
-• هيا بنا نذهب الي الامام لنرا المنزل •
+هيا بنا نذهب الي الامام لنرا المنزل 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16623,7 +16625,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/should' then
 local Teext =[[
-• هيا بنا نذهب الي الخلف لنرا المنزل •
+هيا بنا نذهب الي الخلف لنرا المنزل 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16635,7 +16637,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/have' then
 local Teext =[[
-• لقد وصلنا الى المنزل شكراَ جزيلَ انتطرني ثواني وسوف اعود •
+لقد وصلنا الى المنزل شكراَ جزيلَ انتطرني ثواني وسوف اعود 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16648,7 +16650,7 @@ end
 
 if Text == '/VBV' then
 local Teext =[[
-• لقد عودت إليك ظهر شيئ •
+لقد عودت إليك ظهر شيئ 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16660,7 +16662,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/ALLL' then
 local Teext =[[
-• هيا نذهب داخل المنزل •
+هيا نذهب داخل المنزل 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16672,7 +16674,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/Jake' then
 local Teext =[[
-•  نحنو نتوه في هذه المكان •
+ نحنو نتوه في هذه المكان 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16684,7 +16686,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/GGGG' then
 local Teext =[[
-• لا يوجد ضواء في هذا المكان •
+لا يوجد ضواء في هذا المكان 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16696,7 +16698,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/can' then
 local Teext =[[
-• تعالى نذهب الي الباب الرئيسي •
+تعالى نذهب الي الباب الرئيسي 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16708,7 +16710,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/zxz' then
 local Teext =[[
-• انها النهاية هتكمل ولا لا •
+انها النهاية هتكمل ولا لا 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16720,7 +16722,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/optionis' then
 local Teext =[[
-• سارسل اليك  سوال مع اختيارت لو حليت صح ستنجو من العقاب لو خطأ سيقوم عليك العقاب •
+سارسل اليك  سوال مع اختيارت لو حليت صح ستنجو من العقاب لو خطأ سيقوم عليك العقاب 
 السوال هوا - شيء لا يتأثر بالماء حتى عندما يمر من خلالها فمن يكون؟
 ]]
 keyboard = {} 
@@ -16739,7 +16741,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/klllag' then
 local Teext =[[
-•مبروك لقد فوزت ونجيت من العقاب•
+مبروك لقد فوزت ونجيت من العقاب
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16751,7 +16753,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/allowj' then
 local Teext =[[
-• غلط القاب هوا-   خلاص سامحتك •
+غلط القاب هوا-   خلاص سامحتك 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16764,7 +16766,7 @@ end
 
 if Text == '/allaly' then
 local Teext =[[
-• غلط القاب هوا-    سكر خشمك و قول كلمة من اختيار الاعبين الي معك•
+غلط القاب هوا-    سكر خشمك و قول كلمة من اختيار الاعبين الي معك
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16776,7 +16778,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/akakakk' then
 local Teext =[[
-• غلط القاب هوا-    اذهب الى واحد ماتعرفه وقل له انا كيوت وابي بوسه •
+غلط القاب هوا-    اذهب الى واحد ماتعرفه وقل له انا كيوت وابي بوسه 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16788,7 +16790,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/kalalal' then
 local Teext =[[
-• غلط القاب هوا-    روح المطبخ و اكسر صحن او كوب•
+غلط القاب هوا-    روح المطبخ و اكسر صحن او كوب
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16800,7 +16802,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption
 end
 if Text == '/Kelly' then
 local Teext =[[
-• غلط القاب هوا-    تتصل على الوالده  و تقول لها تزوجت با سر•
+غلط القاب هوا-    تتصل على الوالده  و تقول لها تزوجت با سر
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16815,7 +16817,7 @@ end
 
 if Text == '/looks' then
 local Teext =[[
-• انت ستندم سأقتلك •
+انت ستندم سأقتلك 
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17094,12 +17096,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل الترحيب '
+local Text = 'تم تفعيل الترحيب '
 database:set(bot_id.."Chek:Welcome"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17110,12 +17112,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل الترحيب '
+local Text = 'تم تعطيل الترحيب '
 database:del(bot_id.."Chek:Welcome"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17126,12 +17128,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل التحقق '
+local Text = 'تم تفعيل التحقق '
 database:set(bot_id.."CAPTCHA"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17142,12 +17144,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل التحقق '
+local Text = 'تم تعطيل التحقق '
 database:del(bot_id.."CAPTCHA"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17159,12 +17161,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل ردود السورس '
+local Text = 'تم تفعيل ردود السورس '
 database:set(bot_id.."my_GHoeq2:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17175,12 +17177,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل ردود السورس '
+local Text = 'تم تعطيل ردود السورس '
 database:del(bot_id.."my_GHoeq2:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17191,12 +17193,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل حساب العمر '
+local Text = 'تم تفعيل حساب العمر '
 database:set(bot_id.."DRG:age_Bots"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17207,12 +17209,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل حساب العمر '
+local Text = 'تم تعطيل حساب العمر '
 database:del(bot_id.."DRG:age_Bots"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17223,12 +17225,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل نسبه جمالي '
+local Text = 'تم تفعيل نسبه جمالي '
 database:set(bot_id.."pp_photo:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17239,12 +17241,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل نسبه جمالي '
+local Text = 'تم تعطيل نسبه جمالي '
 database:del(bot_id.."pp_photo:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17255,12 +17257,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل نسبة الرجوله '
+local Text = 'تم تفعيل نسبة الرجوله '
 database:set(bot_id.."Cick:rjo"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17271,12 +17273,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل نسبة الرجوله '
+local Text = 'تم تعطيل نسبة الرجوله '
 database:del(bot_id.."Cick:rjo"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17287,12 +17289,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل  نسبة الحب '
+local Text = 'تم تفعيل  نسبة الحب '
 database:set(bot_id.."Cick:lov"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17303,12 +17305,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل  نسبة الحب '
+local Text = 'تم تعطيل  نسبة الحب '
 database:del(bot_id.."Cick:lov"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17319,12 +17321,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل نسبه الانوثه '
+local Text = 'تم تفعيل نسبه الانوثه '
 database:set(bot_id.."Cick:ano"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17335,12 +17337,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل نسبه الانوثه '
+local Text = 'تم تعطيل نسبه الانوثه '
 database:del(bot_id.."Cick:ano"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17351,12 +17353,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل نسبه الكره '
+local Text = 'تم تفعيل نسبه الكره '
 database:set(bot_id.."Cick:krh"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17367,12 +17369,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل نسبه الكره '
+local Text = 'تم تعطيل نسبه الكره '
 database:del(bot_id.."Cick:krh"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17383,12 +17385,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل الايدي '
+local Text = 'تم تفعيل الايدي '
 database:set(bot_id.."Bot:Id"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17399,12 +17401,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل الايدي '
+local Text = 'تم تعطيل الايدي '
 database:del(bot_id.."Bot:Id"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17416,12 +17418,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل الالعاب '
+local Text = 'تم تفعيل الالعاب '
 database:set(bot_id.."Lock:Games"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17432,12 +17434,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل الالعاب '
+local Text = 'تم تعطيل الالعاب '
 database:del(bot_id.."Lock:Games"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17448,12 +17450,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل ضافني '
+local Text = 'تم تفعيل ضافني '
 database:set(bot_id.."Added:Me"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17464,12 +17466,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل ضافني '
+local Text = 'تم تعطيل ضافني '
 database:del(bot_id.."Added:Me"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17480,12 +17482,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل انا مين '
+local Text = 'تم تفعيل انا مين '
 database:set(bot_id.."my_anamen:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17496,12 +17498,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل انا مين '
+local Text = 'تم تعطيل انا مين '
 database:del(bot_id.."my_anamen:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17512,12 +17514,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل الزخرفه '
+local Text = 'تم تفعيل الزخرفه '
 database:set(bot_id.." ban:zhrf_Bots"..msg.chat_id_,"open")
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17528,12 +17530,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل الزخرفه '
+local Text = 'تم تعطيل الزخرفه '
 database:del(bot_id.." ban:zhrf_Bots"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17544,12 +17546,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل صورتي '
+local Text = 'تم تفعيل صورتي '
 database:set(bot_id.."my_photo:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17562,12 +17564,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل صورتي '
+local Text = 'تم تعطيل صورتي '
 database:del(bot_id.."my_photo:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17581,12 +17583,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل مريم '
+local Text = 'تم تفعيل مريم '
 database:set(bot_id.."my_maryam:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17597,12 +17599,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل مريم '
+local Text = 'تم تعطيل مريم '
 database:del(bot_id.."my_maryam:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17613,12 +17615,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل الرابط '
+local Text = 'تم تفعيل الرابط '
 database:set(bot_id.."Link_Group:status"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17629,12 +17631,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل الرابط '
+local Text = 'تم تعطيل الرابط '
 database:del(bot_id.."Link_Group:status"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17645,12 +17647,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تعطيل اطردني '
+local Text = 'تم تعطيل اطردني '
 database:set(bot_id.."Cick:Me"..Chat_id,true)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17661,12 +17663,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم تفعيل اطردني '
+local Text = 'تم تفعيل اطردني '
 database:del(bot_id.."Cick:Me"..Chat_id)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17678,12 +17680,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الاباحي '
+local Text = 'تم قفل الاباحي '
 database:set(bot_id.."lock:Lock:Sexy"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17694,12 +17696,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الاباحي '
+local Text = 'تم فتح الاباحي '
 database:del(bot_id.."lock:Lock:Sexy"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17710,12 +17712,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل السب '
+local Text = 'تم قفل السب '
 database:set(bot_id.."lock:Fshar"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17726,12 +17728,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح السب '
+local Text = 'تم فتح السب '
 database:del(bot_id.."lock:Fshar"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17742,12 +17744,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الازعاج '
+local Text = 'تم قفل الازعاج '
 database:set(bot_id.."lock:Azag"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17758,12 +17760,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الازعاج '
+local Text = 'تم فتح الازعاج '
 database:del(bot_id.."lock:Azag"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17774,12 +17776,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل المحن '
+local Text = 'تم قفل المحن '
 database:set(bot_id.."lock:mahn"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17790,12 +17792,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح المحن '
+local Text = 'تم فتح المحن '
 database:del(bot_id.."lock:mahn"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17806,12 +17808,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الدردشه '
+local Text = 'تم قفل الدردشه '
 database:set(bot_id.."lock:text"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17822,12 +17824,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الدردشه '
+local Text = 'تم فتح الدردشه '
 database:del(bot_id.."lock:text"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17838,12 +17840,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الاضافه '
+local Text = 'تم قفل الاضافه '
 database:set(bot_id.."lock:AddMempar"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17854,12 +17856,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الاضافه '
+local Text = 'تم فتح الاضافه '
 database:del(bot_id.."lock:AddMempar"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙??𝙰𝙲𝙺↵', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17870,12 +17872,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الدخول '
+local Text = 'تم قفل الدخول '
 database:set(bot_id.."lock:Join"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17886,12 +17888,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الدخول '
+local Text = 'تم فتح الدخول '
 database:del(bot_id.."lock:Join"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17902,12 +17904,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل البوتات '
+local Text = 'تم قفل البوتات '
 database:set(bot_id.."lock:Bot:kick"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17918,12 +17920,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح البوتات '
+local Text = 'تم فتح البوتات '
 database:del(bot_id.."lock:Bot:kick"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17934,12 +17936,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الاشعارات '
+local Text = 'تم قفل الاشعارات '
 database:set(bot_id.."lock:tagservr"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17950,12 +17952,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الاشعارات '
+local Text = 'تم فتح الاشعارات '
 database:del(bot_id.."lock:tagservr"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17966,12 +17968,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الروابط '
+local Text = 'تم قفل الروابط '
 database:set(bot_id.."lock:Link"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17982,12 +17984,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الروابط '
+local Text = 'تم فتح الروابط '
 database:del(bot_id.."lock:Link"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -17998,12 +18000,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل التثبيت '
+local Text = 'تم قفل التثبيت '
 database:set(bot_id.."lockpin"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18014,12 +18016,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح التثبيت '
+local Text = 'تم فتح التثبيت '
 database:del(bot_id.."lockpin"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18030,12 +18032,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل التعديل '
+local Text = 'تم قفل التعديل '
 database:set(bot_id.."lock:edit"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18046,12 +18048,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح التعديل '
+local Text = 'تم فتح التعديل '
 database:del(bot_id.."lock:edit"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18062,12 +18064,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الفارسيه '
+local Text = 'تم قفل الفارسيه '
 database:set(bot_id.."lock:Fars"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18078,12 +18080,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الفارسيه '
+local Text = 'تم فتح الفارسيه '
 database:del(bot_id.."lock:Fars"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18094,12 +18096,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الانكليزيه '
+local Text = 'تم قفل الانكليزيه '
 database:set(bot_id.."lock:Engilsh"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18110,12 +18112,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الانكليزيه '
+local Text = 'تم فتح الانكليزيه '
 database:del(bot_id.."lock:Engilsh"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18126,12 +18128,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل الانلاين '
+local Text = 'تم قفل الانلاين '
 database:set(bot_id.."lock:inline"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18142,12 +18144,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح الانلاين '
+local Text = 'تم فتح الانلاين '
 database:del(bot_id.."lock:inline"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18158,12 +18160,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم قفل تعديل الميديا '
+local Text = 'تم قفل تعديل الميديا '
 database:set(bot_id.."lock_edit_med"..msg.chat_id_,'del')  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -18174,12 +18176,12 @@ local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
 return false
 end
-local Text = '• تم فتح تعديل الميديا '
+local Text = 'تم فتح تعديل الميديا '
 database:del(bot_id.."lock_edit_med"..msg.chat_id_)  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🔰︙𝐁𝐚𝐜𝐤', callback_data="/help8"},
+{text = '𝐁𝐚𝐜𝐤', callback_data="/help8"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  

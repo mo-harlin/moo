@@ -4168,7 +4168,7 @@ end
 
 if text == 'العاب نوفا' or text == 'العاب مطوره' or text == 'الالعاب' then  
 local Text = [[  
- ᥀︙ اهلا في قائمه الالعاب سورس نوفا
+ ᥀︙ اهلا في قائمه العاب سورس نوفا
  ᥀︙ تفضل اختر لعبه من القائمه
 ]]  
 keyboard = {}   
@@ -4198,12 +4198,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-{
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
-},
+{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/65&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -15264,7 +15259,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_, '\n     ꙰🦅 ليس لديك صور في حسابك \n['..get_id_text..']')      
+send(msg.chat_id_, msg.id_, '\n     ꙰?? ليس لديك صور في حسابك \n['..get_id_text..']')      
 end 
 end
 else
@@ -16896,7 +16891,7 @@ return false
 end
 local Teext =[[
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
- ᥀︙ اهلا في قائمه الالعاب سورس نوفا
+ ᥀︙ اهلا في قائمه العاب سورس نوفا
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
  ᥀︙ تفضل اختر لعبه من القائمه
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸

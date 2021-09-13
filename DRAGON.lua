@@ -12473,7 +12473,7 @@ end
 
 if text == 'انا مين' and SudoBot(msg) then
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت مطوري نور عنيا🥺🤍](t.me/G_K_00)'
+local textt = 'انت مطوري نور عنيا 🙊💗'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {

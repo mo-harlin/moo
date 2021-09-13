@@ -6246,50 +6246,17 @@ send(msg.chat_id_, msg.id_," ◉ حساب المنشئ محذوف")
 return false  
 end
 local UserName = (b.username_ or "SRC-DRAGON")
-local Text = "● منشئ الجروب  ⋙ ["..b.first_name_.."](tg://user?id="..b.id_..")\n"..getbio(b.id_):gsub('لايوجد','')
-local msg_id = msg.id_/2097152/0.5
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = '• '..b.first_name_..' •', url="t.me/"..UserName}},   
-}
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..UserName..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
-local Name1 = result.first_name_
-local Name1 = Name1:gsub('"',"") 
-local Name1 = Name1:gsub("'","") 
-local Name1 = Name1:gsub("","") 
-local Name1 = Name1:gsub("*","") 
-local Name1 = Name1:gsub("{","") 
-local Name1 = Name1:gsub("}","") 
-local Name = '['..Name1..'](tg://user?id='..result.id_..')'
-local NameChat = dp.title_
-local NameChat = NameChat:gsub('"',"") 
-local NameChat = NameChat:gsub("'","") 
-local NameChat = NameChat:gsub("","") 
-local NameChat = NameChat:gsub("*","") 
-local NameChat = NameChat:gsub("{","") 
-local NameChat = NameChat:gsub("}","") 
-local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
-if LinkGp.ok == true then 
-LinkGroup = LinkGp.result
-else
-LinkGroup = 'لا يوجد'
-end
-sendText(b.id_,"●مرحبا عزيزي المنشئ هناك شخص يريدك \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب {"..msg.chat_id_.."}\n●رابط الجروب \n ["..LinkGroup.."] ",0,'md')
-end,nil)
-end,nil)
-end,nil)
+send(msg.chat_id_, msg.id_," ◉ منشئ الجروب  ⇇["..b.first_name_.."](T.me/"..UserName..")")  
+end,nil)   
 end
 end
-end,nil)
+end,nil)   
 end
 if text == 'مسح المنشئين' and BasicConstructor(msg) then
 database:del(bot_id..'Constructor'..msg.chat_id_)
 texts = ' ᥀︙ تم مسح المنشئين '
 send(msg.chat_id_, msg.id_, texts)
 end
-
 if text == ("المنشئين") and BasicConstructor(msg) then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
 t = "\n ᥀︙ قائمة المنشئين \n╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸\n"

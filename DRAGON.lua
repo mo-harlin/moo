@@ -1271,13 +1271,14 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '᥀︙ انت الان المطور الاساسي في البوت \n᥀︙ يمكنك تحكم في البوتات من الكيبورد قم بأختيار ماتريده من الازار في الاسفل↑↓\n[تابع جديدنا](t.me/SO_NOVA)'
+local bl = 'انت الان المطور الاساسي في البوت \n سورس نوفا\n يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_NOVA)'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/boyka01/5&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'الاصدار ' and DevSoFi(msg) then 
 database:del(bot_id..'Srt:Bot') 
@@ -1320,7 +1321,8 @@ end
 if text == 'قناه السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[CH](t.me/SO_NOVA)
+افضل سورس في التليجرام 🔐
+سرعه ، دقه ، امان ، حمايه عالميه✅
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -1329,7 +1331,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'اتواصل' and DevSoFi(msg) then
+if text == 'تواصل' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 [TW](t.me/G_W_P_2_BOT)
@@ -1895,7 +1897,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "نوفا")
+N = (database:get(bot_id.."Name:Bot") or "فولتر")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -3103,9 +3105,9 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then 
 local Text = [[ 
 [🔰╎ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
-[╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸](t.me/SO_NOVA)
+[--------------------------------------](t.me/SO_NOVA)
 [🔰╎ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ](t.me/SO_NOVA)
-[╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸](t.me/SO_NOVA)
+[--------------------------------------](t.me/SO_NOVA)
 [🔰╎ɴᴏᴠᴀ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ](t.me/SO_NOVA)
 ]]
 keyboard = {}
@@ -3879,7 +3881,7 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text == "نكته" or text == "قولي نكته" or text == "ضحكني" then 
+if text == "نكته" or text == "قولي نكته" or text == "عايز اضحك" then 
 local TWEET_Msg = { 
 " مرة واحد مصري دخل سوبر ماركت في الكويت عشان يشتري ولاعة..    راح عشان يحاسب بيقوله الولاعة ديه بكام؟   قاله دينار..  قاله منا عارف ان هي نار بس بكام 🤓😂", 
 "بنت حبت تشتغل مع رئيس عصابة..   شغلها في غسيل الأموال 🤓😂 ", 
@@ -4073,7 +4075,6 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
 if text == 'التواصل' then
 local Text = [[ 
 [TW](t.me/G_W_P_2_BOT)
@@ -12392,7 +12393,6 @@ local Text ='تم اختيار استوري'
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qapplu/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13795,7 +13795,7 @@ local List = {
 金 - 𝓼𝓽𝓪𝓼𝓽  . #stast ⸙ 
 金 - 𝓲𝓭 . #id ⸙ 
 金 - 𝓰𝓶𝓪𝓼 . #gmas ⸙ 
-金 - 𝓶𝓼𝓰𝓼 . #msgs ⸙
+金 - ??𝓼𝓰𝓼 . #msgs ⸙
 ]],
 [[
 🇯🇵 - 𝄬 username . #username  𓃠
@@ -15065,7 +15065,7 @@ local SO_NOVA = database:get(bot_id..'text:ch:user')
 if SO_NOVA then
 send(msg.chat_id_, msg.id_,'['..SO_NOVA..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙ لا تستطيع استخدام البوت \n ᥀︙  يرجى الاشتراك بالقناه اولا \n ᥀︙  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -15146,12 +15146,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n᥀︙ 𝐔𝐒𝐄𝐑↬ '..username..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n᥀︙ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n᥀︙ 𝐁𝐈𝐎↬ '..getbioY..'  \n᥀︙ 𝐂𝐇↬ @SO_NOVA \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n◉ 𝐔𝐒𝐄𝐑↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n◉ 𝐁𝐈𝐎↬ '..getbioY..'  \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n᥀︙ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ᥀︙ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..' \n᥀︙ 𝐂𝐇↬ @SO_NOVA \n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n◉ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else
-send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ⇜ ليس لديك صور في حسابك'..'[\n᥀︙ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..' \n᥀︙ 𝐂𝐇↬ @SO_NOVA  \n')
+send(msg.chat_id_, msg.id_, '\n ◉ الصوره ⇜ ليس لديك صور في حسابك'..'[\n◉ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA  \n')
 end 
 end
 end
@@ -15186,7 +15186,7 @@ local SO_NOVA = database:get(bot_id..'text:ch:user')
 if SO_NOVA then
 send(msg.chat_id_, msg.id_,'['..SO_NOVA..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙ لا تستطيع استخدام البوت \n ᥀︙  يرجى الاشتراك بالقناه اولا \n ᥀︙  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -15267,12 +15267,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n᥀︙ 𝐔𝐒𝐄𝐑↬ '..username..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n᥀︙ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n᥀︙ 𝐁𝐈𝐎↬ '..getbioY..'  \n᥀︙ 𝐂𝐇↬ @SO_NOVA \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n◉ 𝐔𝐒𝐄𝐑↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n◉ 𝐁𝐈𝐎↬ '..getbioY..'  \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n᥀︙ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ᥀︙ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..' \n᥀︙ 𝐂𝐇↬ @SO_NOVA \n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n◉ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else
-send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ⇜ ليس لديك صور في حسابك'..'[\n᥀︙ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n᥀︙ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n᥀︙ 𝐈𝐃↬ '..msg.sender_user_id_..' \n᥀︙ 𝐂𝐇↬ @SO_NOVA  \n')
+send(msg.chat_id_, msg.id_, '\n ◉ الصوره ⇜ ليس لديك صور في حسابك'..'[\n◉ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA  \n')
 end 
 end
 end

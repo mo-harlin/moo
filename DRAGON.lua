@@ -12364,7 +12364,7 @@ end
 
 if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 NOVA = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
+local Text ='متيجي اغنيلك انا يواد 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {
@@ -12379,13 +12379,10 @@ end
 
 if text == "ثيم" then  
 NOVA = math.random(1,33);  
-local Text ='الستخدم ثيم اخر اكتب ثيم'  
+local Text ='الستخدم ثيم اخر اكتب ثيم ❤'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{text = 'ثيم اخر', callback_data="/gggnn1"},
-{
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
-},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12393,7 +12390,7 @@ end
 
 if text == "استوري" then  
 NOVA = math.random(1,33);  
-local Text ='تم اختيار استوري'  
+local Text ='تم اختيار استوري لك 😊💕'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
@@ -12404,7 +12401,7 @@ end
 
 if text == "متحركه" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 NOVA = math.random(1,30); 
-local Text ='يتم اختيار متحركه' 
+local Text ='يتم اختيار متحركه 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
@@ -12415,7 +12412,7 @@ end
 
 if text == "انيمي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,60); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='تم اختيار انيمي لك 🫂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12426,7 +12423,7 @@ end
 
 if text == "خلفيات" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,28); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='تم اختيار لك بيك جمد 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12437,7 +12434,7 @@ end
 
 if text == "تويت بالصوره" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,14); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='تم اختيار لك تويت يهقر 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12448,7 +12445,7 @@ end
 
 if text == "لو خيروك بالصوره" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,16); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='تم اختيار لك لو خيروك يقمد 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12459,7 +12456,7 @@ end
 
 if text == "بيكات بوي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,14); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='خد البيك دي وتع هات مح 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12470,7 +12467,7 @@ end
 
 if text == "بيكات جيرل" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,14); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='خدي يموظه لو البيك عجبك هاتي عشره قنيه 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12481,7 +12478,7 @@ end
 
 if text == "بيكات كلبزات" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,14); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='احلي بيك لاحلي ناس ممحونه فلكون 😂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -12492,7 +12489,7 @@ end
 
 if text == "رمزيات" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
 ght = math.random(1,14); 
-local Text ='امسك يواد يهقر 🌚❤️' 
+local Text ='هات عشره ينيه واجبلك كمان واحده 😂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
@@ -13792,7 +13789,7 @@ local List = {
 𝟓 𝟔 𖡻 #msgs  ࿇🦄
 𝟓 𝟔 𖡻 #auto  ࿇🦄
 𝟓 𝟔 𖡻 #stast  ࿇🦄
-𝟓 𝟔 𖡻 #id  ࿇🦄
+𝟓 𝟔 𖡻 #id  ࿇??
 ]],
 [[
 金 - 𝓾𝓼𝓮𝓻𝓷𝓪𝓶𝓮 . #username ⸙ 
@@ -20007,21 +20004,6 @@ keyboard.inline_keyboard = {
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end
-
-if Text == "/gggnn2" then
-NOVA = math.random(3,200); 
-local Text ='تم اختيار ثيم اخر لك' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{
-{text = 'ثيم اخر', callback_data="/gggnn1"},
-},
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/ahmedthem1/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 end
 
 if Text == "/gggnn" then

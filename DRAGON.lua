@@ -12473,11 +12473,11 @@ end
 
 if text == 'انا مين' and SudoBot(msg) then
 local msg_id = msg.id_/2097152/0.5  
-local textt = ''
+local textt = 'انت مطوري نور عنيا 😘❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = textt, url="http://t.me/"..username},
+{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
 {text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
@@ -12496,7 +12496,7 @@ end
 
 if text == 'انا مين' and DevSoFi(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت مطوري الثاني حته مني 😍❤️](t.me/G_K_00)'
+local textt = 'انت مطوري الثاني حته مني 😍❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12519,7 +12519,7 @@ end
 
 if text == 'انا مين' and Sudo(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت المطور بس الصغنن 🌝❤️](t.me/G_K_00)'
+local textt = 'انت المطور بس الصغنن 🌝❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12542,7 +12542,7 @@ end
 
 if text == 'انا مين' and CoSu(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[نت المالك هن يعني حاجه فوق فوق راسي 😂♥](t.me/G_K_00)'
+local textt = 'نت المالك هن يعني حاجه فوق فوق راسي 😂💗'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12565,7 +12565,7 @@ end
 
 if text == 'انا مين' and Constructor(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه🤦‍♂️❤️](t.me/G_K_00)'
+local textt = 'انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه🤦‍♂️❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12588,7 +12588,7 @@ end
 
 if text == 'انا مين' and BasicConstructor(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂❤️](t.me/G_K_00)'
+local textt = 'انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12611,7 +12611,7 @@ end
 
 if text == 'انا مين' and Manager(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[ انت المدير يعني الروم تحت سيطرتك😹❤️](t.me/G_K_00)'
+local textt = 'انت المدير يعني الروم تحت سيطرتك😹❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12634,7 +12634,7 @@ end
 
 if text == 'انا مين' and Mod(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹❤️](t.me/G_K_00)'
+local textt = 'انت مجرد ادمن اجتهد عشان ياخد رتبه😹'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12657,7 +12657,7 @@ end
 
 if text == 'انا مين' and Special(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[ انت مميز ابن ناس 😊❤️](t.me/G_K_00)'
+local textt = انت مميز ابن ناس 😊♥'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12680,7 +12680,7 @@ end
 
 if text == 'انا مين' then
 local msg_id = msg.id_/2097152/0.5  
-local textt = '[ عضو قميل 🌝❤️](t.me/G_K_00)'
+local textt = 'عضو قميل 🌝❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -12837,10 +12837,10 @@ end
 if text == 'بايو' then   
 send(msg.chat_id_, msg.id_,getbio(msg.sender_user_id_)) 
 end 
-
 if text == 'ايديي' then
-send(msg.chat_id_, msg.id_,'  ايديك ← '..msg.sender_user_id_)
+send(msg.chat_id_, msg.id_,'  ᥀︙ ايديك  ⇇'..msg.sender_user_id_)
 end
+
 if text == 'الرتبه' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
@@ -13189,7 +13189,7 @@ local List = {
 ➞: 𝒊𝒅 𓂅 #id 𓍯➸💞.
 ]],
 [[
-☆𝐮𝐬𝐞𝐫 : #username 𖣬  
+☆𝐮??𝐞𝐫 : #username 𖣬  
 ☆𝐦𝐬𝐠  : #msgs 𖣬 
 ☆𝐬𝐭𝐚 : #stast 𖣬 
 ☆𝐢𝐝  : #id 𖣬
@@ -14432,11 +14432,11 @@ send(msg.chat_id_, msg.id_,'᥀︙ تم تغير الايدي ارسل ايدي 
 end
 if text == ("ايدي") and msg.reply_to_message_id_ == 0 and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then     
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local SO_NOVA = database:get(bot_id..'text:ch:user')
+if SO_NOVA then
+send(msg.chat_id_, msg.id_,'['..SO_NOVA..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙ لا تستطيع استخدام البوت \n  ᥀︙ يرجى الاشتراك بالقناه اولا \n  ᥀︙ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -14450,6 +14450,7 @@ rtpa = 'مشرف'
 elseif da.status_.ID == "ChatMemberStatusMember" then 
 rtpa = 'عضو'
 end
+local getbioY = getbio(msg.sender_user_id_)
 local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
 local nummsggp = tonumber(msg.id_/2097152/0.5)
 local nspatfa = tonumber(Msguser / nummsggp * 100)
@@ -14467,7 +14468,19 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-"..",
+	
+"يتي القمر نزل الارض يعمل اي🥺♥",
+
+"صورتك عفنت غيرها بقي....🤓♥",
+
+"اي يعم القمر دا ملاك يجدعان 😘❤️",
+
+"اي الصوره الجمد دي يهقر  😘❤️",
+
+"هوا الي مجننا هوا هوا القمر هوا 😂♥",
+
+"صورتك دي ولا صورت القمر 😘❤️",
+
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -14479,6 +14492,7 @@ else
 username = 'لا يوجد '
 end
 get_id_text = get_id_text:gsub('#rdphoto',rdphoto) 
+get_id_text = get_id_text:gsub('#bio',getbioY) 
 get_id_text = get_id_text:gsub('#id',iduser) 
 get_id_text = get_id_text:gsub('#username',username) 
 get_id_text = get_id_text:gsub('#msgs',Msguser) 
@@ -14493,7 +14507,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_, '\n     ꙰᥀︙  ليس لديك صور في حسابك \n['..get_id_text..']')      
+send(msg.chat_id_, msg.id_, '\n     ꙰🦅 ليس لديك صور في حسابك \n['..get_id_text..']')      
 end 
 end
 else
@@ -14503,12 +14517,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..'\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n◉ 𝐔𝐒𝐄𝐑↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n◉ 𝐁𝐈𝐎↬ '..getbioY..'  \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰᥀︙ 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰᥀︙ 𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n◉ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else
-send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫  '..username..'\n     ꙰᥀︙ 𝐦??𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
+send(msg.chat_id_, msg.id_, '\n ◉ الصوره ⇜ ليس لديك صور في حسابك'..'[\n◉ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA  \n')
 end 
 end
 end
@@ -14516,6 +14530,7 @@ else
 local get_id_text = database:get(bot_id.."KLISH:ID"..msg.chat_id_)
 if get_id_text then
 get_id_text = get_id_text:gsub('#rdphoto',rdphoto) 
+get_id_text = get_id_text:gsub('#bio',getbioY) 
 get_id_text = get_id_text:gsub('#id',iduser) 
 get_id_text = get_id_text:gsub('#username',username) 
 get_id_text = get_id_text:gsub('#msgs',Msguser) 
@@ -14526,7 +14541,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰᥀︙ 𝐬𝐭??  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰᥀︙ 𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n¦• 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n¦• 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n¦• 𝐈𝐃↬ '..msg.sender_user_id_..' \n¦• 𝐂𝐇↬ @SO_NOVA \n')
 end
 end
 
@@ -14536,13 +14551,13 @@ end,nil)
 end,nil)
 end
 end
-if text == ("Id") and msg.reply_to_message_id_ == 0 and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then     
+if text == ("id") and msg.reply_to_message_id_ == 0 and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then     
 if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
+local SO_NOVA = database:get(bot_id..'text:ch:user')
+if SO_NOVA then
+send(msg.chat_id_, msg.id_,'['..SO_NOVA..']')
 else
-send(msg.chat_id_, msg.id_,' ᥀︙ لا تستطيع استخدام البوت \n  ᥀︙ يرجى الاشتراك بالقناه اولا \n  ᥀︙ اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,' ◉ لا تستطيع استخدام البوت \n ◉  يرجى الاشتراك بالقناه اولا \n ◉  اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end
@@ -14556,6 +14571,7 @@ rtpa = 'مشرف'
 elseif da.status_.ID == "ChatMemberStatusMember" then 
 rtpa = 'عضو'
 end
+local getbioY = getbio(msg.sender_user_id_)
 local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
 local nummsggp = tonumber(msg.id_/2097152/0.5)
 local nspatfa = tonumber(Msguser / nummsggp * 100)
@@ -14573,7 +14589,19 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-"..",
+	
+"يتي القمر نزل الارض يعمل اي🥺♥",
+
+"صورتك عفنت غيرها بقي....🤓♥",
+
+"اي يعم القمر دا ملاك يجدعان 😘❤️",
+
+"اي الصوره الجمد دي يهقر  😘❤️",
+
+"هوا الي مجننا هوا هوا القمر هوا 😂♥",
+
+"صورتك دي ولا صورت القمر 😘❤️",
+
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -14585,6 +14613,7 @@ else
 username = 'لا يوجد '
 end
 get_id_text = get_id_text:gsub('#rdphoto',rdphoto) 
+get_id_text = get_id_text:gsub('#bio',getbioY) 
 get_id_text = get_id_text:gsub('#id',iduser) 
 get_id_text = get_id_text:gsub('#username',username) 
 get_id_text = get_id_text:gsub('#msgs',Msguser) 
@@ -14599,7 +14628,7 @@ else
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_, '\n     ꙰᥀︙  ليس لديك صور في حسابك \n['..get_id_text..']')      
+send(msg.chat_id_, msg.id_, '\n     ꙰🦅 ليس لديك صور في حسابك \n['..get_id_text..']')      
 end 
 end
 else
@@ -14609,12 +14638,12 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..'\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n◉ 𝐔𝐒𝐄𝐑↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..'  \n◉ 𝐁𝐈𝐎↬ '..getbioY..'  \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰᥀︙ 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰᥀︙ 𝗖??  t.me/SO_NOVA ↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي '..Name..' \n◉ 𝐔𝐒𝐄𝐑↬ '..Name..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n ◉ 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA \n')
 else
-send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫  '..username..'\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
+send(msg.chat_id_, msg.id_, '\n ◉ الصوره ⇜ ليس لديك صور في حسابك'..'[\n◉ 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n◉ 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n◉ 𝐈𝐃↬ '..msg.sender_user_id_..' \n◉ 𝐂𝐇↬ @SO_NOVA  \n')
 end 
 end
 end
@@ -14622,6 +14651,7 @@ else
 local get_id_text = database:get(bot_id.."KLISH:ID"..msg.chat_id_)
 if get_id_text then
 get_id_text = get_id_text:gsub('#rdphoto',rdphoto) 
+get_id_text = get_id_text:gsub('#bio',getbioY) 
 get_id_text = get_id_text:gsub('#id',iduser) 
 get_id_text = get_id_text:gsub('#username',username) 
 get_id_text = get_id_text:gsub('#msgs',Msguser) 
@@ -14632,7 +14662,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..'↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'↝🇧🇷\n     ꙰᥀︙ 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'↝🇧🇷\n    ꙰᥀︙ 𝗖𝗛t.me/SO_NOVA↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n¦• 𝐔𝐒𝐄𝐑 ↬ '..username..'  \n¦• 𝐌𝐒𝐆𝐒↬ '..Msguser..'  \n¦• 𝐑𝐀𝐍𝐊↬ '..Rutba(msg.sender_user_id_,msg.chat_id_)..' \n¦• 𝐈𝐃↬ '..msg.sender_user_id_..'  \n¦• 𝐂𝐇↬ @SO_NOVA \n')
 end
 end
 

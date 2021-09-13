@@ -1066,7 +1066,13 @@ keyboard = {
 {'غنيلي'},
 {'انصحني','كتابات'},
 {'ضحكني','نكته'},
+{'اذكار'},
+{'حروف','بوستات'},
+{'عقاب','اسالني'},
 {'ثيم'},
+{'مريم','تفعيل مريم'},
+{'الابراج','اختبار الذكاء'},
+{'المميزات'},
 {'تويت','لو خيروك'},
 {'تويت بالصوره','لو خيروك بالصوره'},
 {'انيمي'},
@@ -10187,12 +10193,12 @@ tdcli_function ({ID = "GetUser",user_id_ = SUDO},function(arg,result)
  
  local msg_id = msg.id_/2097152/0.5
 local Text = [[
-[مطور البوت يروحي](t.me/"..result.username_)
+المطور يروحي 🌿☕️
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '   '..result.first_name_..'   ',url="t.me/"..result.username_}},
-{{text = 'اضف البوت لمجموعتك', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
+{{text = '  '..result.first_name_..'  ',url="t.me/"..result.username_}},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -15208,7 +15214,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. 
 return false
 end
 ----------------------------------------------------------------------------
-if text == 'الالعاب' then
+if text == 'العاب' or text == 'المميزات' or text == 'العاب السورس' then  
 if not Constructor(msg) then
 send(msg.chat_id_, msg.id_,' ᥀︙ هاذا الامر خاص بالادمنيه\n ᥀︙ ارسل {⑩} لعرض اوامر الاعضاء')
 return false
@@ -15394,7 +15400,7 @@ keyboard.inline_keyboard = {
 {{text = 'Snspchat', url="https://accounts.snapchat.com/accounts/login?continue=https%3A%2F%2Faccounts.snapchat.com%2Faccounts%2Fdeleteaccount"}},  
 }  
 local msg_id = msg.id_/2097152/0.5  
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yhu79/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'الرابط' or text == 'رابط'  then
 local Text = [[

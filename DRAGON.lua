@@ -12657,7 +12657,7 @@ end
 
 if text == 'انا مين' and Special(msg) then 
 local msg_id = msg.id_/2097152/0.5  
-local textt = انت مميز ابن ناس 😊♥'
+local textt = 'انت مميز ابن ناس 😊♥'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {

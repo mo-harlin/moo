@@ -1035,7 +1035,8 @@ local keyboard = {
 {'تفعيل البوت الخدمي ','تعطيل البوت الخدمي '},
 {'تغير المطور الاساسي'},
 {'تنظيف الجروبات ','تنظيف المشتركين '},
-{'جلب نسخه الاحتياطيه'},
+{'جلب المشتركين','جلب النسخه'},
+{'جلب المطورين','جلب التوكن'},
 {'تحديث السورس ','الاصدار'},
 {'معلومات السيرفر'},
 {'الغاء'},
@@ -1235,6 +1236,15 @@ os.execute('rm -rf DRAGON.lua')
 os.execute('wget https://raw.githubusercontent.com/mo-harlin/moo/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'᥀︙ تم تحديث السورس')
 dofile('DRAGON.lua')  
+end
+if text == "توكن البوت" and SudoBot(msg) or text == 'جلب التوكن' and SudoBot(msg) then 
+if not DevSoFi(msg) then
+send(msg.chat_id_, msg.id_,'هذا الامر خاص بمطور البوت')
+return false
+end
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.sender_user_id_ .. '&text=' ..token) 
+send(msg.chat_id_, msg.id_,' ') 
 end
 if text == 'جلب المشتركين' and DevSoFi(msg) then 
 local list = database:smembers(bot_id..'User_Bot') 
@@ -1487,7 +1497,7 @@ database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_i
 send(msg.chat_id_, msg.id_," ᥀︙ ارسل لي التوجيه الان")
 return false
 end 
-if text == 'جلب نسخه الاحتياطيه' and DevSoFi(msg) then 
+if text == 'جلب النسخه' and DevSoFi(msg) then 
 GetFile_Bot(msg)
 end
 if text == "تنظيف المشتركين " and DevSoFi(msg) then 
@@ -4198,6 +4208,9 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
+{
+{text = 'اخفاء الاوامر', callback_data="/hide"},
+},
 {{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
@@ -4226,7 +4239,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
 end
-if text == 'جلب نسخه الاحتياطيه' and DevSoFi(msg) then 
+if text == 'جلب النسخه' and DevSoFi(msg) then 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -16563,7 +16576,7 @@ local Teext =[[
 ᥀︙ الغاء العام
 ᥀︙ قائمه العام
 ᥀︙ مسح قائمه العام
-᥀︙ جلب نسخه الاحتياطيه
+᥀︙ جلب النسخه
 ᥀︙ رفع نسخه الاحتياطيه
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ اذاعه خاص

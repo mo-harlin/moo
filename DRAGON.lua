@@ -12595,7 +12595,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -14612,7 +14612,7 @@ if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false 
 sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..'\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐬𝐭𝐚  '..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰᥀︙ 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰᥀︙ 𝗖𝗛  t.me/SO_NOVA ↝🇧🇷\n')
+send(msg.chat_id_, msg.id_,'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫   '..username..' ↝🇧🇷\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'.↝🇧🇷\n     ꙰᥀︙ 𝐒𝐭𝐚𝐬  '..Rutba(msg.sender_user_id_,msg.chat_id_)..' ↝🇧🇷\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..' ↝🇧🇷\n    ꙰᥀︙ 𝗖??  t.me/SO_NOVA ↝🇧🇷\n')
 else
 send(msg.chat_id_, msg.id_, '\n ᥀︙ الصوره ~⪼ ليس لديك صور في حسابك'..'[\n    ꙰᥀︙ 𝐮𝐬𝐞𝐫  '..username..'\n     ꙰᥀︙ 𝐦𝐬𝐠  '..Msguser..'\n     ꙰᥀︙ 𝐢𝐝 '..msg.sender_user_id_..'\n    ꙰᥀︙ 𝗖𝗛 t.me/SO_NOVA\n')
 end 

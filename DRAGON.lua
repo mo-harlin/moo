@@ -20007,16 +20007,17 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-
 if Text == "/gggnn" then
 NOVA = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
+local Text ='امسك يواد يقمر 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {
 {text = 'اغنيه اخري', callback_data="/gggnn"},
 },
+{
 {text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 

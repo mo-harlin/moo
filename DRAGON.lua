@@ -3157,6 +3157,19 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
+if text == 'كريم' or text == 'كريم الماجيك' or text == 'مراتي هارلين' then
+local Text = [[
+كريم صاحب تيم الماجيك لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ ᴀʟᴍᴀɢᴋ',url="t.me/M_A_G_K"}},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
 if text == 'مارتن' or text == 'توام هارلين' or text == 'مبرمج السورس' then
 local Text = [[
 مارتن مبرمج سورس نوفا لوحابب تتواصل معاه ❤️.
@@ -14265,7 +14278,7 @@ Msᴀɢ ~ #msgs
 [[
 🇪🇬 - 𝄬 username . #username  𓃠
 🇪🇬 - 𝄬 stast . #stast  ??
-🇪🇬 - ?? id . #id 𓃠
+🇪?? - ?? id . #id 𓃠
 🇪🇬 - ?? gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
 🇪🇬 - 𝄬 𝗖𝗛 - t.me/SO_NOVA 💞.

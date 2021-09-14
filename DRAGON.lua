@@ -2744,7 +2744,7 @@ end,nil)
 end,nil)
 end
 
-if text and text:match("^هارلين$") or text and text:match("^محمد$") or text and text:match("^محمد هارلين$") then
+if text and text:match("^هارلين$") or text and text:match("^محمد هارلين$") or text and text:match("^محمد هارلين$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -3157,7 +3157,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == 'كريم' or text == 'كريم الماجيك' or text == 'مراتي هارلين' then
+if text == 'كريم' or text == 'كريم الماجيك' or text == 'مرات هارلين' then
 local Text = [[
 كريم صاحب تيم الماجيك لوحابب تتواصل معاه ❤️.
 ]]
@@ -16168,7 +16168,7 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-⇊ اوامر القفل والفتح ᥀︙
+᥀︙اوامر القفل والفتح ⇊
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 
 ]]

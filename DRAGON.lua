@@ -150,7 +150,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
-  ⊰مـن قـبـل شـيـكـو 
+  ⊰مـن قـبـل مـارتـن 
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -193,7 +193,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1984063192,1932226438,}   
+sudo_users = {SUDO,1984063192,1918870568,}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -309,7 +309,7 @@ end
 function Can_or_NotCan(user_id,chat_id)
 if tonumber(user_id) == tonumber(1984063192) then  
 var = true 
-elseif tonumber(user_id) == tonumber(1932226438) then
+elseif tonumber(user_id) == tonumber(1918870568) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -351,7 +351,7 @@ end
 function Rutba(user_id,chat_id)
 if tonumber(user_id) == tonumber(1984063192) then  
 var = 'مبرمج سورس نوفا'
-elseif tonumber(user_id) == tonumber(1932226438) then
+elseif tonumber(user_id) == tonumber(1918870568) then
 var = 'مبرمج سورس نوفا'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -1069,7 +1069,7 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'رجوع' then  
 if msa3d(msg) then
-local bl = '𖠕 انت الان المطور الاساسي في البوت \n𖠕 يمكنك تحكم في البوتات من الكيبورد قم بأختيار ماتريده من الازار في الاسفل↑↓'
+local bl = 'انت الان المطور الاساسي في البوت n𖠕\↑↓ يمكنك تحكم في البوتات من الكيبورد قم بأختيار ماتريده من الازار في الاسفل 𖠕'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','المساعد'},
@@ -1227,7 +1227,7 @@ echo '╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸\n᥀︙ مـده تـشغ
 ]]):read('*all'))  
 end
 
-if text == 'تحديث السورس ' and DevSoFi(msg) then 
+if text == 'تحديث السورس' and DevSoFi(msg) then 
 os.execute('rm -rf DRAGON.lua')
 os.execute('wget https://raw.githubusercontent.com/mo-harlin/moo/main/DRAGON.lua')
 send(msg.chat_id_, msg.id_,'᥀︙ تم تحديث السورس')
@@ -1281,12 +1281,56 @@ if text == 'الاصدار' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,'𖠕 اصدار سورس نوفا { s: 6.7}')
 end
+if SourceCh(msg) and text == '⇣───『 قـناه المطورين』───⇣' then
+local Text = [[ 
+ يوزرات مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"},{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 
+
+if SourceCh(msg) and text == 'معلومات الكيبورد' and Devban(msg) then
+bot_data:del(ban_id..'Srt:Bot') 
+local Text = [[ 
+مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
+1• الاحصائيات { لعرض عدد المجموعات، والمشتركين في البوت}
+ 2• تفعيل التواصل{ لتفعيل التواصل عبر البوت خاص بك}
+ 3• تعطيل التواصل{ لتعطيل التواصل عبر البوت خاص بك } 
+ 4• قائمه العام { لعرض المحظورين عام في البوت }
+ 5• المطورين { لعرض المطورين في بوتك }
+8• اذاعه { ارسال رساله لجميع الجروبات في بوتك }
+9• اذاعه خاص { ارسال رساله لجميع مشتركين بوتك}
+10• تعطيل الاشتراك الاجباري { لتعطيل الاشتراك جباري خاص بوتك}
+11• تفعيل الاشتراك الاجباري { لتفعيل الاشتراك الاجباري بوتك }
+12•اذاعه بالتوجيه { ارسال رساله بالتوجيه الي جميع المجموعات }
+13• اذاعه بالتوجيه خاص { ارسال رساله بالتوجيه الي جميع المشتركين }
+14• تفعيل البوت الخدمي { يمكن هاذا امر ان منشئ الكروب يفعل البوت من دون حتياجه لمطور البوت}
+15• تعطيل البوت الخدمي { يمك هل خاصيه ان تفعيل البوت اله مطورين البوت فقط }
+16• تنظيف المشتركين { يمكنك ازاله المشتركين الوهمين عبر هل امر }
+17• تنظيف الجروبات { يمكن ازاله المجموعات الوهميه عبر عل امر }
+18• جلب نسخه احتياطيه { لعرض ملف المجموعات بوتك }
+19• تحديث السورس { لتحديث السورس خاص بوتك }
+20• الغاء { للغاء الامر الذي طلبته }
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'قناه السورس', url="t.me/SO_NOVA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
 if text == 'تواصل لسورس' and DevSoFi(msg) then 
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
 {'⇣───『 قـناه المطورين』───⇣'},
-{'قناة السورس','التواصل'},
+{'قناه السورس','بوت التواصل'},
 {'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
@@ -1389,7 +1433,7 @@ keyboard.inline_keyboard = {
 {{text = 'قناه السورس️️', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'تواصل' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
@@ -2761,7 +2805,7 @@ LinkGroup = LinkGp.result
 else
 LinkGroup = 'لا يوجد'
 end
-sendText(1932226438,"᥀︙. هناك شخص يريدك يا سيدي هارلين \n᥀︙الشخص  {"..Name.."}\n᥀︙اسم الجروب {"..NameChat.."}\n᥀︙ايدي الجروب { `"..msg.chat_id_.."` }\n᥀︙رابط الجروب \n [ "..LinkGroup.." ]\n   𖠕رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
+sendText(1918870568,"᥀︙. هناك شخص يريدك يا سيدي هارلين \n᥀︙الشخص  {"..Name.."}\n᥀︙اسم الجروب {"..NameChat.."}\n᥀︙ايدي الجروب { `"..msg.chat_id_.."` }\n᥀︙رابط الجروب \n [ "..LinkGroup.." ]\n   𖠕رابط الرساله \n https://t.me/c/"..chatid.."/"..msg_id.."   ",0,'md')
 end,nil)
 end,nil)
 end
@@ -3121,21 +3165,21 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
  يوزرات مبرمجين السورس 🍂
-محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
+محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"}},{{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"},{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
 {{text = ' 𝓽᭙ ꪀꪮꪜꪖ',url="t.me/G_W_P_2_BOT"}},
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'محمد' or text == 'محمد هارلين' or text == 'توام مارتن' then
 local Text = [[
@@ -3310,7 +3354,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'التواصل' then
 local Text = [[ 
@@ -3322,7 +3366,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'قناة السورس' then
 local Text = [[ 
@@ -3334,7 +3378,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'بوت التواصل' then
 local Text = [[ 
@@ -3346,7 +3390,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 ---------------------
 if text == "تويت" or text == "كت تويت" then 
@@ -5132,7 +5176,7 @@ if tonumber(result.sender_user_id_) == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1932226438) then  
+if tonumber(result.sender_user_id_) == tonumber(1918870568) then  
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5178,7 +5222,7 @@ if result.id_ == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1932226438) then
+if result.id_ == tonumber(1918870568) then
 send(msg.chat_id_, msg.id_, "𖠕 لا يمكنك حظر مبرمج السورس \n")
 return false 
 end
@@ -5218,7 +5262,7 @@ if tonumber(userid) == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1932226438) then  
+if tonumber(userid) == tonumber(1918870568) then  
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع حظر مبرمج السورس عام")
 return false 
 end
@@ -5259,7 +5303,7 @@ if tonumber(result.sender_user_id_) == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(result.sender_user_id_) == tonumber(1932226438) then  
+if tonumber(result.sender_user_id_) == tonumber(1918870568) then  
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
@@ -5304,7 +5348,7 @@ if result.id_ == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
-if result.id_ == tonumber(1932226438) then
+if result.id_ == tonumber(1918870568) then
 send(msg.chat_id_, msg.id_, "𖠕 لا يمكنك كتم مبرمج السورس \n")
 return false 
 end
@@ -5344,7 +5388,7 @@ if tonumber(userid) == tonumber(1984063192) then
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end
-if tonumber(userid) == tonumber(1932226438) then  
+if tonumber(userid) == tonumber(1918870568) then  
 send(msg.chat_id_, msg.id_, "𖠕 لا تسطيع كتم مبرمج السورس عام")
 return false 
 end

@@ -13775,7 +13775,7 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-,"᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ"
+᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -13883,7 +13883,7 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-,"᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ"
+᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      

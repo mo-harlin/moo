@@ -16095,6 +16095,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yhu79/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+
 if text == 'الرابط' then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
 https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
@@ -16112,22 +16113,6 @@ else
 send(msg.chat_id_, msg.id_,'  ᥀︙ لا يوجد رابط ارسل ضع رابط') 
 end 
 end,nil) 
-end
-
-if text == 'الرابط' or text == 'رابط'  then
-local Text = [[
-᥀︙اختر نوع الرابط لجلبه
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'رابط النص', callback_data="/nov3"}},
-{{text = 'رابط اونلاين', callback_data="/nov2"},{text = 'رابط بالصور', callback_data="/nov1"}},   
-{
-{text = 'اخفاء الاوامر', callback_data="/hide"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == "حروف" or text == "حرف" or text == "الحروف" then 
 local TWEET_Msg = { 

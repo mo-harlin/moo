@@ -1038,7 +1038,7 @@ end
 if text == "/start" then
 if not msa3d(msg) then
 if not DevSoFi(msg) then
-local Namebot = (database:get(ban_id..'Name:Bot') or 'نوفا') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
 local NOVA_Msg = { 
 ' ـــــــــــــــــــــــــــــــــــــــــــــــ\n   🤖╖ أهلآ بك عزيزي أنا بوت  '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\nــــــــــــــــــــــــــــــــــــــــــــــــــــ ',
 } 
@@ -1060,7 +1060,7 @@ else
 send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
 end 
 end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = ban_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 end
 end
@@ -1391,7 +1391,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'التواصل' and DevSoFi(msg) then
+if text == 'تواصل' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 [TW](t.me/G_W_P_2_BOT)
@@ -1513,29 +1513,24 @@ end
 send(msg.chat_id_, msg.id_, t)
 return false
 end
-if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and DevSoFi(msg) then 
+if text=="اذاعه خاص " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
 database:setex(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"𖠕 ارسل الان اذاعتك؟ \n𖠕 للخروج ارسل الغاء ")
+send(msg.chat_id_, msg.id_," 𖠕 ارسل الان اذاعتك؟ \n 𖠕 للخروج ارسل الغاء ")
 return false
 end 
-if text=="اذاعه " and msg.reply_to_message_id_ == 0 and DevSoFi(msg) then 
+if text=="اذاعه " and msg.reply_to_message_id_ == 0 and msa3d(msg) then 
 database:setex(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"𖠕 ارسل الان اذاعتك؟ \n𖠕 للخروج ارسل الغاء ")
+send(msg.chat_id_, msg.id_," 𖠕 ارسل الان اذاعتك؟ \n 𖠕 للخروج ارسل الغاء ")
 return false
 end  
-if text=="اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and DevSoFi(msg) then 
-database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"𖠕 ارسل الان اذاعتك؟ \n𖠕 للخروج ارسل الغاء ")
-return false
-end 
-if text=="اذاعه بالتوجيه " and msg.reply_to_message_id_ == 0  and DevSoFi(msg) then 
+if text=="اذاعه بالتوجيه " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"𖠕 ارسل لي التوجيه الان")
+send(msg.chat_id_, msg.id_," 𖠕 ارسل لي التوجيه الان")
 return false
 end 
-if text=="اذاعه بالتوجيه خاص " and msg.reply_to_message_id_ == 0  and DevSoFi(msg) then 
+if text=="اذاعه بالتوجيه خاص " and msg.reply_to_message_id_ == 0  and msa3d(msg) then 
 database:setex(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
-send(msg.chat_id_, msg.id_,"𖠕 ارسل لي التوجيه الان")
+send(msg.chat_id_, msg.id_," 𖠕 ارسل لي التوجيه الان")
 return false
 end 
 if text == 'جلب النسخه' and DevSoFi(msg) then 
@@ -1653,7 +1648,7 @@ send(msg.chat_id_,msg.id_,"𖠕 عذرا عزيزي المستخدم هاذا م
 return false 
 end      
 database:sadd(bot_id..'Sudo:User', result.id_)
-usertext = '\n𖠕 العضو ↫ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
+usertext = '\n𖠕 العضو ↫ ['..result.title_..'](t.me/'..(username or 'SO_NOVA')..')'
 status  = '\n𖠕 تم ترقيته مطور'
 texts = usertext..status
 else
@@ -1678,7 +1673,7 @@ end
 database:sadd(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n𖠕 العضو ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+usertext = '\n𖠕 العضو ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'SO_NOVA')..')'
 status  = '\n𖠕 تم ترقيته مطور'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -1702,7 +1697,7 @@ end
 function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'Sudo:User', result.id_)
-usertext = '\n𖠕 العضو ↫ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
+usertext = '\n𖠕 العضو ↫ ['..result.title_..'](t.me/'..(username or 'SO_NOVA')..')'
 status  = '\n𖠕 تم تنزيله من المطورين'
 texts = usertext..status
 else
@@ -1727,7 +1722,7 @@ end
 database:srem(bot_id..'Sudo:User', userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
-usertext = '\n𖠕 العضو ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
+usertext = '\n𖠕 العضو ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'SO_NOVA')..')'
 status  = '\n𖠕 تم تنزيله من المطورين'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
@@ -1744,7 +1739,7 @@ if text and not Special(msg) then
 local DRAGON1_Msg = database:get(bot_id.."DRAGON1:Add:Filter:Rp2"..text..msg.chat_id_)   
 if DRAGON1_Msg then 
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'𖠕 العضو ↫ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'textchuser')..') \n𖠕 '..DRAGON1_Msg)
+send(msg.chat_id_, msg.id_,' 𖠕 الـعـضو   ⋙ [『'..Rutba(msg.sender_user_id_,msg.chat_id_)..'』](T.ME/'..(data.username_ or 'SO_NOVA')..') \n 𖠕 '..DRAGON1_Msg)
 DeleteMessage(msg.chat_id_, {[0] = msg.id_})     
 return false
 end,nil)
@@ -1752,18 +1747,18 @@ end
 end
 if database:get(bot_id..'Set:Name:Bot'..msg.sender_user_id_) then 
 if text == 'الغاء' or text == 'الغاء ' then   
-send(msg.chat_id_, msg.id_,"𖠕 تم الغاء حفظ اسم البوت")
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء حفظ اسم البوت")
 database:del(bot_id..'Set:Name:Bot'..msg.sender_user_id_) 
 return false  
 end 
 database:del(bot_id..'Set:Name:Bot'..msg.sender_user_id_) 
 database:set(bot_id..'Name:Bot',text) 
-send(msg.chat_id_, msg.id_, "𖠕 تم حفظ الاسم")
+send(msg.chat_id_, msg.id_, " 𖠕 تم حفظ الاسم")
 return false
 end 
 if database:get(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء𖠕' then   
-send(msg.chat_id_, msg.id_,"𖠕 تم الغاء الاذاعه للخاص")
+if text == 'الغاء' or text == 'الغاء 𖠕' then   
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء الاذاعه للخاص")
 database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -1790,13 +1785,33 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_,"𖠕 تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," 𖠕 تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
 database:del(bot_id.."Send:Bc:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
-
+if database:get(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
+local msa3d = database:get(bot_id.."id:msa3d:ban")
+if text == 'الغاء' or text == 'الغاء 𖠕' then   
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء الرساله للمطور")
+database:del(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+return false
+end 
+if text then
+local textsudo = 'مرحبا عزيزي المطور الاساسي\n'..
+'رساله من ['..result.first_name_..'](tg://user?id='..msg.sender_user_id_..')\n'..
+'\n'..text
+local textmsa3d = 'مرحبا عزيزي المساعد\n'..
+'رساله من ['..result.first_name_..'](tg://user?id='..msg.sender_user_id_..')\n'..
+'\n'..text
+sendText(SUDO,textsudo,0,'md')
+sendText(msa3d,textmsa3d,0,'md')
+database:del(bot_id.."YYYBD_aza3h3" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+end
+end,nil)
+end
 if database:get(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء𖠕' then   
-send(msg.chat_id_, msg.id_,"𖠕 تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖠕' then   
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء الاذاعه")
 database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false
 end 
@@ -1823,13 +1838,13 @@ for k,v in pairs(list) do
 sendSticker(v, 0, 0, 1, nil, msg.content_.sticker_.sticker_.persistent_id_)   
 end 
 end
-send(msg.chat_id_, msg.id_,"𖠕 تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
+send(msg.chat_id_, msg.id_," 𖠕 تمت الاذاعه الى >>{"..#list.."} كروب في البوت ")
 database:del(bot_id.."Send:Bc:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end
 
 if database:get(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء𖠕' then   
-send(msg.chat_id_, msg.id_,"𖠕 تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖠕' then   
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
@@ -1843,13 +1858,13 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_,"𖠕 تمت الاذاعه الى >>{"..#list.."} كروبات في البوت ")
+send(msg.chat_id_, msg.id_," 𖠕 تمت الاذاعه الى >>{"..#list.."} جروبات في البوت ")
 database:del(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
 if database:get(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
-if text == 'الغاء' or text == 'الغاء𖠕' then   
-send(msg.chat_id_, msg.id_,"𖠕 تم الغاء الاذاعه")
+if text == 'الغاء' or text == 'الغاء 𖠕' then   
+send(msg.chat_id_, msg.id_," 𖠕 تم الغاء الاذاعه")
 database:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 return false  
 end 
@@ -1863,7 +1878,7 @@ message_ids_ = {[0] = msg.id_},
 disable_notification_ = 0,
 from_background_ = 1},function(a,t) end,nil) 
 end   
-send(msg.chat_id_, msg.id_,"𖠕 تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
+send(msg.chat_id_, msg.id_," 𖠕 تمت الاذاعه الى >>{"..#list.."} مشترك في البوت ")
 database:del(bot_id.."Send:Fwd:Pv" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
 end 
 end
@@ -3262,6 +3277,7 @@ local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text="اذاعة جروبات",callback_data="YYYBD_aza3h1"..msg.sender_user_id_},{text="اذاعة خاص",callback_data="YYYBD_aza3h2"..msg.sender_user_id_}},
+{{text="رساله للمطور الاساسي",callback_data="YYYBD_aza3h3"..msg.sender_user_id_}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -4120,57 +4136,11 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text and text:match("^بحث (.*)$") then
-local m = text:match("^بحث (.*)$")
-tgg = https.request('https://mahmoudm50.xyz/7oda/ytsearch.php?search='..URL.escape(m)..'')
-gg = JSON.decode(tgg)
-S = '٭ العنوان = '..gg.title
-A = '٭ مدتها = '..gg.time
-V = '٭ عدد المشاهدات = '..gg.view
-P = gg.image
-ttx = ''..S..'\n'..A..'\n'..V..''
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'تنزيل صوت', callback_data="mp3/"..gg.url},
-},
-{
-{text = 'تنزيل بصمه', callback_data="ogg/"..gg.url},
-},
-{
-{text = 'تنزيل فيديو', callback_data="mp4/"..gg.url},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..P..'&caption=' .. URL.escape(ttx).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+if text and text:match('^بحث (.*)$') and not database:get(bot_id..'dw:bot:api'..msg.chat_id_) then            
+local Ttext = text:match('^بحث (.*)$') 
+local msgin = msg.id_/2097152/0.5 
+http.request('http://devstorm.ml/tshake/tahaj200.php?token='..token..'&chat_id='..msg.chat_id_..'&Text='..URL.escape(Ttext)..'&msg='..msgin)
 end
-vardump(data)
-if Text and Text:match('@id/(.*)') then
-local Id_Link = Text:match('@id/(.*)') 
-tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
-DeleteMessage(Chat_id,{[0] = Msg_id})  
-local textt = '  .'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'Mahmoud', url="t.me/mahmoudm2"},
-},
-}
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-end,nil)
-elseif Text and Text:match('mp3/(.*)') then
-local Id_Link = Text:match('mp3/(.*)') 
-DeleteMessage(Chat_id,{[0] = Msg_id})    
-http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
-elseif Text and Text:match('ogg/(.*)') then
-local Id_Link = Text:match('ogg/(.*)') 
-DeleteMessage(Chat_id,{[0] = Msg_id})    
-http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
-elseif Text and Text:match('mp4/(.*)') then
-local Id_Link = Text:match('mp4/(.*)') 
-DeleteMessage(Chat_id,{[0] = Msg_id})    
-http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
-end      
 
 if text == 'العاب نوفا' or text == 'العاب مطوره' or text == 'الالعاب' then  
 local Text = [[  
@@ -4975,7 +4945,7 @@ end,nil)
 elseif text == 'قفل السيلفي بالطرد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:Unsupported"..msg.chat_id_,'kick')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,'𖠕 بواسطه ↫ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'textchuser')..') \n?? تـم قفـل السيلفي بالطرد ')  
+send(msg.chat_id_, msg.id_,'𖠕 بواسطه ↫ ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'textchuser')..') \n𖠕 تـم قفـل السيلفي بالطرد ')  
 end,nil)   
 elseif text == 'فتح السيلفي' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:del(bot_id.."lock:Unsupported"..msg.chat_id_)  
@@ -7642,7 +7612,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = "𖠕 لا يوجد مميزين"
+t = "?? لا يوجد مميزين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
@@ -14395,7 +14365,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
-👳🏼‍♂ - 𝄬 stast . #stast . ????
+👳🏼‍♂ - 𝄬 stast . #stast . 🇪??
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
@@ -20005,18 +19975,27 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-if Text == 'YYYBD_aza3h1'..data.sender_user_id_ and DevSoFi(data) then  
+if Text == 'YYYBD_aza3h1'..data.sender_user_id_ and msa3d(data) then  
 database:setex(bot_id.."Ss:Cs" .. Chat_id .. ":" .. data.sender_user_id_, 600, true) 
-local Text ="᥀︙ ارسل الاذاعة لارسلها الي الجروبات "
+local Text ="𖠕 ارسل الاذاعة لارسلها الي الجروبات "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
-if Text == 'YYYBD_aza3h2'..data.sender_user_id_ and DevSoFi(data) then  
+if Text == 'YYYBD_aza3h2'..data.sender_user_id_ and msa3d(data) then  
 database:setex(bot_id.."Send:Bc:Pv" .. Chat_id .. ":" .. data.sender_user_id_, 600, true) 
-local Text ="᥀︙ ارسل الاذاعة لارسلها الي المشتركين "
+local Text ="𖠕 ارسل الاذاعة لارسلها الي الجروبات "
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == 'YYYBD_aza3h3'..data.sender_user_id_ and msa3d(data) then  
+database:setex(bot_id.."YYYBD_aza3h3" .. Chat_id .. ":" .. data.sender_user_id_, 600, true) 
+local Text ="𖠕 ارسل الاذاعة لارسلها الي المطور الاساسي و المساعد "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
@@ -20038,6 +20017,37 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
+if Text and Text:match('@id/(.*)') then
+local Id_Link = Text:match('@id/(.*)') 
+DeleteMessage(data.chat_id_,{[0] = Msg_id})  
+local textt = '- من فضلك اختر نوع التنزيل'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'تنزيل ملف', callback_data="mp3/"..Id_Link},
+},
+{
+{text = 'تنزيل بصمه', callback_data="ogg/"..Id_Link},
+},
+{
+{text = 'تنزيل فيديو', callback_data="mp4/"..Id_Link},
+},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+elseif Text and Text:match('mp3/(.*)') then
+local Id_Link = Text:match('mp3/(.*)') 
+DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+http.request('http://devstorm.ml/yt2.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
+elseif Text and Text:match('ogg/(.*)') then
+local Id_Link = Text:match('ogg/(.*)') 
+DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+http.request('http://devstorm.ml/yt2.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
+elseif Text and Text:match('mp4/(.*)') then
+local Id_Link = Text:match('mp4/(.*)') 
+DeleteMessage(data.chat_id_,{[0] = Msg_id})    
+http.request('http://devstorm.ml/yt2.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
+end
+
 end
 if data.ID == "UpdateNewMessage" then  -- new msg
 msg = data.message_

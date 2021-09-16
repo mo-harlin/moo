@@ -13775,7 +13775,19 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ
+	
+"يتي القمر نزل الارض يعمل اي🥺❤",
+
+"صورتك عفنت غيرها بقي🙊💕",
+
+"اي يعم القمر دا ملاك يجدعان🫂💕",
+
+"اي الصوره القمر دي يواد 🙊❤",
+
+"هوا الي مجننا هوا هوا القمر هوا😂❤",
+
+"صورتك دي ولا صورت القمر🙊❤",
+
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -13883,7 +13895,19 @@ local photps = (sofi.total_count_ or 0)
 local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local sofia = {
-᭙ꫀꪶᥴꪮꪑ 𝓽ꪮ ᧁ𝘳ꪮꪊρ
+	
+"يتي القمر نزل الارض يعمل اي🥺❤",
+
+"صورتك عفنت غيرها بقي🙊💕",
+
+"اي يعم القمر دا ملاك يجدعان🫂💕",
+
+"اي الصوره القمر دي يواد 🙊❤",
+
+"هوا الي مجننا هوا هوا القمر هوا😂❤",
+
+"صورتك دي ولا صورت القمر🙊❤",
+
 }
 local rdphoto = sofia[math.random(#sofia)]
 if not database:get(bot_id..'Bot:Id:Photo'..msg.chat_id_) then      
@@ -14445,7 +14469,7 @@ iD 𖥳 #id
 [[
 𖠕   : 𝐼𝐷 𖠀 #id .
 𖠕   : 𝑈𝑆𝐸𝑅 𖠀 #username .
-𖠕   : 𝑀𝑆𝐺𝑆 𖠀 #msgs .
+𖠕   : 𝑀𝑆𝐺?? 𖠀 #msgs .
 𖠕   : 𝑆𝑇𝐴𝑇𝑆 𖠀 #stast .
 𖠕   : 𝐸𝐷𝐼𝑇  𖠀 #edit .
 𖠕   : 𝗖𝗛 - t.me/SO_NOVA 💞.

@@ -158,7 +158,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
- ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @I_C_X
+ ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @MaRtEn_Vs_WoRLD
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -1398,7 +1398,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ᴛᴡ ɴᴏᴠᴀ', url="t.me/G_W_P_2_BOT"}}, 
+{{text = ' 𝓽᭙ ꪀꪮꪜꪖ', url="t.me/G_W_P_2_BOT"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1435,7 +1435,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  '..result.first_name_..'  ',url="t.me/"..result.username_}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -3130,9 +3130,9 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ ',url="t.me/I_C_X"}},
-{{text = 'ᴛᴡ ᴠɴᴏᴀ',url="t.me/G_W_P_2_BOT"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"}},{{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = ' 𝓽᭙ ꪀꪮꪜꪖ',url="t.me/G_W_P_2_BOT"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3143,8 +3143,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/G_W_P&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3155,8 +3155,8 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ᴀʟᴍᴀɢᴋ',url="t.me/M_A_G_K"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪜ ꪖꪶꪑꪖᧁ𝘬',url="t.me/M_A_G_K"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3167,11 +3167,11 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/I_C_X"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MaRtEn_Vs_WoRLD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'مريم' then
 local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
@@ -3189,7 +3189,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/37&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'اسالني' or text == 'اختار' or text == 'لغز' or text == 'الغاز' then
 local Text = [[
@@ -3202,7 +3202,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/40&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
 local Text = [[
@@ -3218,7 +3218,7 @@ keyboard.inline_keyboard = {
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/38&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/5&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'الابراج' then
 local Text = [[
@@ -3251,11 +3251,11 @@ keyboard.inline_keyboard = {
 {text = 'الجوزاء 🌩', callback_data="/zguza"},{text = 'الدلو 🦯', callback_data="/zdlu"},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/36&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/6&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'اذاعه' then   
 local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
@@ -3284,7 +3284,7 @@ keyboard = {} keyboard.inline_keyboard = {
 {{text = '📖لقاء مع كاتب رعب"', url="https://t.me/SOURCE_SP/14"}},
 {{text = '📖رواية"الإنسان الأخير""', url="https://t.me/SOURCE_SP/16"}},
 {{text = '📖رواية" مقبرة الحيوانات""', url="https://t.me/SOURCE_SP/15"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url="t.me/SO_NOVA"}}
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url="t.me/SO_NOVA"}}
 }
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))  
@@ -3307,7 +3307,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3318,8 +3318,8 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ᴛᴡ ɴᴏᴠᴀ', url="t.me/G_W_P_2_BOT"}}, 
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = ' 𝓽᭙ ꪀꪮꪜꪖ', url="t.me/G_W_P_2_BOT"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3331,7 +3331,7 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -3342,8 +3342,8 @@ local Text = [[
 ]]
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ᴛᴡ ɴᴏᴠᴀ', url="t.me/G_W_P_2_BOT"}}, 
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = ' 𝓽᭙ ꪀꪮꪜꪖ', url="t.me/G_W_P_2_BOT"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -4207,7 +4207,7 @@ keyboard.inline_keyboard = {
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ROOGEN1/65&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -6105,7 +6105,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n𖠕 وينكم تعالو يريدوكم بالجروب \n═════| sᴏᴜʀᴄᴇ ɴᴏᴠᴀ |═════\n"
+t = "\n𖠕 وينكم تعالو يريدوكم بالجروب \n═════| ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ |═════\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7312,7 +7312,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n𖠕 وينكم تعالو يريدوكم بالجروب \n━━━━━━sᴏᴜʀᴄᴇ ɴᴏᴠᴀ━━━━━━\n"
+t = "\n𖠕 وينكم تعالو يريدوكم بالجروب \n━━━━━━ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ━━━━━━\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -10853,7 +10853,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '  '..result.first_name_..'  ',url="t.me/"..result.username_}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..result.username_..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -12387,7 +12387,7 @@ keyboard.inline_keyboard = {
 {text = 'اغنيه اخري', callback_data="/gggnn"},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 } 
 local msg_id = msg.id_/2097152/0.5 
@@ -12400,7 +12400,7 @@ NOVA = math.random(1,33);
 local Text ='الستخدم ثيم اخر اكتب ثيم ❤'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendDocument?chat_id=' .. msg.chat_id_ .. '&document=https://t.me/ahmedthem1/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12411,7 +12411,7 @@ NOVA = math.random(1,33);
 local Text ='تم اختيار استوري لك 😊💕'  
 keyboard = {}   
 keyboard.inline_keyboard = {  
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }  
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qapplu/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12422,7 +12422,7 @@ NOVA = math.random(1,30);
 local Text ='يتم اختيار متحركه 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/DV_HAR/'..NOVA..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12433,7 +12433,7 @@ ght = math.random(1,60);
 local Text ='تم اختيار انيمي لك 🫂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/s_rogen/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12444,7 +12444,7 @@ ght = math.random(1,28);
 local Text ='تم اختيار لك بيك جمد 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/KHALFEAT_RO/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12455,7 +12455,7 @@ ght = math.random(1,14);
 local Text ='تم اختيار لك تويت يهقر 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_rogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12466,7 +12466,7 @@ ght = math.random(1,16);
 local Text ='تم اختيار لك لو خيروك يقمد 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/lo_rogen/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12477,7 +12477,7 @@ ght = math.random(1,14);
 local Text ='خد البيك دي وتع هات مح 🙊💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_roogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12488,7 +12488,7 @@ ght = math.random(1,14);
 local Text ='خدي يموظه لو البيك عجبك هاتي عشره قنيه 🌚❤️' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_roogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12499,7 +12499,7 @@ ght = math.random(1,14);
 local Text ='احلي بيك لاحلي ناس ممحونه فلكون 😂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_roogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -12510,7 +12510,7 @@ ght = math.random(1,14);
 local Text ='هات عشره ينيه واجبلك كمان واحده 😂💕' 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/ka_roogan/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -13081,7 +13081,7 @@ keyboard.inline_keyboard = {
 {text = textt, url="http://t.me/"..username},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13122,7 +13122,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13145,7 +13145,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13168,7 +13168,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13191,7 +13191,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13214,7 +13214,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13237,7 +13237,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13260,7 +13260,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13283,7 +13283,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13306,7 +13306,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13329,7 +13329,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13416,7 +13416,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13453,7 +13453,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -13960,7 +13960,7 @@ local List = {
 🇪?? - 𝚄𝚂𝙴𝚁 ⟿ #username 💘.
 🇪🇬 - 𝙼𝚂𝙶𝚂 ⟿  #msgs 💘.
 🇪🇬 - 𝙶𝙼𝙰𝚂 ⟿ #stast 💘.
-🇪🇬 - 𝙸𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
+🇪🇬 - ??𝙳 𝚂𝚃𝙰 ⟿ #id 💘.  
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 🇪🇬 - 𝗖𝗛 - t.me/SO_NOVA𖠕 .
 ]],
@@ -14395,7 +14395,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
-👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
+👳🏼‍♂ - 𝄬 stast . #stast . 🇪??
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
 👳🏼‍♂ - 𝄬 msgs . #msgs . 🇪🇬
@@ -15825,7 +15825,7 @@ local Text =[[
 اهلا بك في اوامر المجموعه.🚦
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 اختر الامر الذي تريده بـ الأسفل.⬇️
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15870,7 +15870,7 @@ local Text =[[
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ اختر من الازرار التاليه
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15884,7 +15884,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -16408,7 +16408,7 @@ local Teext =[[
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ الاوامر المضافه ( لعرض الاوامر المضافه ) 
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16516,7 +16516,7 @@ local Teext =[[
 ᥀︙ الساعه
 ᥀︙ التاريخ
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16614,7 +16614,7 @@ local Teext =[[
 ᥀︙ تفعيل/تعطيل المغادره
 ᥀︙ مسح الجروبات
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16673,7 +16673,7 @@ local Teext =[[
 ᥀︙ شنو رئيك بهاي بالرد
 ᥀︙ تحب هذا
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16762,7 +16762,7 @@ local Teext =[[
 ᥀︙ تنزيل ←من زبي 
 ᥀︙ تاك للمتناكين
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16798,7 +16798,7 @@ local Teext =[[
 اهلا بك في اوامر المجموعه.🚦
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 اختر الامر الذي تريده بـ الأسفل.⬇️
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16832,7 +16832,7 @@ local Teext =[[
 اهلا بك في اوامر المجموعه.🚦
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 اختر الامر الذي تريده بـ الأسفل.⬇️
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -16895,7 +16895,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -16940,7 +16940,7 @@ keyboard.inline_keyboard = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 {{text = 'رجوع', callback_data="/add"}},
 {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
@@ -16977,7 +16977,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17011,7 +17011,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17050,7 +17050,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17074,7 +17074,7 @@ local Teext =[[
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ اختر من الازرار التاليه
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
-[sᴏᴜʀᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -17088,7 +17088,7 @@ keyboard.inline_keyboard = {
 {text = 'اخفاء الاوامر', callback_data="/hide"},
 },
 {
-{text = 'sᴏᴜʀᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17495,7 +17495,7 @@ keyboard.inline_keyboard = {
 {text = 'الجوزاء 🌩', callback_data="/zguza"},{text = 'الدلو 🦯', callback_data="/zdlu"},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessagecaption?chat_id='..Chat_id..'&caption='..URL.escape(Teext)..'&message_id='..msg_idd..'&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard))  
@@ -19961,7 +19961,7 @@ database:srem(bot_id..'S00F4:MN:TF'..msg.chat_id_, data.sender_user_id_)
 database:srem(bot_id..'Special:User'..msg.chat_id_, data.sender_user_id_)
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("𖠕 تم تنزيلك من جميع الرتب")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -19970,28 +19970,28 @@ tdcli_function({ID="ChangeChatMemberStatus",chat_id_=Chat_id,user_id_=data.sende
 if (data and data.code_ and data.code_ == 400 and data.message_ == "CHAT_ADMIN_REQUIRED") then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("𖠕︙ليس لدي صلاحية حظر المستخدمين يرجى تفعيلها !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if (data and data.code_ and data.code_ == 3) then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("𖠕︙البوت ليس ادمن يرجى ترقيتي !*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if data and data.code_ and data.code_ == 400 and data.message_ == "USER_ADMIN_INVALID" then 
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("𖠕︙عذرا لا استطيع طرد ادمنية الكروب*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
 if data and data.ID and data.ID == 'Ok' then
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape("𖠕︙تم الطرد بنجاح*")..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -20001,7 +20001,7 @@ if Text == 'noKikedMe'..data.sender_user_id_ then
 local Text ="᥀︙ تم الغاء الأمر بنجاح "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -20010,7 +20010,7 @@ database:setex(bot_id.."Ss:Cs" .. Chat_id .. ":" .. data.sender_user_id_, 600, t
 local Text ="᥀︙ ارسل الاذاعة لارسلها الي الجروبات "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -20019,7 +20019,7 @@ database:setex(bot_id.."Send:Bc:Pv" .. Chat_id .. ":" .. data.sender_user_id_, 6
 local Text ="᥀︙ ارسل الاذاعة لارسلها الي المشتركين "
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ',url='http://t.me/SO_NOVA'}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -20032,7 +20032,7 @@ keyboard.inline_keyboard = {
 {text = 'اغنيه اخري', callback_data="/gggnn"},
 },
 {
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 } 
 local msg_id = msg.id_/2097152/0.5 

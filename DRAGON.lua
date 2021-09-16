@@ -13033,51 +13033,6 @@ end
 send(msg.chat_id_, msg.id_,Text) 
 end
 
-if text == 'ايدي' and tonumber(msg.reply_to_message_id_) > 0 then
-function start_function(extra, result, success)
-tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(extra,data) 
-local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..result.sender_user_id_) or 1) 
-local Contact = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..result.sender_user_id_) or 0) 
-local NUMPGAME = tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..result.sender_user_id_) or 0)
-local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.sender_user_id_) or 0)
-local rtp = Rutba(result.sender_user_id_,msg.chat_id_)
-local username = ('[@'..data.username_..']' or 'لا يوجد')
-local iduser = result.sender_user_id_
-send(msg.chat_id_, msg.id_,'𖠕 ايديه ~⪼ '..iduser..'\n𖠕 معرفه ~⪼ '..username..'\n𖠕 رتبته ~⪼ '..rtp..'\n𖠕 تعديلاته ~⪼ '..edit..'\n𖠕 نقاطه ~⪼ '..NUMPGAME..'\n𖠕 جهاته ~⪼ '..Contact..'\n𖠕 رسائله ~⪼ '..Msguser..'')
-end,nil)
-end
-tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
-end
-if text and text:match("^ايدي @(.*)$") then
-local username = text:match("^ايدي @(.*)$")
-if AddChannel(msg.sender_user_id_) == false then
-local textchuser = database:get(bot_id..'text:ch:user')
-if textchuser then
-send(msg.chat_id_, msg.id_,'['..textchuser..']')
-else
-send(msg.chat_id_, msg.id_,'𖠕 لا تستطيع استخدام البوت \n 𖠕 يرجى الاشتراك بالقناه اولا \n 𖠕 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
-end
-return false
-end
-function start_function(extra, result, success)
-if result.id_ then
-tdcli_function ({ID = "GetUser",user_id_ = result.id_},function(extra,data) 
-local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..result.id_) or 1) 
-local Contact = tonumber(database:get(bot_id..'Add:Contact'..msg.chat_id_..':'..result.id_) or 0) 
-local NUMPGAME = tonumber(database:get(bot_id..'NUM:GAMES'..msg.chat_id_..result.id_) or 0)
-local edit = tonumber(database:get(bot_id..'edits'..msg.chat_id_..result.id_) or 0)
-local rtp = Rutba(result.id_,msg.chat_id_)
-local username = ('[@'..data.username_..']' or 'لا يوجد')
-local iduser = result.id_
-send(msg.chat_id_, msg.id_,'𖠕 ايديه ~⪼('..iduser..')\n𖠕 معرفه ~⪼('..username..')\n𖠕 رتبته ~⪼('..rtp..')\n𖠕 تعديلاته ~⪼('..edit..')\n𖠕 نقاطه ~⪼('..NUMPGAME..')\n𖠕 جهاته ~⪼('..Contact..')\n𖠕 رسائله ~⪼('..Msguser..')')
-end,nil)
-else
-send(msg.chat_id_, msg.id_,'𖠕 المعرف غير صحيح ')
-end
-end
-tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
-end
-
 if text == "رتبتي" and not database:get(bot_id..'ghiktr'..msg.chat_id_) then     
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 if result.username_ then
@@ -14967,7 +14922,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
-- 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
+- 🇪🇬 𝒔??𝒂𝒔𝒕 . #stast 𖣂.
 - 🇪?? 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.

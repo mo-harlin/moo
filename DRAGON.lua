@@ -3219,6 +3219,54 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if SourceCh(msg) and text == 'مريم' then
+local my_ph = bot_data:get(ban_id.."my_maryam:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," ● مريم  معطله") 
+return false  
+end
+local Text = [[
+🥀اطفي النور واستمتع بلعبه •
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'حسنا', callback_data="/may"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/37&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+
+if SourceCh(msg) and text == 'اسالني' or text == 'اختار' or text == 'لغز' or text == 'الغاز' then
+local Text = [[
+⍆ هل انت جهاز للعب ⍆
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'ابدا العب', callback_data="/guitar"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/40&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if SourceCh(msg) and text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
+local Text = [[
+رجل اشترى جهاز كهربائي بخصم 20% من إجمالي قيمة الجهاز، وهي نسبة تساوي 150 ريال؟.ما هي قيمة الجهاز؟.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '600', callback_data="/verp"},{text = '700', callback_data="/plling"},
+},
+{
+{text = '550', callback_data="/pullin"},{text = '237', callback_data="/pulng"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/38&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
 
 if text == 'اذاعه' then   
 local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
@@ -14573,7 +14621,7 @@ Msᴀɢ ~ #msgs
 - 𝑢𝑠𝑒𝑟𝑛??𝑚𝑒 ⟿ #username
 - 𝑚𝑠𝑔𝑠 ⟿ #msgs
 - 𝑖𝑑 ⟿ #id
-- ??𝑑𝑖𝑡 ⟿ #edit
+- ????𝑖𝑡 ⟿ #edit
 - 𝑔𝑎𝑚𝑒 ⟿ #game
 - 𝗖𝗛 - t.me/SO_NOVA ᥀︙ 
 ]],
@@ -16154,6 +16202,20 @@ DeleteMessage(Chat_id,{[0] = Msg_id})
 send(msg.chat_id_, msg.id_,linkgp)              
 end      
 end,nil)
+end
+if Text == '/nov1' then
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
+local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or database:get(bot_id.."Private:Group:Link"..msg.chat_id_) 
+if linkgpp.ok == true then 
+local linkgp = '• 🖤 |ＬＩＮＫ ＧＲＯＵＰ.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(linkgp).."&parse_mode=markdown&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,'🔰︙ لا يوجد رابط ارسل ضع رابط') 
+end 
+end,nil) 
 end
 if Text == '/nov2' then
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 

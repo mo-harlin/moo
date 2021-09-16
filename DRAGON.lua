@@ -1069,7 +1069,7 @@ end
 if Chat_Type == 'UserBot' then
 if text == '/start' or text == 'رجوع' then  
 if msa3d(msg) then
-local bl = '𖠕 انت الان المطور الاساسي في البوت \n 𖠕 يمكنك تحكم في البوتات من الكيبورد أسفل'
+local bl = ' انت الان المطور الاساسي في البوت 𖠕\n يمكنك تحكم في البوتات من الكيبورد أسفل 𖠕'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
 {'المطور','المساعد'},
@@ -1281,22 +1281,8 @@ if text == 'الاصدار' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,'𖠕 اصدار سورس نوفا { s: 6.7}')
 end
-if SourceCh(msg) and text == '⇣───『 قـناه المطورين』───⇣' then
-local Text = [[ 
- يوزرات مبرمجين السورس 🍂
-محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
-]]
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"},{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
-{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MRT_NOVA/9/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 
-
-if SourceCh(msg) and text == 'معلومات الكيبورد' and Devban(msg) then
+if text == 'معلومات الكيبورد' and DevSoFi(msg) then 
 bot_data:del(ban_id..'Srt:Bot') 
 local Text = [[ 
 مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
@@ -6402,7 +6388,7 @@ local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
 send(msg.chat_id_, msg.id_,'['..textchuser..']')
 else
-send(msg.chat_id_, msg.id_,'𖠕 لا تستطيع استخدام البوت \n 𖠕 يرجى الاشتراك بالقناه اولا \n 𖠕 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+send(msg.chat_id_, msg.id_,'𖠕 لا تستطيع استخدام البوت \n 𖠕 يرجى الاشتراك بالقناه اولا \n ?? اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
 end
 return false
 end

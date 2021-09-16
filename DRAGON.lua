@@ -3219,93 +3219,6 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if SourceCh(msg) and text == 'مريم' then
-local my_ph = bot_data:get(ban_id.."my_maryam:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_,"   ᥀︙ مريم  معطله") 
-return false  
-end
-local Text = [[
-اطفي النور واستمتع بلعبه 🙊💕
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'حسنا', callback_data="/may"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/37&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
-if SourceCh(msg) and text == 'اسالني' or text == 'اختار' or text == 'لغز' or text == 'الغاز' then
-local Text = [[
-⍆ هل انت جهاز للعب ⍆
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'ابدا العب', callback_data="/guitar"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/40&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-if SourceCh(msg) and text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
-local Text = [[
-رجل اشترى جهاز كهربائي بخصم 20% من إجمالي قيمة الجهاز، وهي نسبة تساوي 150 ريال؟.ما هي قيمة الجهاز؟.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = '600', callback_data="/verp"},{text = '700', callback_data="/plling"},
-},
-{
-{text = '550', callback_data="/pullin"},{text = '237', callback_data="/pulng"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/38&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-
-
-if SourceCh(msg) and text == 'الابراج' then
-local Text = [[
-أختر برجك عزيزي 🫂💕
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = 'الاسد 🦁', callback_data="/zking"},{text = 'الثور 🐂', callback_data="/zzor"},
-},
-{
-{text = 'العقرب 🦂', callback_data="/zakrb"},{text = 'القوس 🏹', callback_data="/zkos"},
-},
-{
-{text = 'الحمل 🐐', callback_data="/zBanda"},
-},
-{
-{text = 'السرطان 🦀', callback_data="/zsltan"},{text = 'العذراء 🦋', callback_data="/zazra"},
-},
-{
-{text = 'الميزان ⚖', callback_data="/zmezan"},{text = 'الجدي 🦌', callback_data="/zgagy"},
-},
-{
-{text = 'معرفة برجك 🧭', callback_data="/zporg"},
-},
-{
-{text = 'الحوت 🐋', callback_data="/zhot"},
-},
-{
-{text = 'الجوزاء 🌩', callback_data="/zguza"},{text = 'الدلو 🦯', callback_data="/zdlu"},
-},
-{
-{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"},
-},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/36&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
 
 if text == 'اذاعه' then   
 local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
@@ -14328,7 +14241,7 @@ iD ➤ #id  .
 𝐔𝐬𝐞𝐫𝐍𝐚☤🇪🇬- #username 
 𝐒𝐭𝐚𝐬𝐓 ☤🇪🇬- #stast 
 𝐌𝐬𝐠𝐒☤🇪🇬 - #msgs
-𝗖𝗛☤🇪🇬 - t.me/SO_NOVA ᥀︙ .
+𝗖𝗛☤??🇬 - t.me/SO_NOVA ᥀︙ .
 ]],
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
@@ -20140,7 +20053,7 @@ local Name_Bot = (database:get(bot_id..'Name:Bot') or 'نوفا')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
-local Fun = {'لوكي وزاحف من ساع زحفلي وحضرته 😒','خوش ولد و ورده مال الله 💋🙄','يلعب ع البنات 🙄', 'ولد زايعته الكاع 😶🙊','صاك يخبل ومعضل ','محلو وشواربه جنها مكناسه 😂??🏼‍♀️','اموت عليه 🌝','هوه غير ا��حب مال اني 🤓❤️','مو خوش ولد صراحه ☹️','ادبسز وميحترم البنات  ', 'فد واحد قذر 🙄😒','ماطيقه كل ما اكمشه ريحته جنها بخاخ بف باف مال حشرات 😂🤷‍♀️','مو خوش ولد 🤓' } 
+local Fun = {'لوكي وزاحف من ساع زحفلي وحضرته 😒','خوش ولد و ورده مال الله 💋🙄','يلعب ع البنات 🙄', 'ولد زايعته الكاع 😶🙊','صاك يخبل ومعضل ','محلو وشواربه جنها مكناسه 😂??🏼‍♀️','اموت عليه 🌝','هوه غير ا��حب مال اني 🤓❤️','مو خوش ولد صراحه ☹️','ادبسز وميحترم البنات  ', 'فد واحد قذر ??😒','ماطيقه كل ما اكمشه ريحته جنها بخاخ بف باف مال حشرات 😂🤷‍♀️','مو خوش ولد 🤓' } 
 send(msg.chat_id_, result.id_,''..Fun[math.random(#Fun)]..'')   
 end   
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, FunBot, nil)

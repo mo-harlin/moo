@@ -158,7 +158,7 @@ print([[
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
- ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @I_C_X
+ ⊰ ᴅᴇᴠᴇʟᴏᴘᴇʀ ⊱ @MaRtEn_Vs_WoRLD
 ╚≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╝
 ≂≂≂≂≂≂≂≂≂≂SOURCE NOVA≂≂≂≂≂≂≂≂≂
 ╔≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂≂╗
@@ -358,7 +358,7 @@ var = 'المطور الاساسي'
 elseif database:sismember(bot_id.."Dev:SoFi:2", user_id) then
 var = "المطور الثانوي"  
 elseif database:sismember(bot_id.."msa3d:nov", user_id) then
-var = "مساعد"
+var = "المساعد"
 elseif tonumber(user_id) == tonumber(bot_id) then  
 var = 'البوت'
 elseif database:sismember(bot_id..'Sudo:User', user_id) then
@@ -1015,16 +1015,16 @@ return false
 end
 --------------------------------------------------------------------------------------------------------------
 if Chat_Type == 'UserBot' then
-if text == '/start' or text == '『رجوع』' then 
+if text == '/start' or text == 'رجوع' then 
 if DevSoFi(msg) then
 if not msa3d(msg) then
-local bl = '🔰╎انت الان المطور الثانوي في البوت \n🔰╎ سورس نوفا\n 🔰╎يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_NOVA)'
+local bl = '  ᥀︙انت الان المطور الثانوي في البوت \n  ᥀︙ سورس نوفا\n   ᥀︙يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_NOVA)'
 local keyboard = {
 {'الاحصائيات'},
 {'المطور','المساعد'},
 {'معلومات الكيبورد'},
-{'『تواصل لسورس』','『اوامر اضف』'},
-{'『اوامر التفعيل』','『اوامر الحمايه』'},
+{'تواصل السورس','اوامر اضف'},
+{'اوامر التفعيل','اوامر الحمايه'},
 {'جلب المشتركين','جلب النسخه'},
 {'جلب المطورين'},
 {'تحديث السورس','الاصدار'},
@@ -1067,16 +1067,16 @@ end
 --------------------------------------------------------------------------------------------------------------
 
 if Chat_Type == 'UserBot' then
-if text == '/start' or text == '『رجوع』' then  
+if text == '/start' or text == 'رجوع' then  
 if msa3d(msg) then
-local bl = '🔰╎انت الان المطور الاساسي في البوت \n🔰╎ سورس نوفا\n 🔰╎يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_NOVA)'
+local bl = '  ᥀︙انت الان المطور الاساسي في البوت \n  ᥀︙ سورس نوفا\n   ᥀︙يمكنك تحكم في البوتات من الكيبورد أسفل \n[تابع جديدنا](t.me/SO_NOVA)'
 local keyboard = {
 {'ضع اسم للبوت','معلومات الكيبورد'},
-{'المطور','المساعد'},
+{'المطور','مساعد'},
 {'الاحصائيات'},
-{'『تواصل لسورس』'},
-{'『اوامر الاذاعه』','『اوامر اضف』'},
-{'『اوامر التفعيل』','『اوامر الحمايه』'},
+{'تواصل السورس'},
+{'اوامر الاذاعه','اوامر اضف'},
+{'اوامر التفعيل','اوامر الحمايه'},
 {'جلب المشتركين','جلب النسخه'},
 {'جلب المطورين','جلب التوكن'},
 {'تحديث السورس','الاصدار'},
@@ -1282,16 +1282,47 @@ database:del(bot_id..'Srt:Bot')
 send(msg.chat_id_, msg.id_,' ᥀︙ اصدار سورس نوفا { s: 6.7}')
 end
 
-if text == '『تواصل لسورس』' and DevSoFi(msg) then 
+if SourceCh(msg) and text == 'معلومات الكيبورد' and Devban(msg) then
+bot_data:del(ban_id..'Srt:Bot') 
+local Text = [[ 
+مرحبا بك مطوري سأشرح لك كل شئ في لوحه الاوامر بالتفصيل
+1• الاحصائيات { لعرض عدد المجموعات، والمشتركين في البوت}
+ 2• تفعيل التواصل{ لتفعيل التواصل عبر البوت خاص بك} 
+ 3• تعطيل التواصل{ لتعطيل التواصل عبر البوت خاص بك } 
+ 4• قائمه العام { لعرض المحظورين عام في البوت }
+ 5• المطورين { لعرض المطورين في بوتك }
+8• اذاعه { ارسال رساله لجميع الجروبات في بوتك }
+9• اذاعه خاص { ارسال رساله لجميع مشتركين بوتك}
+10• تعطيل الاشتراك الاجباري { لتعطيل الاشتراك جباري خاص بوتك}
+11• تفعيل الاشتراك الاجباري { لتفعيل الاشتراك الاجباري بوتك }
+12•اذاعه بالتوجيه { ارسال رساله بالتوجيه الي جميع المجموعات }
+13• اذاعه بالتوجيه خاص { ارسال رساله بالتوجيه الي جميع المشتركين }
+14• تفعيل البوت الخدمي { يمكن هاذا امر ان منشئ الكروب يفعل البوت من دون حتياجه لمطور البوت}
+15• تعطيل البوت الخدمي { يمك هل خاصيه ان تفعيل البوت اله مطورين البوت فقط }
+16• تنظيف المشتركين { يمكنك ازاله المشتركين الوهمين عبر هل امر }
+17• تنظيف الجروبات { يمكن ازاله المجموعات الوهميه عبر عل امر }
+18• جلب نسخه احتياطيه { لعرض ملف المجموعات بوتك }
+19• تحديث السورس { لتحديث السورس خاص بوتك }
+20• الغاء { للغاء الامر الذي طلبته }
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'قناه السورس', url="t.me/SO_NOVA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end
+
+if text == 'تواصل السورس' and DevSoFi(msg) then 
 local Text = 'قسم مطورين السورس لدخول الي حسابتهم'
 local Key = {
-{'⇣───『 قـناه المطورين』───⇣'},
+{'مبرمجين السورس'},
 {'قناة السورس','التواصل'},
-{'『رجوع』'},
+{'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == '『اوامر اضف』' and DevSoFi(msg) then 
+if text == 'اوامر اضف' and DevSoFi(msg) then 
 local Text = 'قسم مسح واضف مثلا اضف رد عام مسح رد عام'
 local Key = {
 {'اضف رد عام','مسح رد عام'},
@@ -1301,13 +1332,13 @@ local Key = {
 {'مسح الثانوين'},
 {'ضع كليشه ستارت','مسح كليشه ستارت'},
 {'ضع قناة الاشتراك','مسح رساله الاشتراك'},
-{'『رجوع』'},
+{'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
 
 
-if text == '『اوامر التفعيل』' and DevSoFi(msg) then 
+if text == 'اوامر التفعيل' and DevSoFi(msg) then 
 local Text = 'قسم التفعيل والتعطيل لتفعيل كل شئ في البوت'
 local Key = {
 {'تعطيل الاذاعه','تفعيل الاذاعه'},
@@ -1316,11 +1347,11 @@ local Key = {
 {'تعطيل النسخه التلقائيه','تفعيل النسخه التلقائيه'},
 {'تفعيل الاشتراك الاجباري','تعطيل الاشتراك الاجباري'},
 {'تفعيل البوت الخدمي','تعطيل البوت الخدمي'},
-{'『رجوع』'},
+{'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == '『اوامر الحمايه』' and DevSoFi(msg) then 
+if text == 'اوامر الحمايه' and DevSoFi(msg) then 
 local Text = 'قسم الحمايه يوجد في المطورين والثانوين والخ...'
 local Key = {
 {'قائمه الكتم العام','المطورين','قائمه العام'},
@@ -1328,17 +1359,17 @@ local Key = {
 {'الثانوين','الردود المتعدده'},
 {'تنظيف الجروبات','تنظيف المشتركين'},
 {'تغير رساله الاشتراك','الاشتراك الاجباري','تغير الاشتراك'},
-{'『رجوع』'},
+{'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
-if text == '『اوامر الاذاعه』' and DevSoFi(msg) then 
+if text == 'اوامر الاذاعه' and DevSoFi(msg) then 
 local Text = 'قسم الاذاعات لعمل اذاعه في البوت'
 local Key = {
 {'اذاعه','اذاعه خاص '},
 {'اذاعه بالتثبيت'},
 {'اذاعه بالتوجيه','اذاعه بالتوجيه خاص'},
-{'『رجوع』'},
+{'رجوع'},
 }
 send_inline_key(msg.chat_id_,Text,Key)
 end 
@@ -1376,6 +1407,21 @@ send(msg.chat_id_,msg.id_,'تم رفع المطورين ')
 end    
 end 
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil) 
+end
+
+if text == 'مبرمجين السورس' and DevSoFi(msg) then
+database:del(bot_id..'Srt:Bot') 
+local Text = [[ 
+ يوزرات مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
+]] 
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"},{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}}, 
+} 
+local msg_id = msg.id_/2097152/0.5 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
 if text == 'قناه السورس' and DevSoFi(msg) then
@@ -3109,15 +3155,15 @@ end
 -----------------
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' then 
 local Text = [[ 
-[🔰╎ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
+[ ❇️︙ᴡᴇʟᴄᴍᴇ ᴛᴏ sᴏᴜʀᴄᴇ ɴᴏᴠᴀ](t.me/SO_NOVA)
 [--------------------------------------](t.me/SO_NOVA)
-[🔰╎ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ](t.me/SO_NOVA)
+[ ❇️︙ʙᴇsᴛ sᴏᴜʀᴄᴇ ᴏɴ ᴛᴇɪʟɢʀᴀᴍ](t.me/SO_NOVA)
 [--------------------------------------](t.me/SO_NOVA)
-[🔰╎ɴᴏᴠᴀ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ](t.me/SO_NOVA)
+[ ❇️︙ɴᴏᴠᴀ ɪɴ ʙᴏᴜᴛᴛᴏɴs ʙᴇʟᴏʟ](t.me/SO_NOVA)
 ]]
 keyboard = {}
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"},{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/I_C_X"}},
+{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"},{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/MaRtEn_Vs_WoRLD"}},
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5 
@@ -3126,16 +3172,28 @@ end
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
  يوزرات مبرمجين السورس 🍂
-محتاج تنصب بوت حمايه علي سورس جاك تواصل معانا✅
+محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ ',url="t.me/I_C_X"}},
+{{text = 'ᴅᴠ ʜᴀʀʟɪɴ',url="t.me/G_W_P"}},{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ ',url="t.me/MaRtEn_Vs_WoRLD"}},
 {{text = 'ᴛᴡ ᴠɴᴏᴀ',url="t.me/G_W_P_2_BOT"}},
 {{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end
+if text == 'مارتن' or text == 'توام هارلين' or text == 'مبرمج السورس' then
+local Text = [[
+مارتن مبرمج سورس نوفا لوحابب تتواصل معاه ❤️.
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MaRtEn_Vs_WoRLD&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == 'محمد' or text == 'محمد هارلين' or text == 'توام مارتن' then
 local Text = [[
@@ -3161,26 +3219,14 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/M_A_G_K&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'مارتن' or text == 'توام هارلين' or text == 'مبرمج السورس' then
-local Text = [[
-مارتن مبرمج سورس نوفا لوحابب تتواصل معاه ❤️.
-]]
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'ᴅᴠ ᴍᴀʀᴇɪɴ',url="t.me/I_C_X"}},
-{{text = 'sᴏᴜʀᴄᴇ ɴᴏᴠᴀ', url="t.me/SO_NOVA"}},
-}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/I_C_X&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-if text == 'مريم' then
-local my_ph = database:get(bot_id.."my_maryam:status"..msg.chat_id_)
+if SourceCh(msg) and text == 'مريم' then
+local my_ph = bot_data:get(ban_id.."my_maryam:status"..msg.chat_id_)
 if not my_ph then
-send(msg.chat_id_, msg.id_," ᥀︙ مريم  معطله") 
+send(msg.chat_id_, msg.id_,"   ᥀︙ مريم  معطله") 
 return false  
 end
 local Text = [[
-اطفي النور واستمتع بلعبه
+اطفي النور واستمتع بلعبه 🙊💕
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -3191,7 +3237,8 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/37&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'اسالني' or text == 'اختار' or text == 'لغز' or text == 'الغاز' then
+
+if SourceCh(msg) and text == 'اسالني' or text == 'اختار' or text == 'لغز' or text == 'الغاز' then
 local Text = [[
 ⍆ هل انت جهاز للعب ⍆
 ]]
@@ -3204,7 +3251,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/40&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
+if SourceCh(msg) and text == 'اختبار الذكاء' or text == 'نسبه الذكاء' then
 local Text = [[
 رجل اشترى جهاز كهربائي بخصم 20% من إجمالي قيمة الجهاز، وهي نسبة تساوي 150 ريال؟.ما هي قيمة الجهاز؟.
 ]]
@@ -3220,20 +3267,22 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/38&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'الابراج' then
+
+
+if SourceCh(msg) and text == 'الابراج' then
 local Text = [[
-أختر برجك عزيزي 📮،⍆
+أختر برجك عزيزي 🫂💕
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'الاسد ،🦁', callback_data="/zking"},{text = 'الثور 🐂', callback_data="/zzor"},
+{text = 'الاسد 🦁', callback_data="/zking"},{text = 'الثور 🐂', callback_data="/zzor"},
 },
 {
 {text = 'العقرب 🦂', callback_data="/zakrb"},{text = 'القوس 🏹', callback_data="/zkos"},
 },
 {
-{text = 'الحمل 🐐', callback_data="/zNOVA"},
+{text = 'الحمل 🐐', callback_data="/zBanda"},
 },
 {
 {text = 'السرطان 🦀', callback_data="/zsltan"},{text = 'العذراء 🦋', callback_data="/zazra"},
@@ -3242,7 +3291,7 @@ keyboard.inline_keyboard = {
 {text = 'الميزان ⚖', callback_data="/zmezan"},{text = 'الجدي 🦌', callback_data="/zgagy"},
 },
 {
-{text = ' معرفة برجك 🧭', callback_data="/zporg"},
+{text = 'معرفة برجك 🧭', callback_data="/zporg"},
 },
 {
 {text = 'الحوت 🐋', callback_data="/zhot"},
@@ -3257,6 +3306,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/36&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+
 if text == 'اذاعه' then   
 local Text = "اختار\nاذاعة خاص\nاذاعة جروبات\nرساله للمطور الاساسي"
 keyboard = {} 
@@ -6659,7 +6709,7 @@ username = json.result.username
 else
 username = 'SO_NOVA'
 end
-local Name = '〈 المساعد 〉 -  '..name..'\n'
+local Name = 'المساعد'..name..'\n'
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = name, url="t.me/"..username}},}
 local msg_id = msg.id_/2097152/0.5
@@ -13834,7 +13884,7 @@ local List = {
 ??🇪🇭 𝑼𝒔𝒆𝒓𝑵𝒂𝒎𝒆 : #username ♕
 𓄼🇪🇭 𝑺𝒕𝒂𝒔𝒕 : #stast    ☥
 𓄼🇪🇭 𝒊𝒅 : #id ‌‌‏⚚
-𓄼🇪🇭 𝑮𝒂𝒎𝒆𝑺 : #edit ⚚
+𓄼🇪🇭 𝑮??𝒎𝒆𝑺 : #edit ⚚
 𓄼🇪🇭 𝑴??𝒈𝒔 : #msgs 𓆊
 ]],
 [[
@@ -14993,7 +15043,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐮𝐬𝐞𝐫𝒏𝒂𝒎𝒆 . #username 𖣂.
 - 🇪🇬 𝒔𝒕𝒂𝒔𝒕 . #stast 𖣂.
 - 🇪?? 𝐢𝐝 . #id 𖣂.
-- 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
+- 🇪🇬 ??𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
 - 🇪🇬 𝗖𝗛 - t.me/SO_NOVA ᥀︙ 
 ]],
@@ -16045,6 +16095,25 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5  
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yhu79/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+if text == 'الرابط' then
+local notText = '✘ عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
+local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_)) or bot_data:get(ban_id.."Private:Group:Link"..msg.chat_id_) 
+if linkgpp.ok == true then 
+local linkgp = '• 🖤 |لينك الجروب.\nـــــــــــــــــــــــــ\n ['..ta.title_..']('..linkgpp.result..')\nـــــــــــــــــــــــــ\n  ['..linkgpp.result..']'
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = ta.title_, url=linkgpp.result}},}
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+https.request("https://api.telegram.org/bot"..token..'/sendmessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(linkgp).."&parse_mode=markdown&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,'  ᥀︙ لا يوجد رابط ارسل ضع رابط') 
+end 
+end,nil) 
+end
+
 if text == 'الرابط' or text == 'رابط'  then
 local Text = [[
 ᥀︙اختر نوع الرابط لجلبه
@@ -17076,7 +17145,6 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ اهلا بك في قسم الالعاب 
 ╾╾╾╾╾╾╾╾╾╾╾╾╾╾╾╸
 ᥀︙ اختر من الازرار التاليه

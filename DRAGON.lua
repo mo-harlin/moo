@@ -3333,6 +3333,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
 end
+
 if text == 'قناه السورس' then
 local Text = [[ 
 افضل سورس في التليجرام 🔐
@@ -3381,6 +3382,20 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
+
+if text == "رفع رتبه" and msg.reply_to_message_id_ and GetChannelMember(msg) then
+local Text = [[ 
+
+]]
+keyboard = {}  
+keyboard.inline_keyboard = { 
+{
+{text = "مطور",callback_data="devnov"..msg.sender_user_id_},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+end 
 ---------------------
 if text == "تويت" or text == "كت تويت" then 
 local TWEET_Msg = { 
@@ -11741,6 +11756,49 @@ send(msg.chat_id_, msg.id_,"𖠕 ارسل لي الاسم الان ")
 end
 return false
 end
+if text=="اذاعه عام" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
+if database:get(bot_id.."Status:Ss") and not SudoBot(msg) then 
+send(msg.chat_id_, msg.id_,"٭ الاذاعه معطله من قبل المطور الاساسي")
+return false
+end
+database:setex(bot_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
+send(msg.chat_id_, msg.id_,"٭ ارسل لي سواء ~ { ملصق, متحركه, صوره, رساله }\n٭ للخروج ارسل الغاء ") 
+return false
+end 
+
+if database:get(bot_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) then 
+if SourceCh(msg) and text == "الغاء" or text == "الغاء" then 
+send(msg.chat_id_, msg.id_,"٭ تم الغاء الاذاعه") 
+database:del(bot_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+return false
+end 
+local list = database:smembers(bot_id..'UsersBot') 
+if msg.content_.text_ then
+for k,v in pairs(list) do 
+send(v, 0,"["..msg.content_.text_.."]") 
+end
+elseif msg.content_.photo_ then
+if msg.content_.photo_.sizes_[0] then
+photo = msg.content_.photo_.sizes_[0].photo_.persistent_id_
+elseif msg.content_.photo_.sizes_[1] then
+photo = msg.content_.photo_.sizes_[1].photo_.persistent_id_
+end
+for k,v in pairs(list) do 
+sendPhoto(v, 0, photo,(msg.content_.caption_ or ""))
+end 
+elseif msg.content_.animation_ then
+for k,v in pairs(list) do 
+sendDocument(v, 0, msg.content_.animation_.animation_.persistent_id_,(msg.content_.caption_ or "")) 
+end 
+elseif msg.content_.sticker_ then
+for k,v in pairs(list) do 
+sendSticker(v, 0, msg.content_.sticker_.sticker_.persistent_id_) 
+end 
+end
+send(msg.chat_id_, msg.id_,"٭ تمت الاذاعه الى المشتركين والمجموعات ") 
+database:del(bot_id.."Ss:Cs" .. msg.chat_id_ .. ":" .. msg.sender_user_id_) 
+return false
+end
 if text=="اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0  and Sudo(msg) then 
 if database:get(bot_id..'Bc:Bots') and not DevSoFi(msg) then 
 send(msg.chat_id_, msg.id_,'𖠕 الاذاعه معطله من قبل المطور الاساسي')
@@ -14308,7 +14366,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 UsErNaMe . #username 𖠲
 - 🇪🇬 StAsT . #stast 𖠲
 - 🇪🇬 Id . #id 𖠲
-- 🇪🇬 GaMeS . #game 𖠲
+- 🇪?? GaMeS . #game 𖠲
 - 🇪🇬 MsGs . #msgs 𖠲
 - 🇪🇬 𝗖𝗛 - t.me/SO_NOVA𖠕 .
 ]],
@@ -15105,7 +15163,7 @@ local interaction = Total_Msg(Msguser)
 local rtpg = rtpa
 local bana = {
 	
-"⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★",
+"⚕ 𓆰 𝑾𝒆𝒍𝒄𝒐𝒎?? 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑 ★",
 
 "• 🖤 |𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 𝑮𝒓𝒐𝒖𝒑| 🖤 •",
 
@@ -19990,7 +20048,7 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 if Text == 'YYYBD_aza3h2'..data.sender_user_id_ and msa3d(data) then  
 database:setex(bot_id.."Send:Bc:Pv" .. Chat_id .. ":" .. data.sender_user_id_, 600, true) 
-local Text ="𖠕 ارسل الاذاعة لارسلها الي الجروبات "
+local Text ="𖠕 ارسل الاذاعة لارسلها الي الخاص "
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
@@ -20005,6 +20063,23 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == 'devnov'..data.sender_user_id_ and DevSoFi(data) then
+function start_function(extra, result, success)
+database:sadd(bot_id..'Sudo:User', result.sender_user_id_)
+tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
+usertext = '\n𖠕 العضو ↫ ['..data.first_name_..'](t.me/'..(data.username_ or 'SO_NOVA')..')'
+status  = '\n𖠕 تم ترقيته مطور'
+local Text =" '..usertext..' \n '..status..' "
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ',url='http://t.me/SO_NOVA'}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Text)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end,nil)
+end
+tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
+return false 
 end
 if Text == "/gggnn" then
 NOVA = math.random(3,200); 

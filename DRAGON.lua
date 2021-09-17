@@ -426,6 +426,24 @@ Var = false
 end
 return Var
 end
+function getcustom(msg,scc)
+local var = "لايوجد"
+Ge = https.request("https://api.telegram.org/bot"..token.."/getChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..scc.sender_user_id_)
+GeId = JSON.decode(Ge)
+if GeId.result.custom_title then
+var = GeId.result.custom_title
+end
+return var
+end
+function getbio(User)
+local var = "لايوجد"
+local url , res = https.request("https://api.telegram.org/bot"..token.."/getchat?chat_id="..User)
+data = json:decode(url)
+if data.result.bio then
+var = data.result.bio
+end
+return var
+end
 function AddChannel(User)
 local var = true
 if database:get(bot_id..'add:ch:id') then
@@ -437,7 +455,6 @@ end
 end
 return var
 end
-
 function dl_cb(a,d)
 end
 function getChatId(id)
@@ -14851,7 +14868,7 @@ iD ➤ #id  .
 [[
 ⭐️𝖘𝖙𝖆 : #stast ـ🍭
 ⭐️𝖚𝖘𝖊𝖗𝖓𝖆𝖒𝖊 : #username ـ🍭
-⭐️𝖒𝖘𝖌𝖘 : #msgs ـ🍭
+⭐️𝖒𝖘𝖌𝖘 : #msgs ـ??
 ⭐️𝖎𝖉 : #id ـ 🍭
 ⭐️𝗖𝗛 - t.me/SO_NOVA𖠕 
 ]],

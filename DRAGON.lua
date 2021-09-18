@@ -975,7 +975,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = ' '
+local bl = '⛥'
 local keyboard = {
 {'مطورين السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},

@@ -907,7 +907,7 @@ end
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'رجوع'  then  
-local bl = ' '
+local bl = 'مرحبا بيك عزيزي العضو اليك الاوامر قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
 {'مطور','انا مين'},
 {'انصحنى','كتبات'},
@@ -975,7 +975,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = '⛥'
+local bl = 'انت الان المطور الاساسي في البوت \n يمكنك تحكم في البوتات من الكيبورد قم بأختيار ماتريده من الازار في الاسفل↑↓'
 local keyboard = {
 {'مطورين السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
@@ -1132,11 +1132,11 @@ database:del(bot_id..'Srt:Bot')
 send(msg.chat_id_, msg.id_,' 𖠕 اصدار سورس نوفا{ 1.5x}')
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = 'مرحبا بك في سورس نوفا\n انت المطور الاساسي واليك كيبورد التحكم في البوت '
+local Text = 'مرحبا بك في سورس نوفا\n انت المطور الاساسي في البوت'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
-{{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1144,7 +1144,7 @@ end
 if text == 'مطورين السورس' and DevSoFi(msg) then 
 local Text = 'يورزات مطورين سورس نوفا لدخول الي حسابتهم'
 local Key = {
-{'المطورين'},
+{'مطورين نوفا'},
 {'يا سورس','التواصل'},
 {'العوده'},
 }
@@ -1253,7 +1253,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'المطورين' and DevSoFi(msg) then
+if text == 'مطورين نوفا' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 يوزرات مبرمجين السورس 🍂
@@ -3249,7 +3249,7 @@ database:set(bot_id..':Set:Moktlf'..msg.chat_id_,name)
 name = string.gsub(name,'😸','😹😹😹😹😹😹😹😹😸😹😹😹😹')
 name = string.gsub(name,'☠','💀💀💀💀💀💀💀☠💀💀💀💀💀')
 name = string.gsub(name,'🐼','👻👻👻🐼👻👻👻👻👻👻👻')
-name = string.gsub(name,'🐇','𖠕𖠕𖠕𖠕𖠕🐇𖠕𖠕𖠕𖠕')
+name = string.gsub(name,'🐇','𖠕𖠕𖠕𖠕𖠕🐇??𖠕𖠕𖠕')
 name = string.gsub(name,'🌑','🌚🌚??🌚🌚🌑🌚🌚🌚')
 name = string.gsub(name,'🌚','🌑🌑🌑🌑🌑🌚🌑🌑🌑')
 name = string.gsub(name,'⭐️','🌟🌟🌟🌟🌟🌟🌟🌟⭐️🌟🌟🌟')
@@ -10422,7 +10422,7 @@ local linkgpp = json:decode(https.request('https://api.telegram.org/bot'..token.
 if linkgpp.ok == true then 
 local Teext = '𖠕 '..ta.title_..'\n'..linkgpp.result 
 local inline = {{{text = ta.title_, url=linkgpp.result}},
-{{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 } 
 send_inline_key(msg.chat_id_,Teext,nil,inline,msg.id_/2097152/0.5) 
 else 
@@ -14155,6 +14155,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'بوت الحذف',url="t.me/LC6BOT"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/BEK_ROG/15&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))

@@ -405,7 +405,24 @@ end
 end
 return var
 end
-
+function getcustom(msg,scc)
+local var = "لايوجد"
+Ge = https.request("https://api.telegram.org/bot"..token.."/getChatMember?chat_id=" .. msg.chat_id_ .. "&user_id=" ..scc.sender_user_id_)
+GeId = JSON.decode(Ge)
+if GeId.result.custom_title then
+var = GeId.result.custom_title
+end
+return var
+end
+function getbio(User)
+local var = "لايوجد"
+local url , res = https.request("https://api.telegram.org/bot"..token.."/getchat?chat_id="..User)
+data = json:decode(url)
+if data.result.bio then
+var = data.result.bio
+end
+return var
+end
 function dl_cb(a,d)
 end
 function getChatId(id)
@@ -890,7 +907,7 @@ end
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'رجوع'  then  
-local bl = '𖠕 مرحبا بك في سورس مافل 🧚‍♀❤️ \n 𖠕 انت المطور العضو واليك كيبورد التحكم في البوت 😊❤️ \n.𖠕 [اضغط هنا وانضم الي قناه السورس](t.me/SO_NOVA)'
+local bl = 'مرحبا بك في سورس نوفا\n انت المطور العضو واليك كيبورد التحكم في البوت'
 local keyboard = {
 {'مبرمجين السورس'},
 {'مطور','انا مين'},
@@ -910,7 +927,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
 local DRAGON_Msg = { 
-'✨ اهــلا انـا بــوت اسـمـي '..Namebot.. ' ❤️🥥 | اقــوم بـحـمـايـه المـجـموعـات.. 🦹‍♂🔰 \n ✨ من الاسبام والتفليش والتوجيه والتكرار والخخ... 🪐 \n ✨ لتفعيل البوت في مجموعتك اتبع الخطوات 🍁❤️ \n ↤ اضف البوت الي مجموعتك 🌵 \n ↤ قم بترقيت البوت ادمن في المجموعه 🌴 \n ↤ واكتب كلمه ( تفعيل ) في المجموعه 🪵 \n ✨ وسيتم رفع مشرفين المجموعه تلقائين',
+  ' اهلا انا بـوت اسمي '..Namebot.. ' اقوم بحمايه المجموعات..\nمن الاسبام والتفليش والتوجيه والتكرار والخخ...\nلتفعيل البوت في مجموعتك اتبع الخطوات\nاضف البوت الي مجموعتك\nقم بترقيت البوت ادمن في المجموعه\n واكتب كلمه ( تفعيل ) في المجموعه\وسيتم رفع مشرفين المجموعه تلقائين',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -959,7 +976,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = '𖠕 مرحبا بك في سورس نوفا 🧚‍♀❤️ \n 𖠕 انت المطور الاساسي واليك كيبورد التحكم في البوت 😊❤️ \n.𖠕 [اضغط هنا وانضم الي قناه السورس](t.me/SO_NOVA)'
+local bl = 'مرحبا بك في سورس نوفا\n انت المطور الاساسي واليك كيبورد التحكم في البوت '
 local keyboard = {
 {'مطورين السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
@@ -1116,14 +1133,14 @@ database:del(bot_id..'Srt:Bot')
 send(msg.chat_id_, msg.id_,' 𖠕 اصدار سورس نوفا{ 1.5x}')
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = '𖠕 مرحبا بك في سورس نوفا 🧚‍♀❤️ \n 𖠕 انت المطور الاساسي واليك كيبورد التحكم في البوت 😊❤️ \n.𖠕 [اضغط هنا وانضم الي قناه السورس](t.me/SO_NOVA)'
+local Text = 'مرحبا بك في سورس نوفا\n انت المطور الاساسي واليك كيبورد التحكم في البوت '
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
 {{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/BEK_ROG/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'مطورين السورس' and DevSoFi(msg) then 
 local Text = 'يورزات مبرمجين سورس نوفا لدخول الي حسابتهم'
@@ -1234,7 +1251,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/BEK_ROG/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
 if text == 'المبرمجين' and DevSoFi(msg) then
@@ -1249,7 +1266,7 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/BEK_ROG/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == "ضع اسم للبوت" and DevSoFi(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -1288,7 +1305,7 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '〈 المطور 〉 -  \n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local Name = 'المطور يروحي 🌿☕️  \n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -2787,7 +2804,7 @@ end,nil)
 end,nil)
 end
 
-if text and text:match("^هارلين$") or text and text:match("^محمد هارلين$") or text and text:match("^محمد هارلين$") then
+if text and text:match("^هارلين$") or text and text:match("^محمد$") or text and text:match("^محمد هارلين$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 local Name1 = result.first_name_
@@ -3421,7 +3438,7 @@ else
 tdcli_function ({ID = "GetUser",user_id_ = SUDO,},function(arg,result) 
 local function taha(extra, taha, success)
 if taha.photos_[0] then
-local Name = '〈 المطور 〉 -\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
+local Name = 'المطور يروحي 🌿☕️\n['..result.first_name_..'](tg://user?id='..result.id_..')\n'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
@@ -3451,31 +3468,38 @@ keyboard.inline_keyboard = {
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 
-if text == '─────☆☆☆─────' then
+if text == 'قناة السورس' then
 local Text = [[ 
- 𖠕 قناه سورس نوفا 𖠕
+[𖠕︙᭙ꫀꪶᥴꪑꫀ 𝓽ꪮ ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ](t.me/SO_NOVA)
+[--------------------------------------](t.me/SO_NOVA)
+[𖠕︙ρꫀᦔ𝓽  𝘴ꪮꪊ𝘳ᥴꫀ ꪮꪀ 𝓽ꫀ𝓲ꪶᧁ𝘳ꪖꪑ](t.me/SO_NOVA)
+[--------------------------------------](t.me/SO_NOVA)
+[𖠕︙ꪀꪮꪜꪖ 𝓲ꪀ ρꪮꪊ𝓽𝓽ꪮꪀ ρꫀꪶꪮꪶ](t.me/SO_NOVA)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/BEK_ROG/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'قناه السورس' then
+if text == 'التواصل' then
 local Text = [[ 
- 𖠕 قناه سورس نوفا 𖠕
+يوزرات مبرمجين السورس 🍂
+محتاج تنصب بوت حمايه علي سورس نوفا تواصل معانا✅
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}}, 
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"},{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = ' 𝓽᭙ ꪀꪮꪜꪖ',url="t.me/G_W_P_2_BOT"}},
+{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 } 
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/BEK_ROG/18&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
@@ -3484,14 +3508,14 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"}},{{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
+{{text = 'ᦔꪜ ꫝꪖ𝘳ꪶ𝓲ꪀ',url="t.me/G_W_P"},{text = 'ᦔꪜ ꪑꪖ𝘳ꫀ𝓽 ꪀ ',url="t.me/MaRtEn_Vs_WoRLD"}},
 {{text = ' 𝓽᭙ ꪀꪮꪜꪖ',url="t.me/G_W_P_2_BOT"}},
 {{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"}},
 }
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/dv_harlin/4&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-if text == 'محمد' or text == 'محمد هارلين' or text == 'توام مارتن' then
+if text == 'محمد' or text == 'هارلين' or text == 'توام مارتن' then
 local Text = [[
 هارلين مبرمج سورس نوفا لوحابب تتواصل معاه ❤️.
 ]]
@@ -4324,7 +4348,7 @@ end,nil)
 elseif text == 'قفل المعرفات بالتقييد' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'ked')  
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
-send(msg.chat_id_, msg.id_,' 𖠕 بواسطه ← ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SO_NOVA')..') \n 𖠕 تـم قفـل المعرفات بالتقييد ')
+send(msg.chat_id_, msg.id_,' ?? بواسطه ← ['..Rutba(msg.sender_user_id_,msg.chat_id_)..'](T.ME/'..(data.username_ or 'SO_NOVA')..') \n 𖠕 تـم قفـل المعرفات بالتقييد ')
 end,nil)   
 elseif text == 'قفل المعرفات بالكتم' and Mod(msg) and msg.reply_to_message_id_ == 0 then 
 database:set(bot_id.."lock:user:name"..msg.chat_id_,'ktm')  
@@ -6268,7 +6292,7 @@ t = " 𖠕 لا يوجد منشئين"
 end
 send(msg.chat_id_, msg.id_, t)
 end
-if text == "المنشئ"  then
+if SourceCh(msg) and text ==("المنشئ") then
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
 for i=0 , #admins do
@@ -6276,26 +6300,52 @@ if data.members_[i].status_.ID == "ChatMemberStatusCreator" then
 owner_id = admins[i].user_id_
 tdcli_function ({ID = "GetUser",user_id_ = owner_id},function(arg,b) 
 if b.first_name_ == false then
-send(msg.chat_id_, msg.id_," *⌯︙حساب المنشئ محذوف*")
+send(msg.chat_id_, msg.id_," ● حساب المنشئ محذوف")
 return false  
 end
-tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = owner_id,offset_ = 0,limit_ = 1},function(arg,getpro) 
-if getpro.photos_[0] then
-Name = '*◐╿المنشئ »* ['..b.first_name_..'](tg://user?id='..b.id_..')\n'
-Name = Name..'*◐╿البايو »* ['..getbio(owner_id)..']\n'
-keyboard = {}
-keyboard.inline_keyboard = {{{text = ''..b.first_name_..'', url = "https://t.me/"..b.username_..""}},}
-local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Name)..'&photo='..getpro.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+if b.username_ then
+UserName = b.username_
 else
-
-send(msg.chat_id_, msg.id_,Name,1, 'md')
+UserName = 'SOURCEVENOM'
 end
-end,nil)   
-end,nil)   
+local Text = "● منشئ الجروب  ⋙ ["..b.first_name_.."](tg://user?id="..b.id_..")\n"..getbio(b.id_):gsub('لايوجد','')
+local msg_id = msg.id_/2097152/0.5
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = '• '..b.first_name_..' •', url="t.me/"..UserName}},   
+{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Info.lua").botUserName.."?startgroup=start"}},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/'..UserName..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
+local Name1 = result.first_name_
+local Name1 = Name1:gsub('"',"") 
+local Name1 = Name1:gsub("'","") 
+local Name1 = Name1:gsub("","") 
+local Name1 = Name1:gsub("*","") 
+local Name1 = Name1:gsub("{","") 
+local Name1 = Name1:gsub("}","") 
+local Name = '['..Name1..'](tg://user?id='..result.id_..')'
+local NameChat = dp.title_
+local NameChat = NameChat:gsub('"',"") 
+local NameChat = NameChat:gsub("'","") 
+local NameChat = NameChat:gsub("","") 
+local NameChat = NameChat:gsub("*","") 
+local NameChat = NameChat:gsub("{","") 
+local NameChat = NameChat:gsub("}","") 
+local LinkGp = json:decode(https.request('https://api.telegram.org/bot'..token..'/exportChatInviteLink?chat_id='..msg.chat_id_))
+if LinkGp.ok == true then 
+LinkGroup = LinkGp.result
+else
+LinkGroup = 'لا يوجد'
+end
+sendText(b.id_,"●مرحبا عزيزي المنشئ هناك شخص يريدك \n●الشخص  {"..Name.."}\n●اسم الجروب {"..NameChat.."}\n●ايدي الجروب {"..msg.chat_id_.."}\n●رابط الجروب \n ["..LinkGroup.."] ",0,'md')
+end,nil)
+end,nil)
+end,nil)
 end
 end
-end,nil)  
+end,nil)
 end
 if text == "رفع منشئ" and msg.reply_to_message_id_ and BasicConstructor(msg) then
 if AddChannel(msg.sender_user_id_) == false then
@@ -13007,20 +13057,23 @@ end
 if text == "اسمي"  then 
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.first_name_  then
-first_name = ' 𖠕 اسمك الاول ← {`'..(result.first_name_)..'`}'
+first_name = ' اسمك الاول ← {`'..(result.first_name_)..'`}'
 else
 first_name = ''
 end   
 if result.last_name_ then 
-last_name = ' 𖠕 اسمك الثاني ← {`'..result.last_name_..'`}' 
+last_name = ' اسمك الثاني ← {`'..result.last_name_..'`}' 
 else
 last_name = ''
 end      
 send(msg.chat_id_, msg.id_,first_name..'\n'..last_name) 
 end,nil)
 end 
+if text == 'بايو' then   
+send(msg.chat_id_, msg.id_,getbio(msg.sender_user_id_)) 
+end 
 if text == 'ايديي' then
-send(msg.chat_id_, msg.id_,' 𖠕 ايديك ← '..msg.sender_user_id_)
+send(msg.chat_id_, msg.id_,' ايديك ← '..msg.sender_user_id_)
 end
 if text == 'الرتبه' and tonumber(msg.reply_to_message_id_) > 0 then
 function start_function(extra, result, success)

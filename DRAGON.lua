@@ -907,9 +907,8 @@ end
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'رجوع'  then  
-local bl = ''
+local bl = ' '
 local keyboard = {
-{'مبرمجين السورس'},
 {'مطور','انا مين'},
 {'انصحنى','كتبات'},
 {'تويت بالصور','لو خيروك بالصور'},
@@ -927,7 +926,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
 local DRAGON_Msg = { 
-'🌿╖ مرحبا بك انا بوت '..Namebot..'\n🌿╢ وظيفتي حماية المجموعات\n🌿╢ لتفعيل البوت في مجموعتك\n🌿╢ أضِف البوت إلى مجموعتك\n🌿╢ ارفعهُ » مشرف واكتب تفعيل\n🌿╜ سيتم ترقيتك مالك في البوت',
+'╖ مرحبا بك انا بوت '..Namebot..'\n╢ وظيفتي حماية المجموعات\n╢ لتفعيل البوت في مجموعتك\n╢ أضِف البوت إلى مجموعتك\n╢ ارفعه مشرف واكتب تفعيل\n╜ سيتم ترقيتك مالك في البوت',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -937,7 +936,7 @@ keyboard.inline_keyboard = {
 {text = 'الـمـطـور', url="http://t.me/"..sudos.UserName},
 },
 {
-{text = 'اضفني لمجموعتك 🐣❤️', url="http://t.me/"..sudos.UserName.."?startgroup=new"},
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -951,10 +950,10 @@ tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, l
 end
 end
 
-if text == 'مبرمجين السورس' then
+if text == 'مبرمجين نوفا' then
 local Text = ' يورزات مبرمجين سورس نوفا لدخول الي حسابتهم'
 local Key = {
-{'المبرمجين'},
+{'المطورين'},
 {'التواصل','عايز بوت','يا سورس'},
 {'رجوع'},
 }
@@ -976,7 +975,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = ''
+local bl = ' '
 local keyboard = {
 {'مطورين السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
@@ -1143,9 +1142,9 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 if text == 'مطورين السورس' and DevSoFi(msg) then 
-local Text = 'يورزات مبرمجين سورس نوفا لدخول الي حسابتهم'
+local Text = 'يورزات مطورين سورس نوفا لدخول الي حسابتهم'
 local Key = {
-{'المبرمجين'},
+{'المطورين'},
 {'يا سورس','التواصل'},
 {'العوده'},
 }
@@ -1254,7 +1253,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/MRT_NOVA/9&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'المبرمجين' and DevSoFi(msg) then
+if text == 'المطورين' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
 يوزرات مبرمجين السورس 🍂

@@ -907,7 +907,7 @@ end
 if Chat_Type == 'UserBot' then
 if not DevSoFi(msg) then
 if text == '/start' or text == 'رجوع'  then  
-local bl = 'مرحبا بك في سورس نوفا\n انت المطور العضو واليك كيبورد التحكم في البوت'
+local bl = ''
 local keyboard = {
 {'مبرمجين السورس'},
 {'مطور','انا مين'},
@@ -927,7 +927,7 @@ if text == "/start" then
 if not DevSoFi(msg) then
 local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
 local DRAGON_Msg = { 
-'🤖╖ أهلآ بك عزيزي أنا بوت  '..Namebot..'\n🌿╢ وظيفتي حماية المجموعات\n🌿╢ لتفعيل البوت\n🌿╢ أضِف البوت إلى مجموعتك\n🌿╢ ارفعهُ » مشرف\n🌿╢ واكتب » تفعيل\n🌿╜ سيتم ترقيتك مالك في البوت',
+'🌿╖ مرحبا بك انا بوت '..Namebot..'\n🌿╢ وظيفتي حماية المجموعات\n🌿╢ لتفعيل البوت في مجموعتك\n🌿╢ أضِف البوت إلى مجموعتك\n🌿╢ ارفعهُ » مشرف واكتب تفعيل\n🌿╜ سيتم ترقيتك مالك في البوت',
 } 
 Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
@@ -976,7 +976,7 @@ end
 return false
 end
 if DevSoFi(msg) then
-local bl = 'مرحبا بك في سورس نوفا\n انت المطور الاساسي واليك كيبورد التحكم في البوت '
+local bl = ''
 local keyboard = {
 {'مطورين السورس'},
 {'ضع اسم للبوت','معلومات الكيبورد'},
@@ -3251,7 +3251,7 @@ name = string.gsub(name,'😸','😹😹😹😹😹😹😹😹😸😹😹😹
 name = string.gsub(name,'☠','💀💀💀💀💀💀💀☠💀💀💀💀💀')
 name = string.gsub(name,'🐼','👻👻👻🐼👻👻👻👻👻👻👻')
 name = string.gsub(name,'🐇','𖠕𖠕𖠕𖠕𖠕🐇𖠕𖠕𖠕𖠕')
-name = string.gsub(name,'🌑','🌚🌚🌚🌚🌚🌑🌚🌚🌚')
+name = string.gsub(name,'🌑','🌚🌚??🌚🌚🌑🌚🌚🌚')
 name = string.gsub(name,'🌚','🌑🌑🌑🌑🌑🌚🌑🌑🌑')
 name = string.gsub(name,'⭐️','🌟🌟🌟🌟🌟🌟🌟🌟⭐️🌟🌟🌟')
 name = string.gsub(name,'✨','💫💫💫💫💫✨💫💫💫💫')

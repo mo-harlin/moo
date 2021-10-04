@@ -12549,21 +12549,19 @@ end,nil)
 end,nil)
 end
 end
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-if text == "الزمن" then 
-local time = https.request('https://IP/timeEG.php') 
-local timezone = "الساعه الان بتوقيت القاهره : "..time.."\nالتاريخ : "..os.date("%Y/%m/%d") 
-send(msg.chat_id_, msg.id_,timezone) 
-end 
-if text == "الساعه" or text == 'الوقت' then 
-local time = https.request('https://IP/timeEG.php') 
-local timezone = "الساعه الان بتوقيت القاهره : "..time 
-send(msg.chat_id_, msg.id_,timezone) 
-end 
-if text == "التاريخ" then 
-local timezone =  "\nالتاريخ : "..os.date("%Y/%m/%d") 
-send(msg.chat_id_, msg.id_,timezone) 
+-- عود اخمط وهوبز ع العالم كول تطويري ..
+
+if text == "الساعه" then
+local ramsesj20 = "\n الساعه الان : "..os.date("%I:%M%p")
+send(msg.chat_id_, msg.id_,ramsesj20)
 end
+
+if text == "التاريخ" then
+local ramsesj20 =  "\n التاريخ : "..os.date("%Y/%m/%d")
+send(msg.chat_id_, msg.id_,ramsesj20)
+end
+--------------
+--- هههه ها فرخ دتبوك ؟ ههههههههههه 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 if text == ("الردود المتعدده") and CoSu(msg) then
 if AddChannel(msg.sender_user_id_) == false then

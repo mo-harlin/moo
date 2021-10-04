@@ -12562,7 +12562,6 @@ send(msg.chat_id_, msg.id_,ramsesj20)
 end
 --------------
 --- هههه ها فرخ دتبوك ؟ ههههههههههه 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 if text == ("الردود المتعدده") and CoSu(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local SO_NOOVA = database:get(bot_id..'text:ch:user')

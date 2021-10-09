@@ -3821,59 +3821,6 @@ send(msg.chat_id_, msg.id_,'['..TWEET_Msg[math.random(#TWEET_Msg)]..']')
 return false 
 end
 
-if text == 'العاب' and Special(msg) then  
-if not database:get(bot_id..'lockGeamVip'..msg.chat_id_) then
-_key = {
-{{text="♟ Chess Game ♟",url='https://t.me/T4TTTTBOT?game=chess'}},
-{{text="لعبة فلابي بيرد 🐥",url='https://t.me/awesomebot?game=FlappyBird'},{text="تحداني فالرياضيات 🔢",url='https://t.me/gamebot?game=MathBattle'}},
-{{text="تحداني في ❌⭕️",url='t.me/XO_AABOT?start3836619'},{text="سباق الدراجات 🏍",url='https://t.me/gamee?game=MotoFX'}},
-{{text="سباق سيارات 🏎",url='https://t.me/gamee?game=F1Racer'},{text="متشابه 👾",url='https://t.me/gamee?game=DiamondRows'}},
-{{text="كرة قدم ⚽",url='https://t.me/gamee?game=FootballStar'}},
-{{text="دومنا🥇",url='https://vipgames.com/play/?affiliateId=wpDom/#/games/domino/lobby'},{text="❕ليدو",url='https://vipgames.com/play/?affiliateId=wpVG#/games/ludo/lobby'}},
-{{text="ورق🤹‍♂",url='https://t.me/gamee?game=Hexonix'},{text="Hexonix❌",url='https://t.me/gamee?game=Hexonix'}},
-{{text="MotoFx🏍️",url='https://t.me/gamee?game=MotoFx'}},
-{{text="لعبة 2048 🎰",url='https://t.me/awesomebot?game=g2048'},{text="Squares🏁",url='https://t.me/gamee?game=Squares'}},
-{{text="Atomic 1▶️",url='https://t.me/gamee?game=AtomicDrop1'},{text="Corsairs",url='https://t.me/gamebot?game=Corsairs'}},
-{{text="LumberJack",url='https://t.me/gamebot?game=LumberJack'}},
-{{text="LittlePlane",url='https://t.me/gamee?game=LittlePlane'},{text="RollerDisco",url='https://t.me/gamee?game=RollerDisco'}},
-{{text="🦖 Dragon Game 🦖",url='https://t.me/T4TTTTBOT?game=dragon'},{text="🐍 3D Snake Game 🐍",url='https://t.me/T4TTTTBOT?game=snake'}},
-{{text="🔵 Color Game 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
-{{text="🚀 Rocket Game 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 Arrow Game 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
-{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOOVA"}},
-}
-send_inlin_key(msg.chat_id_," ⌯︙قائمه العاب اضغط للعب",_key,msg.id_)
-else
-send(msg.chat_id_, msg.id_," ⌯︙العاب معطله في الوقت الحالي")
-end
-end
-
-if text == 'العاب السورس' or text == 'العاب' or text == 'نوفا الهكر' then  
-local Text = [[  
- ⌯︙حسنا قم باختيار اللعبه
- ⌯︙وبعدها الشات الذي تريد ان تلعب فيه
-]]  
-keyboard = {}   
-keyboard.inline_keyboard = {  
-{{text= '♟ Chess Game ♟', url='https://t.me/T4TTTTBOT?game=chess'}},
-{{text= 'لعبة فلابي بيرد 🐥', url='https://t.me/awesomebot?game=FlappyBird'},{text='تحداني فالرياضيات 🔢',url='https://t.me/gamebot?game=MathBattle'}},
-{{text= 'تحداني في ❌⭕️', url='t.me/XO_AABOT?start3836619'},{text='سباق الدراجات 🏍',url='https://t.me/gamee?game=MotoFX'}},
-{{text= 'سباق سيارات 🏎', url='https://t.me/gamee?game=F1Racer'},{text='متشابه 👾',url='https://t.me/gamee?game=DiamondRows'}},
-{{text= 'كرة قدم ⚽', url='https://t.me/gamee?game=FootballStar'}},
-{{text= 'دومنا🥇', url='https://vipgames.com/play/?affiliateId=wpDom/#/games/domino/lobby'},{text='❕ليدو',url='https://vipgames.com/play/?affiliateId=wpVG#/games/ludo/lobby'}},
-{{text= 'ورق🤹‍♂', url='https://t.me/gamee?game=Hexonix'},{text='Hexonix❌',url='https://t.me/gamee?game=Hexonix'}},
-{{text= 'MotoFx🏍️', url='https://t.me/gamee?game=MotoFx'}},
-{{text= 'لعبة 2048 🎰', url='https://t.me/awesomebot?game=g2048'},{text='Squares🏁',url='https://t.me/gamee?game=Squares'}},
-{{text= 'Atomic 1▶️', url='https://t.me/gamee?game=AtomicDrop1'},{text='Corsairs',url='https://t.me/gamebot?game=Corsairs'}},
-{{text= 'LumberJack', url='https://t.me/gamebot?game=LumberJack'}},
-{{text= 'LittlePlane', url='https://t.me/gamee?game=LittlePlane'},{text='RollerDisco',url='https://t.me/gamee?game=RollerDisco'}},
-{{text= '🦖 Dragon Game 🦖', url='https://t.me/T4TTTTBOT?game=dragon'},{text='🐍 3D Snake Game 🐍',url='https://t.me/T4TTTTBOT?game=snake'}},
-{{text= '🔵 Color Game 🔴', url='https://t.me/T4TTTTBOT?game=color'}},
-{{text= '🚀 Rocket Game 🚀', url='https://t.me/T4TTTTBOT?game=rocket'},{text='🏹 Arrow Game 🏹',url='https://t.me/T4TTTTBOT?game=arrow'}},
-{{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOOVA"}},
-}  
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
 if text == 'العاب نوفا' or text == 'الالعاب' or text == 'العاب متطوره' then  
 local Text = [[  
  ⌯︙حسنا قم باختيار اللعبه 
@@ -5642,7 +5589,7 @@ return false
 end
 if text == ("صيح للمالك") or text == ("تاك للمالك") then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -5935,7 +5882,7 @@ return false
 end
 if text == ("تاك للمنشئين الاساسين") or text == ("صيح المنشئين الاساسين") then
 local list = database:smembers(bot_id..'Basic:Constructor'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6119,7 +6066,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنشئين") or text == ("صيح المنشئين") then
 local list = database:smembers(bot_id..'Constructor'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6316,7 +6263,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمدراء") or text == ("صيح المدراء") then
 local list = database:smembers(bot_id..'Manager'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6608,7 +6555,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للادمنيه") or text == ("صيح الادمنيه") then
 local list = database:smembers(bot_id..'Mod:User'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6800,7 +6747,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمنظفين") or text == ("صيح المنظفين") then
 local list = database:smembers(bot_id..'S00F4:MN:TF'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n≪━━━━━━𝓓⌯︙𝓖━━━━━━≫\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n≪━━━━━━𝓓⌯︙𝓖━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -7136,7 +7083,7 @@ send(msg.chat_id_, msg.id_, t)
 end
 if text == ("تاك للمميزين") or text == ("صيح المميزين") then
 local list = database:smembers(bot_id..'Special:User'..msg.chat_id_)
-t = "\n ⌯︙وينكم تعالو يريدوكم بالجروب \n- - - - - - - - - - - - - - - - -\n"
+t = "\n ⌯︙فينك يواد الخرابه بتولع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️ \n- - - - - - - - - - - - - - - - -\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -11287,26 +11234,31 @@ end
 
 if text == ""..(database:get(bot_id..'Name:Bot') or 'نوفا').."" then  
 Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا')
-local DRAGON_Msg = {
+local NOVA_Msg = {
 'ننعم يروحي 😻♥️',
-'نعم يا قلب  '..Namebot..'',
+'نعم يا قلب '..Namebot..'',
 'عاوز اي من '..Namebot..'',
-'دوختو  '..Namebot..'',
-'بتشقط وجي ويت 🤪',
+'دوختو '..Namebot..'',
+'ايوا يروحقلب '..Namebot..'',
+'بتشقط وجي ويت 🙂😹',
 'ايوا جاي 🙈',
-'يعم هتسحر واجي 😾',
-'طب متصلي على النبي كدا 🙂💜',
-'تع اشرب شاي 🥺💙',
-'دوس على الخوخه 🍑',
-'متيجي 😉',
-'ياض خش نام 😂',
+'بطه مش ليك يمرزوق 😹❤',
+'طب متصلي على النبي كدا 🙂❤',
+'تع اشرب شاي 🥺❤️',
+'علفكره بحبك 🥺♥',
+'دوس على الخوخه 🍑🙈 ',
+'متيجي 😉♥',
+'ياض خش نام 😂♥',
 } 
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+Namebot = NOVA_Msg[math.random(#NOVA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕, url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -11319,27 +11271,61 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا')
-local DRAGON_Msg = {
-'اسمي '..Namebot..' يا قلبي 🙈💗',
-'اسمي'..Namebot..' يا روحي🙈❤️',
-'اسمي '..Namebot..' يعمري🌚🍭',
-'اسمي '..Namebot..' يا قمر🌝🌸',
+local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
+local NOVA_Msg = { 
+'اسمي '..Namebot..' يا قلبي 🤤❤️',
+'اسمي '..Namebot..' يقمد🥺❤',
+'اسمي '..Namebot..' يا روحي♥🙈',
+'اسمي '..Namebot..' يعمري🤔 ❤️',
+'اسمي '..Namebot..' يعسل♥🙈',
+'اسمي '..Namebot..' يا قمر 🥺❤',
+'اسمي '..Namebot..' يكلحياتي😘❤️',
 'اسمي '..Namebot..' يامزه 🥺❤️',
-'اسمي '..Namebot..' يعم 😒',
-'مقولت اسمي '..Namebot..' في اي 🙄',
-'عيون البوت اسمي '..Namebot..' يعمري🥺❤️',
-'اسمي '..Namebot..' ياحياتي🥺♥️',
-'اسمي '..Namebot..' يوتكه🥺❤️',
-'انا '..Namebot..' ينوحي🙀🥺',
-}
-
-Namebot = DRAGON_Msg[math.random(#DRAGON_Msg)] 
+'اسمي '..Namebot..' يعم 😂❤️',
+'مقولت اسمي '..Namebot..' في اي 🙄❤️',
+'اسمي '..Namebot..' الكيوت ​​​​​​​​​​​​​​​​​🥰​​​​​​​​​​​​​​​​❤️',
+'اسمي '..Namebot..' ياحياتي🧸♥️',
+'اسمي '..Namebot..' يوتكه🥺❤',
+} 
+Namebot = NOVA_Msg[math.random(#NOVA_Msg)] 
 local msg_id = msg.id_/2097152/0.5  
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOOVA"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(Namebot).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+send(msg.chat_id_, msg.id_,Namebot, 1, 'md') 
+end 
+end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end
+if text == "بوتي" then
+local Namebot = (database:get(bot_id..'Name:Bot') or 'نوفا') 
+local NOVA_Msg = { 
+'عيون بوتك من جوه 🙊​​​​​​​​​​​​​​​​❤️',
+'خد بالك نبحبك اعع ​​​​😂​​​​😂​​​​😂​​​​​​​​​​​​​​​​❤️',
+'ولمصحف بدوب اجدعان ​​​​😂​​​​​​​​​​​​​​​​❤️',
+'ننعم يقلب بوتك من جوه 🙊💕',
+'روح قلب بوتك من جوه ​​​​​​​​​​​​​​​​​🥰​​​​​​​​​​​​​​​​❤️',
+'علفكره بحبك 🥺♥',
+} 
+Namebot = NOVA_Msg[math.random(#NOVA_Msg)] 
+local msg_id = msg.id_/2097152/0.5  
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
+},
+{
+{text = 'ᦔꪮꪊ𝘳ᥴꫀ ꪀꪮꪜꪖ', url="t.me/SO_NOOVA"},
 },
 }
 local function getpro(extra, result, success) 
@@ -12626,24 +12612,33 @@ end
 end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 end
-if text == "رتبتي" then
+
+if SourceCh(msg)text == "رتبتي" and not bot_data:get(ban_id..'ghiktr'..msg.chat_id_) then     
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SO_NOOVA'
+end
 local msg_id = msg.id_/2097152/0.5  
-local textt = 'رتبتك » '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local textt = 'رتبتك »'..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Banda = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = textt, url="http://t.me/"..username},
 },
 }
 local function getpro(extra, result, success) 
 if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&caption=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else 
-send(msg.chat_id_, msg.id_,textt, 1, 'md') 
-end 
-end 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
 end
+
 
 if text == 'انا مين' and SudoBot(msg) then
 local msg_id = msg.id_/2097152/0.5  
@@ -12651,7 +12646,7 @@ local textt = 'المطور الاساسي نور عيني 🥺❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12671,7 +12666,7 @@ local textt = 'انت مطوري الثاني حته مني 😍♥'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12691,7 +12686,7 @@ local textt = 'انت المطور بس الصغنن 🥰♥'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12711,7 +12706,7 @@ local textt = 'نت المالك هن يعني حاجه فوق فوق راسي �
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12731,7 +12726,7 @@ local textt = 'انت منشئ يسطا عتلاء منشئ عاوز حاجه ت
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12751,7 +12746,7 @@ local textt = 'انت هنا منشئ اساسي يعني اعلى رتبه عا
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12771,7 +12766,7 @@ local textt = 'انت المدير يعني الروم تحت سيطرتك 😹�
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12791,7 +12786,7 @@ local textt = 'انت مجرد ادمن اجتهد عشان ياخد رتبه �
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12811,7 +12806,7 @@ local textt = 'انت مميز ابن ناس 😊♥'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
@@ -12831,7 +12826,7 @@ local textt = 'عضو قميل 🥰❤️'
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = ''..result.first_name_..'', url = "https://t.me/"..result.username_..""},
+{text = 'مـطـور الـبـوت 🌿☕', url="http://t.me/"..sudos.UserName},
 },
 }
 local function getpro(extra, result, success) 
